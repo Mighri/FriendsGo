@@ -19,11 +19,14 @@ class SVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearc
     var FriendsEmpty = [Friend]()
     var currentFriendArray = [Friend]() //update table
     let urlgetUsers = MyClass.Constants.urlgetUsers
-    let urlInvitationFG = MyClass.Constants.urlInvitationFG
+    let urlInvitationEventFG = MyClass.Constants.urlInvitationEventFG
     let urlverifInvitation = MyClass.Constants.urlverifInvitation
     let userId = UserDefaults.standard.string(forKey: "Saveid")!
     var searching: Bool! = false
     let urlgetAmis = MyClass.Constants.urlgetAmis
+    
+     var event: Event!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpFriends()
@@ -192,14 +195,14 @@ class SVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearc
          }
          */
         
-        let paras = ["idU": userId,
-                     "idInvite": self.currentFriendArray[buttonTag].id,
-                     "EtatInvitation" : "En attente",
-                     "Moyen": "FriendsGo"
+        let paras = ["IdInviteur": userId,
+                     "IdInvite": self.currentFriendArray[buttonTag].id,
+                     "Etat" : "En attente",
+                     "IdEvent": event.idE
             ] as [String : Any]
         
         
-        Service.sharedInstance.postItAny(parameters:paras, url:self.urlInvitationFG)
+        Service.sharedInstance.postItAny(parameters:paras, url:self.urlInvitationEventFG)
         
         
     }

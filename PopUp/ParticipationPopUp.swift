@@ -11,7 +11,7 @@ import UIKit
 
 class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
     
-    
+    let urlUpdateInvEvent = MyClass.Constants.urlUpdateInvEvent
     override func viewDidLoad() {
         super.viewDidLoad()
         

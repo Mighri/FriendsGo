@@ -93,6 +93,7 @@ extension InviteForEventController: ViewPagerControllerDataSourceB {
         }
         else
         {
+            vc1.event = event
             return vc1
         }
     }

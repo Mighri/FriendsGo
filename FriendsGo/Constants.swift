@@ -10,12 +10,12 @@ class MyClass {
     
     struct Constants {
         //000Webhost
-        static let BaseURL = "http://lengthways-dopes.000webhostapp.com/"
+        //static let BaseURL = "http://lengthways-dopes.000webhostapp.com/"
         // Pc-Faster : 192.168.101.13
        // static let BaseURL = "http://192.168.101.13/"
 
         // Chifco : 192.168.10.143
-   //static let BaseURL = "http://192.168.10.143/"
+ static let BaseURL = "http://192.168.10.143/"
         
         // class ViewController
         static let urlAuthMail = BaseURL+"getUtilisateurs.php"
@@ -61,5 +61,11 @@ class MyClass {
         static let urlUpdateEvent = BaseURL+"updateEvent.php"
         
         
+        static let urlInvitationEventFG = BaseURL+"invitationEventFG.php"
+        
+        static let urlUpdateInvEvent = BaseURL+"updateInvEvent.php"
+        
+        static let urlGetInvEvent = BaseURL+"getInvEvent.php"
+       
     }
 }

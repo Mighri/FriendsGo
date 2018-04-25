@@ -18,7 +18,7 @@ class InvitationEventViewController : UIViewController, UITableViewDataSource, U
     //let urlgetAmis = MyClass.Constants.urlgetAmis
     var searching: Bool! = false
     
-    let urlgetEvents = MyClass.Constants.urlgetEvents
+    let urlGetInvEvent = MyClass.Constants.urlGetInvEvent
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +55,9 @@ class InvitationEventViewController : UIViewController, UITableViewDataSource, U
         
         let userId = UserDefaults.standard.string(forKey: "Saveid")
         print(userId!)
-        let p = ["IdUE" : userId!] as [String : Any]
+        let p = ["IdInvited" : userId!] as [String : Any]
         
-        Service.sharedInstance.loadEvent(parameters: p as [String : Any], url: urlgetEvents) { (state, Objets) in
+        Service.sharedInstance.loadEvent(parameters: p as [String : Any], url: urlGetInvEvent) { (state, Objets) in
             if state {
                 self.eventArray = Objets!
                 self.currentEventArray = self.eventArray
