@@ -27,6 +27,9 @@
 		FB50A8162072757D00702130 /* MWAPopupC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB50A8152072757D00702130 /* MWAPopupC.swift */; };
 		FB5D93C5206992E300FC55CF /* TableCellInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D93C4206992E300FC55CF /* TableCellInvitation.swift */; };
 		FB5D93C7206CEE9F00FC55CF /* InvitationFG.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D93C6206CEE9F00FC55CF /* InvitationFG.swift */; };
+		FB647AA2208F3CF6006EF6D8 /* SVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA1208F3CF5006EF6D8 /* SVC.swift */; };
+		FB647AA4208F72D4006EF6D8 /* InviteForEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */; };
+		FB647AA6208FC84C006EF6D8 /* InviteContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */; };
 		FB942BE5207F95F800614B4B /* FB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB942BE4207F95F800614B4B /* FB.swift */; };
 		FB9E7888203E0CEB00E9BCA6 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E7887203E0CEA00E9BCA6 /* Friend.swift */; };
 		FBB21A6B204D9871002E6AD0 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB21A6A204D9871002E6AD0 /* CellView.swift */; };
@@ -148,6 +151,9 @@
 		FB50A8152072757D00702130 /* MWAPopupC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWAPopupC.swift; sourceTree = "<group>"; };
 		FB5D93C4206992E300FC55CF /* TableCellInvitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellInvitation.swift; sourceTree = "<group>"; };
 		FB5D93C6206CEE9F00FC55CF /* InvitationFG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationFG.swift; sourceTree = "<group>"; };
+		FB647AA1208F3CF5006EF6D8 /* SVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVC.swift; sourceTree = "<group>"; };
+		FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteForEventController.swift; sourceTree = "<group>"; };
+		FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactController.swift; sourceTree = "<group>"; };
 		FB942BE4207F95F800614B4B /* FB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB.swift; sourceTree = "<group>"; };
 		FB9E7887203E0CEA00E9BCA6 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		FBB21A6A204D9871002E6AD0 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
@@ -357,6 +363,8 @@
 			children = (
 				FBDD83B3206567B4006FFA9C /* ListContactsViewController.swift */,
 				FBDD83B72068372E006FFA9C /* SearchViewController.swift */,
+				FB647AA1208F3CF5006EF6D8 /* SVC.swift */,
+				FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */,
 				FBDD83AD2063BE1A006FFA9C /* AmisViewController.swift */,
 				FB44F5F420752A44001F71CB /* InvitationEventViewController.swift */,
 				FB44F5F2207529DE001F71CB /* MyEventsViewController.swift */,
@@ -378,6 +386,7 @@
 				FBB8B07520869102002DE5FA /* ParticipantsController.swift */,
 				FBB8B07720869140002DE5FA /* NonParticipantsController.swift */,
 				FBB8B07920869190002DE5FA /* InterestedFriendsController.swift */,
+				FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */,
 				FBB52B6F204B2E52004CC997 /* Menu.storyboard */,
 			);
 			path = Controller;
@@ -729,6 +738,7 @@
 				FB44F5F920756FC6001F71CB /* EventCell.swift in Sources */,
 				FBB586D02062A7530071BFD8 /* ViewPagerController.swift in Sources */,
 				FBB52B4F204B19B2004CC997 /* ImageHeaderView.swift in Sources */,
+				FB647AA2208F3CF6006EF6D8 /* SVC.swift in Sources */,
 				FBB8B07C20869DEB002DE5FA /* InviteContactCell.swift in Sources */,
 				FBB52B66204B1C05004CC997 /* BaseTableViewCell.swift in Sources */,
 				FBB8B08E2087F4B1002DE5FA /* InvContactsController.swift in Sources */,
@@ -745,6 +755,7 @@
 				FB30A8E0205A9F7500133B39 /* SignViewController.swift in Sources */,
 				FBB52B68204B1C26004CC997 /* DataTableViewCell.swift in Sources */,
 				FBB586D22062A7660071BFD8 /* ViewPagerOptions.swift in Sources */,
+				FB647AA6208FC84C006EF6D8 /* InviteContactController.swift in Sources */,
 				FB44F5FB20761FF6001F71CB /* MWAPopupAddEvent.swift in Sources */,
 				FBB8B07A20869190002DE5FA /* InterestedFriendsController.swift in Sources */,
 				FBB8B06A2084E057002DE5FA /* AnEventViewController.swift in Sources */,
@@ -763,6 +774,7 @@
 				FBB52B45204B18B5004CC997 /* EventViewController.swift in Sources */,
 				FBB8B07820869140002DE5FA /* NonParticipantsController.swift in Sources */,
 				FBB52B47204B18D3004CC997 /* MapViewController.swift in Sources */,
+				FB647AA4208F72D4006EF6D8 /* InviteForEventController.swift in Sources */,
 				FBB8B09020888E52002DE5FA /* InvitationEventCell.swift in Sources */,
 				FBECB1942045C15E0001DC89 /* RegisterUserViewController.swift in Sources */,
 				FBB8B08220874BFF002DE5FA /* ViewPagerControllerB.swift in Sources */,

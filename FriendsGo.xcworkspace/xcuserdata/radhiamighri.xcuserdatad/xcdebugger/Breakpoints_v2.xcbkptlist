@@ -26,7 +26,7 @@
                   moduleName = "FriendsGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/RegisterUserViewController.swift"
-                  timestampString = "546166914.798164"
+                  timestampString = "546340789.590348"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "126"
@@ -41,7 +41,7 @@
                   moduleName = "FriendsGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/RegisterUserViewController.swift"
-                  timestampString = "546166914.80155"
+                  timestampString = "546340789.5937231"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "127"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/AppDelegate.swift"
-            timestampString = "546192175.459558"
+            timestampString = "546340789.337642"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/AppDelegate.swift"
-            timestampString = "546192175.460022"
+            timestampString = "546340789.338168"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -570,7 +570,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/SearchViewController.swift"
-            timestampString = "545565928.823668"
+            timestampString = "546347327.986442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -586,7 +586,7 @@
                   moduleName = "FriendsGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Controller/SearchViewController.swift"
-                  timestampString = "546166924.7992539"
+                  timestampString = "546340789.7452821"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -601,7 +601,7 @@
                   moduleName = "FriendsGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Controller/SearchViewController.swift"
-                  timestampString = "546166924.802657"
+                  timestampString = "546340789.7478679"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -618,7 +618,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/SearchViewController.swift"
-            timestampString = "545565928.8237571"
+            timestampString = "546347327.98746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "190"
@@ -634,7 +634,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/SearchViewController.swift"
-            timestampString = "545565928.823872"
+            timestampString = "546347327.987707"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "175"
@@ -650,7 +650,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/ListContactsViewController.swift"
-            timestampString = "546164989.8101341"
+            timestampString = "546255884.784848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -666,7 +666,7 @@
                   moduleName = "FriendsGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Controller/ListContactsViewController.swift"
-                  timestampString = "546166925.099683"
+                  timestampString = "546340789.761808"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -681,7 +681,7 @@
                   moduleName = "FriendsGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Controller/ListContactsViewController.swift"
-                  timestampString = "546166925.102165"
+                  timestampString = "546340789.764285"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -714,7 +714,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/SearchViewController.swift"
-            timestampString = "545565928.824096"
+            timestampString = "546347327.9880019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "154"
@@ -730,13 +730,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/SearchViewController.swift"
-            timestampString = "545565928.824178"
+            timestampString = "546347327.988202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "160"
             endingLineNumber = "160"
             landmarkName = "addButtonPressed(sender:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FriendsGo.SearchViewController.addButtonPressed(sender: __ObjC.UIButton) -&gt; ()"
+                  moduleName = "FriendsGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Controller/SearchViewController.swift"
+                  timestampString = "546340789.778815"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "672">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;FriendsGo.InvitationFG&gt;&gt;) -&gt; () in FriendsGo.SearchViewController.addButtonPressed(sender: __ObjC.UIButton) -&gt; ()"
+                  moduleName = "FriendsGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Controller/SearchViewController.swift"
+                  timestampString = "546340789.781996"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -746,7 +778,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/SearchViewController.swift"
-            timestampString = "545565928.824259"
+            timestampString = "546347327.988477"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "182"
@@ -778,7 +810,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/ListContactsViewController.swift"
-            timestampString = "546164989.810499"
+            timestampString = "546255884.785133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "130"
@@ -794,7 +826,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/ListContactsViewController.swift"
-            timestampString = "546164989.810607"
+            timestampString = "546255884.785213"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "126"
@@ -810,7 +842,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/ListContactsViewController.swift"
-            timestampString = "546164989.810704"
+            timestampString = "546255884.785395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
@@ -921,40 +953,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FriendsGo/AppDelegate.swift"
-            timestampString = "546192175.4613529"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FriendsGo/AppDelegate.swift"
-            timestampString = "546192175.461749"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "FriendsGo/FB.swift"
-            timestampString = "545565928.825456"
+            timestampString = "546347327.988982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -970,7 +970,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/FB.swift"
-            timestampString = "545565928.8255399"
+            timestampString = "546347327.989061"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -986,7 +986,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/FB.swift"
-            timestampString = "545565928.825613"
+            timestampString = "546347327.989148"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -1002,7 +1002,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../FriendsGo/PopUp/MWAPopupEventM.swift"
-            timestampString = "546172681.500348"
+            timestampString = "546292849.599713"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "139"
@@ -1018,7 +1018,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../FriendsGo/PopUp/MWAPopupEventM.swift"
-            timestampString = "546172681.500509"
+            timestampString = "546292849.636078"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
@@ -1034,7 +1034,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/MyEventsViewController.swift"
-            timestampString = "546249931.857054"
+            timestampString = "546347327.989318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
@@ -1050,7 +1050,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/MyEventsViewController.swift"
-            timestampString = "546249932.062868"
+            timestampString = "546347327.989482"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -1066,7 +1066,7 @@
                   moduleName = "FriendsGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Controller/MyEventsViewController.swift"
-                  timestampString = "546166927.226279"
+                  timestampString = "546340789.9176511"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -1081,7 +1081,7 @@
                   moduleName = "FriendsGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Controller/MyEventsViewController.swift"
-                  timestampString = "546166927.230713"
+                  timestampString = "546340789.919951"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
@@ -1098,7 +1098,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Service.swift"
-            timestampString = "546031015.462303"
+            timestampString = "546343123.867278"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "210"
@@ -1114,7 +1114,7 @@
                   moduleName = "FriendsGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Service.swift"
-                  timestampString = "546166927.249006"
+                  timestampString = "546340789.925348"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "210"
@@ -1129,7 +1129,7 @@
                   moduleName = "FriendsGo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Service.swift"
-                  timestampString = "546166927.252955"
+                  timestampString = "546340789.927635"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "210"
@@ -1146,7 +1146,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Service.swift"
-            timestampString = "546031015.507915"
+            timestampString = "546343123.867756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "214"
@@ -1162,7 +1162,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Service.swift"
-            timestampString = "546031015.508055"
+            timestampString = "546343123.868034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "218"
@@ -1178,7 +1178,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Service.swift"
-            timestampString = "546031015.5081609"
+            timestampString = "546343123.8683701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "221"
@@ -1194,7 +1194,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/MyEventsViewController.swift"
-            timestampString = "546249932.063329"
+            timestampString = "546347327.989736"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -1210,11 +1210,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/AnEventViewController.swift"
-            timestampString = "546249932.063427"
+            timestampString = "546347327.989898"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "InvitedFriends(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1226,7 +1226,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FriendsGo/Controller/AnEventViewController.swift"
-            timestampString = "546249932.063535"
+            timestampString = "546347327.990065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
@@ -1242,7 +1242,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PopUp/ConfDeleteEventPopUp.swift"
-            timestampString = "546249932.063622"
+            timestampString = "546347327.990293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -1258,7 +1258,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PopUp/ConfDeleteEventPopUp.swift"
-            timestampString = "546249932.063706"
+            timestampString = "546347327.990471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -1274,7 +1274,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PopUp/UpdateEvent.swift"
-            timestampString = "546249932.06385"
+            timestampString = "546347327.990698"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "157"
@@ -1290,7 +1290,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PopUp/UpdateEvent.swift"
-            timestampString = "546249932.06397"
+            timestampString = "546347327.991043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "167"
@@ -1306,12 +1306,188 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PopUp/UpdateEvent.swift"
-            timestampString = "546249932.064093"
+            timestampString = "546347327.991358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "168"
             endingLineNumber = "168"
             landmarkName = "registerButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PopUp/FriendsInvitController.swift"
+            timestampString = "546347327.9916199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "setUpFriends()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FriendsGo.FriendsInvitController.(setUpFriends in _1F9E06472949C40BB305AE214E10F81A)() -&gt; ()"
+                  moduleName = "FriendsGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/PopUp/FriendsInvitController.swift"
+                  timestampString = "546340789.996989"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;FriendsGo.Friend&gt;&gt;) -&gt; () in FriendsGo.FriendsInvitController.(setUpFriends in _1F9E06472949C40BB305AE214E10F81A)() -&gt; ()"
+                  moduleName = "FriendsGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/PopUp/FriendsInvitController.swift"
+                  timestampString = "546340790.000952"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FriendsGo/Service.swift"
+            timestampString = "546343123.875594"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
+            landmarkName = "loadInvitation(parameters:url:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FriendsGo/Service.swift"
+            timestampString = "546343123.875948"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "loadInvitation(parameters:url:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FriendsGo/Service.swift"
+            timestampString = "546343123.876284"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "loadInvitation(parameters:url:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in FriendsGo.Service.loadInvitation(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, url: Swift.String, completionHandler: (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;FriendsGo.InvitationFG&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FriendsGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Service.swift"
+                  timestampString = "546340790.0215859"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "249"
+                  endingLineNumber = "249"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in FriendsGo.Service.loadInvitation(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, url: Swift.String, completionHandler: (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;FriendsGo.InvitationFG&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FriendsGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radhiamighri/Desktop/dossier%20sans%20titre/FriendsGo/FriendsGo/Service.swift"
+                  timestampString = "546340790.0262541"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "249"
+                  endingLineNumber = "249"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FriendsGo/Service.swift"
+            timestampString = "546343123.876796"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "loadInvitation(parameters:url:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FriendsGo/Service.swift"
+            timestampString = "546343123.880218"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "loadInvitation(parameters:url:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FriendsGo/Service.swift"
+            timestampString = "546343123.880712"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
+            landmarkName = "loadInvitation(parameters:url:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

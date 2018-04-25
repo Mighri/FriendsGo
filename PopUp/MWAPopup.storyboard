@@ -1257,8 +1257,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="adresseEvent" destination="qpe-8q-rhj" id="56Z-3Y-7ih"/>
+                        <outlet property="imageEvent" destination="HHX-Zg-KYX" id="ycL-Uu-9I4"/>
                         <outlet property="searchBar" destination="uG4-Ee-DfY" id="kiD-1p-bwn"/>
                         <outlet property="table" destination="Nok-Do-2ix" id="Hce-9N-KNw"/>
+                        <outlet property="titreEvent" destination="tPP-2b-Bw6" id="fue-L5-USg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cld-Wm-MkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

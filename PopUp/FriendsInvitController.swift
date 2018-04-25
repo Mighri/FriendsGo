@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FriendsInvitController: UIViewController , UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class FriendsInvitController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     
     @IBOutlet var table: UITableView!
@@ -102,7 +102,7 @@ class FriendsInvitController: UIViewController , UINavigationControllerDelegate,
     }
     
     // Table
-    /*
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if currentFriendArray != nil, currentFriendArray.count > 0
@@ -113,11 +113,11 @@ class FriendsInvitController: UIViewController , UINavigationControllerDelegate,
         
         //return currentFriendArray.count
     }
- */
+  /*
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
+    */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.table.dequeueReusableCell(withIdentifier: "InvitationEventCell") as! InvitationEventCell

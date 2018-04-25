@@ -1,40 +1,47 @@
 //
-//  InviteFriendsController.swift
+//  InviteForEventController.swift
 //  FriendsGo
 //
-//  Created by Radhia Mighri on 17/04/2018.
+//  Created by Radhia Mighri on 24/04/2018.
 //  Copyright © 2018 Radhia Mighri. All rights reserved.
 //
 
 import UIKit
 
-class InviteFriendsController: UIViewController {
+class InviteForEventController: UIViewController, UINavigationControllerDelegate {
     
     var tabs = [
-        ViewPagerTab(title: "Participants"),
-        ViewPagerTab(title: "Intéressés"),
-        ViewPagerTab(title: "Non participants")
+        ViewPagerTab(title: "     Contacts    "),
+        ViewPagerTab(title: "     Amis        ")
     ]
+    
+    @IBOutlet var imageEvent: UIImageView!
+    @IBOutlet var titreEvent: UILabel!
+    @IBOutlet var adresseEvent: UILabel!
     
     var viewPager:ViewPagerControllerB!
     var options:ViewPagerOptionsB!
+    
+    var event: Event!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
         
+        titreEvent.text = event.titre
+        adresseEvent.text = event.adresse
+        let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
+        imageEvent.image = UIImage(data: imagedecoded)!
         //options = ViewPagerOptionsB(viewPagerWithFrame: self.view.bounds)
         
-        // add friend
-        
-        options = ViewPagerOptionsB(viewPagerWithFrame: CGRect(x: 0, y: 100, width: 320, height: 468))
+        options = ViewPagerOptionsB(viewPagerWithFrame: CGRect(x: 0, y: 150, width: 320, height: 600))
         
         options.tabType = ViewPagerTabType.basic
-        //options.tabViewImageSize = CGSize(width: 20, height: 20)
         options.tabViewTextFont = UIFont.systemFont(ofSize: 16)
-        //options.tabViewPaddingLeft = 20
-        //options.tabViewPaddingRight = 20
+        options.tabViewPaddingLeft = 20
+        options.tabViewPaddingRight = 20
         options.isTabHighlightAvailable = true
+        
         
         viewPager = ViewPagerControllerB()
         viewPager.options = options
@@ -47,6 +54,19 @@ class InviteFriendsController: UIViewController {
         
     }
     
+    
+    @IBAction func back(_ sender: UIButton) {
+        
+       print("KKKKKKKKKK")
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
+        
+        //ViewController.event = event
+        
+      self.navigationController?.pushViewController(ViewController, animated: true)
+    }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
@@ -55,7 +75,7 @@ class InviteFriendsController: UIViewController {
 }
 
 
-extension InviteFriendsController: ViewPagerControllerDataSourceB {
+extension InviteForEventController: ViewPagerControllerDataSourceB {
     
     func numberOfPages() -> Int {
         return tabs.count
@@ -63,29 +83,18 @@ extension InviteFriendsController: ViewPagerControllerDataSourceB {
     
     func viewControllerAtPosition(position:Int) -> UIViewController {
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ParticipantsController") as! ParticipantsController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "InviteContactController") as! InviteContactController
         
-        let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "InterestedFriendsController") as! InterestedFriendsController
-        
-        let vc2 = self.storyboard?.instantiateViewController(withIdentifier: "NonParticipantsController") as! NonParticipantsController
+        let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "SVC") as! SVC
         
         if (position == 0)
         {
-            
-            // vc.itemText = "\(tabs[position].title!)"
             return vc
         }
-        else if (position == 1)
+        else
         {
-            //   vc.itemText = "\(tabs[position].title!)"
             return vc1
         }
-        else{
-            // vc.itemText = "\(tabs[position].title!)"
-            return vc2
-            
-        }
-        
     }
     
     func tabsForPages() -> [ViewPagerTab] {
@@ -97,7 +106,7 @@ extension InviteFriendsController: ViewPagerControllerDataSourceB {
     }
 }
 
-extension InviteFriendsController: ViewPagerControllerDelegateB {
+extension InviteForEventController: ViewPagerControllerDelegateB {
     
     func willMoveToControllerAtIndex(index:Int) {
         print("Moving to page \(index)")
@@ -107,4 +116,6 @@ extension InviteFriendsController: ViewPagerControllerDelegateB {
         print("Moved to page \(index)")
     }
 }
+
+
 

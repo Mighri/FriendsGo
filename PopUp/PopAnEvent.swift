@@ -48,14 +48,25 @@ class PopAnEvent: UIViewController {
     
     
     @IBAction func inviteFriend(_ sender: AnyObject) {
-   
-        let popOverVC = UIStoryboard(name: "MWAPopup", bundle: nil).instantiateViewController(withIdentifier: "InvitationEventPopUp") as! InvitationEventPopUp
+  /*
+        let popOverVC = UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: "InviteForEventController") as! InviteForEventController
+        popOverVC.event = event
         self.addChildViewController(popOverVC)
         //popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
-        // popOverVC.didMove(toParentViewController: self)
-        popOverVC.show(vc: self.navigationController!)
+        popOverVC.didMove(toParentViewController: self)
+
+ 
+ */
         
+     
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "InviteForEventController") as! InviteForEventController
+          ViewController.event = event
+       //self.present(ViewController, animated: true, completion: nil)
+     self.navigationController?.pushViewController(ViewController, animated: true)
+ 
     }
     
     @IBAction func deleteEvent(_ sender: AnyObject) {

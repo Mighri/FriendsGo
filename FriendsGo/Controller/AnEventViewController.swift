@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class AnEventViewController: UIViewController {
+class AnEventViewController: UIViewController, UINavigationControllerDelegate{
     
     @IBOutlet var descEvent: UILabel!
      @IBOutlet var dateEvent: UILabel!
@@ -82,12 +82,14 @@ class AnEventViewController: UIViewController {
     @IBAction func back(_ sender: UIButton) {
         
         print("%%%%%%%%%%%%%%%%%%%%")
+        
         let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
         
-        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "MyEventsViewController") as! MyEventsViewController
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
         
-        //self.present(ViewController, animated: true, completion: nil)
-       self.navigationController?.pushViewController(ViewController, animated: true)
+        //ViewController.event = event
+        
+        self.navigationController?.pushViewController(ViewController, animated: true)
  
     }
     

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class InvitationEventPopUp: UIViewController , UINavigationControllerDelegate {
+class InvitationEventPopUp: UIViewController {
     
     
     override func viewDidLoad() {
@@ -22,12 +22,20 @@ class InvitationEventPopUp: UIViewController , UINavigationControllerDelegate {
     }
     
     @IBAction func amis(_ sender: UIButton) {
-        let popOverVC = UIStoryboard(name: "MWAPopup", bundle: nil).instantiateViewController(withIdentifier: "FriendsInvitController") as! FriendsInvitController
+        
+        let popOverVC = UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: "SVC") as! SVC
         self.addChildViewController(popOverVC)
-        //popOverVC.view.frame = self.view.frame
+        popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
-        // popOverVC.didMove(toParentViewController: self)
-        popOverVC.show(vc: self.navigationController!)
+          popOverVC.didMove(toParentViewController: self)
+        //popOverVC.show(vc: self.navigationController!)
+ 
+        /*
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "SVC") as! SVC
+        self.navigationController?.pushViewController(ViewController, animated: true)
+ */
     }
     
     @IBAction func contacts(_ sender: UIButton) {
@@ -36,8 +44,8 @@ class InvitationEventPopUp: UIViewController , UINavigationControllerDelegate {
         self.addChildViewController(popOverVC)
         //popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
-        // popOverVC.didMove(toParentViewController: self)
-        popOverVC.show(vc: self.navigationController!)
+         popOverVC.didMove(toParentViewController: self)
+       // popOverVC.show(vc: self.navigationController!)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
