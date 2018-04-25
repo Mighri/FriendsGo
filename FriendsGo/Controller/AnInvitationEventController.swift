@@ -64,15 +64,15 @@ class AnInvitationEventController: UIViewController {
     
     @IBAction func newPopUp(_ sender: AnyObject) {
         let popOverVC = UIStoryboard(name: "MWAPopup", bundle: nil).instantiateViewController(withIdentifier: "ParticipationPopUp") as! ParticipationPopUp
+        popOverVC.event = event
+        
         self.addChildViewController(popOverVC)
         //popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
         // popOverVC.didMove(toParentViewController: self)
         popOverVC.show(vc: self.navigationController!)
     }
-    
-    
-    
+
     func performSearch() {
         
         matchingItems.removeAll()

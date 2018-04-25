@@ -67,5 +67,6 @@ class MyClass {
         
         static let urlGetInvEvent = BaseURL+"getInvEvent.php"
        
+         static let urlDeleteInvEvent = BaseURL+"deleteInvEvent.php"
     }
 }

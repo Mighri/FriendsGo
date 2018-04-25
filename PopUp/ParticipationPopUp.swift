@@ -11,7 +11,13 @@ import UIKit
 
 class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
     
+     let userId = UserDefaults.standard.string(forKey: "Saveid")!
+    var event: Event!
+    
     let urlUpdateInvEvent = MyClass.Constants.urlUpdateInvEvent
+    let urlDeleteInvEvent = MyClass.Constants.urlDeleteInvEvent
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,24 +29,55 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
     
     @IBAction func participeEventButton(_ sender: AnyObject) {
         
-     
+        let paras = ["IdInviteur": event.IdU ,
+                     "IdInvite": userId,
+                     "Etat" : "participe",
+                     "IdEvent": event.idE
+            ] as [String : Any]
+        
+        
+        Service.sharedInstance.postIt(parameters:paras as! [String : String], url:self.urlUpdateInvEvent)
+        close()
     }
     
     
     @IBAction func neParticipePasEventButton(_ sender: AnyObject) {
         
+        let paras = ["IdInviteur": event.IdU ,
+                     "IdInvite": userId,
+                     "Etat" : "ne participe pas",
+                     "IdEvent": event.idE
+            ] as [String : Any]
         
         
+        Service.sharedInstance.postIt(parameters:paras as! [String : String], url:self.urlUpdateInvEvent)
+  close()
     }
     
     @IBAction func interesseEventButton(_ sender: AnyObject) {
         
-   
-    }
+        let paras = ["IdInviteur": event.IdU ,
+                     "IdInvite": userId,
+                     "Etat" : "interessé",
+                     "IdEvent": event.idE
+            ] as [String : Any]
+        
+        
+        Service.sharedInstance.postIt(parameters:paras as! [String : String], url:self.urlUpdateInvEvent)
+        close()
+}
+    
     
     @IBAction func supprimerEventButton(_ sender: AnyObject) {
         
+        let paras = ["IdInviteur": event.IdU ,
+                     "IdInvite": userId,
+                     "Etat" : "interessé",
+                     "IdEvent": event.idE
+            ] as [String : Any]
         
+        Service.sharedInstance.postItAny(parameters:paras,  url:self.urlDeleteInvEvent)
+        close()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
