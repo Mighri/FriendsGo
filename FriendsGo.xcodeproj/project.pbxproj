@@ -30,6 +30,7 @@
 		FB647AA2208F3CF6006EF6D8 /* SVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA1208F3CF5006EF6D8 /* SVC.swift */; };
 		FB647AA4208F72D4006EF6D8 /* InviteForEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */; };
 		FB647AA6208FC84C006EF6D8 /* InviteContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */; };
+		FB647AA920912BE6006EF6D8 /* MWAPopupEventM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */; };
 		FB942BE5207F95F800614B4B /* FB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB942BE4207F95F800614B4B /* FB.swift */; };
 		FB9E7888203E0CEB00E9BCA6 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E7887203E0CEA00E9BCA6 /* Friend.swift */; };
 		FBB21A6B204D9871002E6AD0 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB21A6A204D9871002E6AD0 /* CellView.swift */; };
@@ -85,7 +86,6 @@
 		FBB8B08E2087F4B1002DE5FA /* InvContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8B08D2087F4B1002DE5FA /* InvContactsController.swift */; };
 		FBB8B09020888E52002DE5FA /* InvitationEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8B08F20888E52002DE5FA /* InvitationEventCell.swift */; };
 		FBB8B09220889B6C002DE5FA /* FriendsInvitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8B09120889B6C002DE5FA /* FriendsInvitController.swift */; };
-		FBC9CAFC20839B6900DDFDFE /* MWAPopupEventM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9CAFB20839B6800DDFDFE /* MWAPopupEventM.swift */; };
 		FBCA49BD203C779C00C74625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA49BC203C779C00C74625 /* AppDelegate.swift */; };
 		FBCA49BF203C779C00C74625 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA49BE203C779C00C74625 /* ViewController.swift */; };
 		FBCA49C2203C779C00C74625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCA49C0203C779C00C74625 /* Main.storyboard */; };
@@ -154,6 +154,8 @@
 		FB647AA1208F3CF5006EF6D8 /* SVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVC.swift; sourceTree = "<group>"; };
 		FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteForEventController.swift; sourceTree = "<group>"; };
 		FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactController.swift; sourceTree = "<group>"; };
+		FB647AA720912AF6006EF6D8 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test-Bridging-Header.h"; sourceTree = "<group>"; };
+		FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWAPopupEventM.swift; sourceTree = "<group>"; };
 		FB942BE4207F95F800614B4B /* FB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB.swift; sourceTree = "<group>"; };
 		FB9E7887203E0CEA00E9BCA6 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		FBB21A6A204D9871002E6AD0 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
@@ -210,8 +212,6 @@
 		FBB8B08D2087F4B1002DE5FA /* InvContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvContactsController.swift; sourceTree = "<group>"; };
 		FBB8B08F20888E52002DE5FA /* InvitationEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationEventCell.swift; sourceTree = "<group>"; };
 		FBB8B09120889B6C002DE5FA /* FriendsInvitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInvitController.swift; sourceTree = "<group>"; };
-		FBC9CAFA20838B9E00DDFDFE /* Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Test-Bridging-Header.h"; path = "../../../Test-Bridging-Header.h"; sourceTree = "<group>"; };
-		FBC9CAFB20839B6800DDFDFE /* MWAPopupEventM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MWAPopupEventM.swift; path = ../../../FriendsGo/PopUp/MWAPopupEventM.swift; sourceTree = "<group>"; };
 		FBCA49B9203C779B00C74625 /* FriendsGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCA49BC203C779C00C74625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBCA49BE203C779C00C74625 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 				FB50A8112072257400702130 /* MWAPopup.swift */,
 				FB50A8152072757D00702130 /* MWAPopupC.swift */,
 				FB44F5FA20761FF6001F71CB /* MWAPopupAddEvent.swift */,
-				FBC9CAFB20839B6800DDFDFE /* MWAPopupEventM.swift */,
+				FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */,
 				FBB8B06B2085FFB8002DE5FA /* PopAnEvent.swift */,
 				FBB8B06F20860C0C002DE5FA /* UpdateEvent.swift */,
 				FBB8B071208689D1002DE5FA /* InvitationEventPopUp.swift */,
@@ -468,7 +468,7 @@
 		FBCA49BB203C779B00C74625 /* FriendsGo */ = {
 			isa = PBXGroup;
 			children = (
-				FBC9CAFA20838B9E00DDFDFE /* Test-Bridging-Header.h */,
+				FB647AA720912AF6006EF6D8 /* Test-Bridging-Header.h */,
 				FB145A792057E4F20038A30B /* credentials.plist */,
 				FBCA49BC203C779C00C74625 /* AppDelegate.swift */,
 				FBB52B3B204B17EE004CC997 /* Controller */,
@@ -799,9 +799,9 @@
 				FB44F5F3207529DE001F71CB /* MyEventsViewController.swift in Sources */,
 				FBB52B61204B1AFB004CC997 /* UIColor.swift in Sources */,
 				FBB52B3F204B184C004CC997 /* LeftViewController.swift in Sources */,
+				FB647AA920912BE6006EF6D8 /* MWAPopupEventM.swift in Sources */,
 				FBB52B55204B1A4A004CC997 /* String.swift in Sources */,
 				FBCA49BD203C779C00C74625 /* AppDelegate.swift in Sources */,
-				FBC9CAFC20839B6900DDFDFE /* MWAPopupEventM.swift in Sources */,
 				FB5D93C7206CEE9F00FC55CF /* InvitationFG.swift in Sources */,
 				FBF27CD2204EF55F007E59E7 /* NotificationViewController.swift in Sources */,
 				FBB8B07620869102002DE5FA /* ParticipantsController.swift in Sources */,
