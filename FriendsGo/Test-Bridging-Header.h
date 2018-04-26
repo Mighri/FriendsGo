@@ -5,5 +5,6 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 //Google plus
 
-#import <Google/SignIn.h>
-#import <FBSDKAccessToken.h>
+//#import <Google/SignIn.h>
+//#import <FBSDKAccessToken.h>
+

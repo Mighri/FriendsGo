@@ -9,6 +9,7 @@
 import UIKit
 
 class InviteFriendsController: UIViewController {
+    var event: Event!
     
     var tabs = [
         ViewPagerTab(title: "Participants"),
@@ -23,11 +24,11 @@ class InviteFriendsController: UIViewController {
         super.viewDidLoad()
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
         
-        //options = ViewPagerOptionsB(viewPagerWithFrame: self.view.bounds)
+         options = ViewPagerOptionsB(viewPagerWithFrame: self.view.bounds)
         
         // add friend
         
-        options = ViewPagerOptionsB(viewPagerWithFrame: CGRect(x: 0, y: 100, width: 320, height: 468))
+        //options = ViewPagerOptionsB(viewPagerWithFrame: CGRect(x: 0, y: 100, width: 320, height: 468))
         
         options.tabType = ViewPagerTabType.basic
         //options.tabViewImageSize = CGSize(width: 20, height: 20)
@@ -71,17 +72,16 @@ extension InviteFriendsController: ViewPagerControllerDataSourceB {
         
         if (position == 0)
         {
-            
-            // vc.itemText = "\(tabs[position].title!)"
+         vc.event = event
             return vc
         }
         else if (position == 1)
         {
-            //   vc.itemText = "\(tabs[position].title!)"
+            vc1.event = event
             return vc1
         }
         else{
-            // vc.itemText = "\(tabs[position].title!)"
+            vc2.event = event
             return vc2
             
         }

@@ -17,11 +17,18 @@ class AnInvitationEventController: UIViewController {
     @IBOutlet var proprietaireEvent: UILabel!
     @IBOutlet var participationEvent: UILabel!
     @IBOutlet var imageEvent: UIImageView!
+    @IBOutlet var participEvent: UIImageView!
     @IBOutlet var lieuEvent: UILabel!
     var event: Event!
     var friend: Friend!
-    let urlGetUsername = MyClass.Constants.urlGetUsername
+    //var invitEvent = InvitationEventFG!
+
     
+    let urlGetUsername = MyClass.Constants.urlGetUsername
+    let urlInvEventFG = MyClass.Constants.urlInvEventFG
+    
+     //var invitEvent = InvitationEventFG!
+
     
     @IBOutlet weak var mapView: MKMapView!
     var matchingItems: [MKMapItem] = [MKMapItem]()
@@ -59,6 +66,49 @@ class AnInvitationEventController: UIViewController {
         mapView.removeAnnotations(mapView.annotations)
         self.performSearch()
         
+        
+        
+        
+        
+       /* var keyy = " "
+        
+    if keyy == UserDefaults.standard.string(forKey: "interesse")
+        {
+            print(keyy)
+            participationEvent.text = UserDefaults.standard.string(forKey: "interesse")!
+            participEvent.image = UIImage(named: "starP")
+        }
+        else if keyy == UserDefaults.standard.string(forKey: "neParticipe")
+        {
+            participationEvent.text = UserDefaults.standard.string(forKey: "neParticipe")!
+            participEvent.image = UIImage(named: "cross")
+        }
+        else
+        {
+            participationEvent.text = UserDefaults.standard.string(forKey: "participe")
+            participEvent.image = UIImage(named: "Check")
+        }
+       
+       */
+        
+     /*
+        let userId = UserDefaults.standard.string(forKey: "Saveid")
+        print(userId!)
+        let pr = ["IdInvitedd" : userId!,
+                  "eventtt" : event.idE] as [String : Any]
+        
+        Service.sharedInstance.loadInvitationEvent(parameters: pr as [String : Any], url: urlInvEventFG) { (state, Objets) in
+            if state {
+                self.invitEvent = Objets!
+                print("Objets")
+            } else {
+                print("nooo")
+            }
+            
+        }
+        
+        */
+ 
     }
     
     

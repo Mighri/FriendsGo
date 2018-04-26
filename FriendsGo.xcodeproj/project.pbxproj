@@ -94,6 +94,7 @@
 		FBCA49D2203C779E00C74625 /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA49D1203C779E00C74625 /* TestTests.swift */; };
 		FBCA49DD203C779F00C74625 /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA49DC203C779F00C74625 /* TestUITests.swift */; };
 		FBDA813A20494FEE00744BCD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDA813B20494FEE00744BCD /* SwiftyJSON.framework */; };
+		FBDBD7882091DCE100500576 /* InvitationEventFG.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDBD7872091DCE100500576 /* InvitationEventFG.swift */; };
 		FBDD83AE2063BE1B006FFA9C /* AmisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD83AD2063BE1A006FFA9C /* AmisViewController.swift */; };
 		FBDD83B220644B2D006FFA9C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD83B120644B2C006FFA9C /* Constants.swift */; };
 		FBDD83B4206567B4006FFA9C /* ListContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDD83B3206567B4006FFA9C /* ListContactsViewController.swift */; };
@@ -154,8 +155,8 @@
 		FB647AA1208F3CF5006EF6D8 /* SVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVC.swift; sourceTree = "<group>"; };
 		FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteForEventController.swift; sourceTree = "<group>"; };
 		FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactController.swift; sourceTree = "<group>"; };
-		FB647AA720912AF6006EF6D8 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test-Bridging-Header.h"; sourceTree = "<group>"; };
 		FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWAPopupEventM.swift; sourceTree = "<group>"; };
+		FB647AAA20913900006EF6D8 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Test-Bridging-Header.h"; path = "../../../Test-Bridging-Header.h"; sourceTree = "<group>"; };
 		FB942BE4207F95F800614B4B /* FB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB.swift; sourceTree = "<group>"; };
 		FB9E7887203E0CEA00E9BCA6 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		FBB21A6A204D9871002E6AD0 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
@@ -226,6 +227,7 @@
 		FBCA49DC203C779F00C74625 /* TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITests.swift; sourceTree = "<group>"; };
 		FBCA49DE203C779F00C74625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBDA813B20494FEE00744BCD /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBDBD7872091DCE100500576 /* InvitationEventFG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationEventFG.swift; sourceTree = "<group>"; };
 		FBDD83AD2063BE1A006FFA9C /* AmisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmisViewController.swift; sourceTree = "<group>"; };
 		FBDD83B120644B2C006FFA9C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FBDD83B3206567B4006FFA9C /* ListContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactsViewController.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			children = (
 				FB9E7887203E0CEA00E9BCA6 /* Friend.swift */,
 				FB5D93C6206CEE9F00FC55CF /* InvitationFG.swift */,
+				FBDBD7872091DCE100500576 /* InvitationEventFG.swift */,
 				FB44F5F6207530E1001F71CB /* Event.swift */,
 			);
 			path = Model;
@@ -468,7 +471,7 @@
 		FBCA49BB203C779B00C74625 /* FriendsGo */ = {
 			isa = PBXGroup;
 			children = (
-				FB647AA720912AF6006EF6D8 /* Test-Bridging-Header.h */,
+				FB647AAA20913900006EF6D8 /* Test-Bridging-Header.h */,
 				FB145A792057E4F20038A30B /* credentials.plist */,
 				FBCA49BC203C779C00C74625 /* AppDelegate.swift */,
 				FBB52B3B204B17EE004CC997 /* Controller */,
@@ -762,6 +765,7 @@
 				FBB52B4D204B194F004CC997 /* ExSlideMenuController.swift in Sources */,
 				FBB52B57204B1A71004CC997 /* UITableViewExtension.swift in Sources */,
 				FB50A8162072757D00702130 /* MWAPopupC.swift in Sources */,
+				FBDBD7882091DCE100500576 /* InvitationEventFG.swift in Sources */,
 				FBB52B63204B1B12004CC997 /* UIApplication.swift in Sources */,
 				FBE61C322089415800626B69 /* ParametersCell.swift in Sources */,
 				FBDD83B62065684B006FFA9C /* TableCell.swift in Sources */,

@@ -21,8 +21,8 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
      var event: Event!
      var friend: Friend!
     let urlGetUsername = MyClass.Constants.urlGetUsername
-    
-    
+     
+   
     @IBOutlet weak var mapView: MKMapView!
     var matchingItems: [MKMapItem] = [MKMapItem]()
     
@@ -132,18 +132,13 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
     
     
     @IBAction func InvitedFriends(_ sender: UIButton) {
-        
-        
+
         print("********************************************")
-        
-        
-        
-        
-        
+
         let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
         
         let ViewController = mystoryboard.instantiateViewController(withIdentifier: "InviteFriendsController") as! InviteFriendsController
-        
+        ViewController.event = event
         self.navigationController?.pushViewController(ViewController, animated: true)
         
          //self.navigationController?.navigationBar.backItem?.title = "Les invités"

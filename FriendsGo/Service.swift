@@ -190,7 +190,43 @@ class Service {
         
     }
     
-    
+ 
+    func loadInvPeople(parameters: [String : Any], url: String, completionHandler:@escaping (Bool, [Friend]?) -> ()) {
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/x-www-form-urlencoded"
+        ]
+        
+        
+        Alamofire.request(url, method:.post, parameters: parameters, headers : headers)
+            .validate()
+            .responseJSON { response in
+                
+                switch response.result {
+                    
+                case let .success(value):
+                    
+                    if let result = value as? [String: Any] {
+                        
+                        if let items = result["ele"] as? [[String: Any]] {
+                            let user = Mapper<Friend>().mapArray(JSONArray: items )
+                            print(items)
+                            
+                            print(user)
+                            
+                            completionHandler(true, user)
+                            
+                        } else {
+                            completionHandler(false, nil)
+                        }
+                    }
+                    
+                case let .failure(error):
+                    print(error)
+                    completionHandler(false, nil)
+                }
+        }
+        
+    }
     
     
     
@@ -271,6 +307,45 @@ class Service {
         
     }
     
+    
+    
+    
+    func loadInvitationEvent(parameters: [String : Any], url: String, completionHandler:@escaping (Bool, [InvitationEventFG]?) -> ()) {
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/x-www-form-urlencoded"
+        ]
+        
+        
+        Alamofire.request(url, method:.post, parameters: parameters, headers : headers)
+            .validate()
+            .responseJSON { response in
+                
+                switch response.result {
+                    
+                case let .success(value):
+                    
+                    if let result = value as? [String: Any] {
+                        
+                        if let items = result["invitationEventFG"] as? [[String: Any]] {
+                            let invEvent = Mapper<InvitationEventFG>().mapArray(JSONArray: items )
+                            print(items)
+                            
+                            print(invEvent)
+                            
+                            completionHandler(true, invEvent)
+                            
+                        } else {
+                            completionHandler(false, nil)
+                        }
+                    }
+                    
+                case let .failure(error):
+                    print(error)
+                    completionHandler(false, nil)
+                }
+        }
+        
+    }
     
     
     

@@ -37,6 +37,10 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
         
         
         Service.sharedInstance.postIt(parameters:paras as! [String : String], url:self.urlUpdateInvEvent)
+        
+       
+        UserDefaults.standard.set("Je participe", forKey: "participe")
+        
         close()
     }
     
@@ -51,6 +55,8 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
         
         
         Service.sharedInstance.postIt(parameters:paras as! [String : String], url:self.urlUpdateInvEvent)
+        
+         UserDefaults.standard.set("Je ne participe pas", forKey: "neParticipe")
   close()
     }
     
@@ -64,7 +70,9 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
         
         
         Service.sharedInstance.postIt(parameters:paras as! [String : String], url:self.urlUpdateInvEvent)
-        close()
+        
+         //UserDefaults.standard.set("Je m'intéresse", forKey: "interesse")
+        //close()
 }
     
     
