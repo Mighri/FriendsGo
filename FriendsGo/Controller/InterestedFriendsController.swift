@@ -12,6 +12,7 @@ import SDWebImage
 class  InterestedFriendsController: UITableViewController {
     var FriendArray = [Friend]()
     var event: Event!
+    let urlgetAmis = MyClass.Constants.urlgetAmis
     let urlGetInteresed = MyClass.Constants.urlGetInteresed
     
     let userId = UserDefaults.standard.string(forKey: "Saveid")!
@@ -19,27 +20,25 @@ class  InterestedFriendsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let p = ["IdU" : userId,
+                 "IDEvent" : event.idE] as [String : Any]
         
-        
-        let p = ["idinviteurb" : userId,
-                 "IdEventb" : event.idE] as [String : Any]
-        
-        Service.sharedInstance.loadInvPeople(parameters: p, url: urlGetInteresed) { (state, Objets) in
+        Service.sharedInstance.loadInfoAny(parameters: p, url: urlGetInteresed) { (state, Objets) in
             if state {
                 self.FriendArray = Objets!
-                //UserDefaults.standard.set(self.FriendArray.count, forKey: "nbreInv")
-                // self.tableView.reloadData()
+                self.tableView.reloadData()
                 print("Objets")
             } else {
                 print("nooo")
             }
+            
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationBarItem()
-        self.title = "Invitations"
+        //self.setNavigationBarItem()
+        //self.title = "Invitations"
     }
     
     // Table

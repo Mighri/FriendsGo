@@ -80,7 +80,7 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
         
         let paras = ["IdInviteur": event.IdU ,
                      "IdInvite": userId,
-                     "Etat" : "interessé",
+                     "Etat" : "interesse",
                      "IdEvent": event.idE
             ] as [String : Any]
         

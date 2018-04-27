@@ -11,11 +11,17 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import FBSDKShareKit
 
-class ImportViewController: UIViewController, FBSDKLoginButtonDelegate {
-  
+class ImportViewController: UIViewController{
+      let userId = UserDefaults.standard.string(forKey: "Saveid")!
+    var friend : Friend!
+    var FriendArray = [Friend]()
+   // var correspondance = Correspondance
     
     let urlRegisterContact = MyClass.Constants.urlRegisterContact
     let urlUserContact = MyClass.Constants.urlUserContact
+    let urlImportContactsFBG = MyClass.Constants.urlImportContactsFBG
+     let urlgetCorrespondance = MyClass.Constants.urlgetCorrespondance
+    
     
     @IBOutlet weak var facebookButton : UIButton!
     @IBOutlet weak var googleButton : UIButton!
@@ -43,85 +49,99 @@ class ImportViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     @IBAction func fbLogin(_ sender: Any) {
         
-        /*   let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignViewController") as! SignViewController
-         self.navigationController?.pushViewController(secondViewController, animated: true)
-         */
-        
-        button.readPermissions = ["public_profile","email","user_friends"]
-        let token = FBSDKAccessToken.current()
-        if  (token != nil)  {
-            print("***********************")
-            friends()
+        /*
+        let params = [
+            "idU": self.userId,
+            "idContact": self.friend.id]
+        Service.sharedInstance.loadCorrespondance(parameters:params as! [String : String] , url:self.urlgetCorrespondance) { (state, Objets) in
+            if state {
+                
+                //self.FriendArray = Objets!
+                print("Objets")
+            }
+        else
+        {
+            print("nooo")
         }
-        
     }
-    
-    
-    
-    func friends() {
-        let params = ["fields": "id, first_name, last_name, email, picture"]
-        FBSDKGraphRequest(graphPath: "me/taggable_friends", parameters: params).start { (connection, result , error) -> Void in
-            if let error = error {
-                print(error)
-            } else if let info = result as? [String: Any] {
-                print(info)
-                /*
-                let idUser = UserDefaults.standard.integer(forKey: "Saveid")
-                print(idUser)
-                let d = String(describing: idUser)
-                print(d)
-                */
-                if let data = info["data"] as? [[String: Any]] {
-                   
-                    for i in 0...data.count-1 {
-                        if let nom = data[i]["first_name"] as? String {
-                            print(nom)
-                            let prenom = data[i]["last_name"] as? String
-                            print(prenom as Any)
-                            let idContact = data[i]["id"] as? String
-                            print(idContact as Any)
-                            
-                            let infoPicture = data[i]["picture"] as! [String : AnyObject]
-                            let Objet = (infoPicture as [String : AnyObject])["data"]
-                            let photo = Objet!["url"] as! String
-          
-                            let idUser = UserDefaults.standard.string(forKey: "Saveid") as? String
-                            
-                            let params = [
-                                "idU": idUser!,
-                        "idContact": idContact!]
-                            
-                            Service.sharedInstance.postIt(parameters:params , url:self.urlUserContact)
-                            
-                      
-                            let pr = ["Nom": nom,
-                                      "Prenom": prenom!,
-                                      "photoURL": photo,
-                                      "origine": "Facebook",
-                                      "idContact": idContact!]
-                            
-                            Service.sharedInstance.postIt(parameters:pr , url:self.urlRegisterContact)
-
-                        }
-                    }
+        */
+        
+        let p = ["inscrivia" : "Facebook"]
+        
+        Service.sharedInstance.loadInfoAny(parameters: p, url: urlImportContactsFBG) { (state, Objets) in
+            if state {
+                
+                self.FriendArray = Objets!
+                
+                for i in 0...self.FriendArray.count-1 {
+                self.friend = Objets![i]
+                
+                
+                let params = [
+                    "idU": self.userId,
+                    "idContact": self.friend.id]
+                
+                Service.sharedInstance.postIt(parameters:params as! [String : String] , url:self.urlUserContact)
+                
+                
+                let pr = ["Nom": self.friend.Nom,
+                          "Prenom": self.friend.prenom,
+                          "photoURL": self.friend.photoURL,
+                          "origine": "Facebook",
+                          "idContact": self.friend.id]
+                
+                Service.sharedInstance.postIt(parameters:pr as! [String : String] , url:self.urlRegisterContact)
+                
+                
+                print("Objets")
                 }
                 
             } else {
-                print("Unexpected result: \(String(describing: result))")
+                print("nooo")
             }
         }
     }
     
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        
-    }
     
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        
-    }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
+    
+    
+    @IBAction func importGoogle(_ sender: Any) {
+        
+        let p = ["inscrivia" : "Google"]
+        
+        Service.sharedInstance.loadInfoAny(parameters: p, url: urlImportContactsFBG) { (state, Objets) in
+            if state {
+                
+                self.FriendArray = Objets!
+                
+                for i in 0...self.FriendArray.count-1 {
+                    self.friend = Objets![i]
+                    
+                    
+                    let params = [
+                        "idU": self.userId,
+                        "idContact": self.friend.id]
+                    
+                    Service.sharedInstance.postIt(parameters:params as! [String : String] , url:self.urlUserContact)
+                    
+                    
+                    let pr = ["Nom": self.friend.Nom,
+                              "Prenom": self.friend.prenom,
+                              "photoURL": self.friend.photoURL,
+                              "origine": "Google",
+                              "idContact": self.friend.id]
+                    
+                    Service.sharedInstance.postIt(parameters:pr as! [String : String] , url:self.urlRegisterContact)
+                    
+                    
+                    print("Objets")
+                }
+                
+            } else {
+                print("nooo")
+            }
+        }
     }
 }
  

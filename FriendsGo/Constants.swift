@@ -12,10 +12,10 @@ class MyClass {
         //000Webhost
        //static let BaseURL = "http://lengthways-dopes.000webhostapp.com/"
         // Pc-Faster : 192.168.101.13
-       static let BaseURL = "http://172.20.10.5/"
+      static let BaseURL = "http://172.20.10.5/"
 
         // Chifco : 192.168.10.143
- //static let BaseURL = "http://192.168.10.143/"
+        //static let BaseURL = "http://192.168.10.143/"
         
         // class ViewController
         static let urlAuthMail = BaseURL+"getUtilisateurs.php"
@@ -72,5 +72,12 @@ class MyClass {
         static let urlInvEventFG = BaseURL+"invEventFG.php"
         
         static let urlGetInteresed = BaseURL+"getInterested.php"
+           static let urlGetParticipated = BaseURL+"getParticipated.php"
+           static let urlGetNonParticipated = BaseURL+"getNonParticipated.php"
+        
+         static let urlImportContactsFBG = BaseURL+"importContactsFBG.php"
+        
+        static let urlgetCorrespondance = BaseURL+"getCorrespondance.php"
+        
     }
 }

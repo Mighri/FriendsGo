@@ -62,7 +62,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGJ-YB-iOU">
                                 <rect key="frame" x="77" y="433" width="167" height="30"/>
-                                <color key="backgroundColor" red="0.63891973350253806" green="0.18931563571863808" blue="0.54292904791135999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.73725490196078436" green="0.15686274509803921" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Se connecter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -160,7 +160,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aup-bR-IGp">
                                 <rect key="frame" x="16" y="492" width="288" height="30"/>
-                                <color key="backgroundColor" red="0.34272131908730097" green="0.35308295440278897" blue="0.87991751269035534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.069271564483642578" green="0.33646810054779053" blue="0.53281229734420776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="J'ai déjà un compte"/>
                                 <connections>
@@ -169,7 +169,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bud-Ug-0Kw">
                                 <rect key="frame" x="16" y="440" width="288" height="30"/>
-                                <color key="backgroundColor" red="0.70429215838241788" green="0.25972848438071783" blue="0.78733740482233505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.73725490196078436" green="0.15686274509803921" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Confirmer"/>
                                 <connections>
