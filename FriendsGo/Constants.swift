@@ -79,6 +79,11 @@ class MyClass {
         
         static let urlgetCorrespondance = BaseURL+"getCorrespondance.php"
         
+         static let urlAddPosition = BaseURL+"addPosition.php"
+        
+         static let urlGetPosition = BaseURL+"getPosition.php"
+        
+         static let urlUpdatePosition = BaseURL+"updatePosition.php"
         
     }
 }

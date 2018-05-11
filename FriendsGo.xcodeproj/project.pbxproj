@@ -37,6 +37,7 @@
 		FB6B37BE2093CB81004EF9EF /* Correspondance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6B37BD2093CB80004EF9EF /* Correspondance.swift */; };
 		FB718F2B20A4645500C0DA9D /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB718F2A20A4645400C0DA9D /* PlacesViewController.swift */; };
 		FB718F2D20A4A12900C0DA9D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB718F2C20A4A12900C0DA9D /* CoreLocation.framework */; };
+		FB718F2F20A5A9EA00C0DA9D /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB718F2E20A5A9EA00C0DA9D /* Position.swift */; };
 		FB8464C920935EE700A46F61 /* ImportFriendsFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8464C820935EE700A46F61 /* ImportFriendsFB.swift */; };
 		FB942BE5207F95F800614B4B /* FB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB942BE4207F95F800614B4B /* FB.swift */; };
 		FB9E7888203E0CEB00E9BCA6 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E7887203E0CEA00E9BCA6 /* Friend.swift */; };
@@ -170,6 +171,7 @@
 		FB6B37BD2093CB80004EF9EF /* Correspondance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Correspondance.swift; sourceTree = "<group>"; };
 		FB718F2A20A4645400C0DA9D /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		FB718F2C20A4A12900C0DA9D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FB718F2E20A5A9EA00C0DA9D /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		FB8464C820935EE700A46F61 /* ImportFriendsFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportFriendsFB.swift; sourceTree = "<group>"; };
 		FB942BE4207F95F800614B4B /* FB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB.swift; sourceTree = "<group>"; };
 		FB9E7887203E0CEA00E9BCA6 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				FB5D93C6206CEE9F00FC55CF /* InvitationFG.swift */,
 				FBDBD7872091DCE100500576 /* InvitationEventFG.swift */,
 				FB44F5F6207530E1001F71CB /* Event.swift */,
+				FB718F2E20A5A9EA00C0DA9D /* Position.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -776,6 +779,7 @@
 				FBB8B08020874B67002DE5FA /* ViewPagerTabViewB.swift in Sources */,
 				FB8464C920935EE700A46F61 /* ImportFriendsFB.swift in Sources */,
 				FBB586D42062A76F0071BFD8 /* ViewPagerTab.swift in Sources */,
+				FB718F2F20A5A9EA00C0DA9D /* Position.swift in Sources */,
 				FB44F5F520752A44001F71CB /* InvitationEventViewController.swift in Sources */,
 				FBB8B08A2087E42A002DE5FA /* ParametersViewController.swift in Sources */,
 				FBDD83B220644B2D006FFA9C /* Constants.swift in Sources */,

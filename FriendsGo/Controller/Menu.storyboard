@@ -88,33 +88,6 @@
             </objects>
             <point key="canvasLocation" x="844" y="-74"/>
         </scene>
-        <!--Map View Controller-->
-        <scene sceneID="5ME-rY-ywe">
-            <objects>
-                <viewController id="YEC-3c-2Nt" userLabel="Map View Controller" customClass="MapViewController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="X5L-mv-A6k"/>
-                        <viewControllerLayoutGuide type="bottom" id="EzB-L4-XLS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ax6-Kj-vyg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SMX-8c-jVc">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="S5l-4P-XxY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="5bb-8n-7r7"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iet-ed-2AY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-849.375" y="747.88732394366195"/>
-        </scene>
         <!--Message View Controller-->
         <scene sceneID="TtJ-OX-Xkw">
             <objects>
@@ -2131,9 +2104,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DLP-Ec-HIU"/>
                     </view>
-                    <connections>
-                        <outlet property="map" destination="hwc-e2-TZG" id="saO-JU-5cG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2LQ-dK-nC7" sceneMemberID="firstResponder"/>
             </objects>

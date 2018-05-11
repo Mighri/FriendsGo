@@ -13,6 +13,12 @@ import CoreLocation
 
 class MapViewController: UIViewController, GMSMapViewDelegate {
     
+    var positions = [Position]()
+    
+    let urlAddPosition = MyClass.Constants.urlAddPosition
+     let urlGetPosition = MyClass.Constants.urlGetPosition
+    let urlUpdatePosition = MyClass.Constants.urlUpdatePosition
+    let userId = UserDefaults.standard.string(forKey: "Saveid")
     
     let coords = [  CLLocation(latitude: 35.8200481161809, longitude: 10.5920922663161),
                     CLLocation(latitude: 36.8200481161809, longitude: 11.5920922663161),
@@ -39,9 +45,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     let defaultLocation = CLLocation(latitude: -33.869405, longitude: 151.199)
     
     // Update the map once the user has made their selection.
-    
-    
-    
+
     override func loadView() {
         
         let camera = GMSCameraPosition.camera(withLatitude: 51.5,
@@ -57,7 +61,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         markerView.tintColor = .red
         londonView = markerView
         
-        let position = CLLocationCoordinate2D(latitude: 51.5, longitude: -0.127)
+        let position = CLLocationCoordinate2D(latitude: 35.8200243115759, longitude: 10.5919910129258)
         let marker = GMSMarker(position: position)
         marker.title = "London"
         marker.iconView = markerView
@@ -112,61 +116,38 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         // Add the map to the view, hide it until we&#39;ve got a location update.
         view.addSubview(mapView)
         mapView.isHidden = true
-        
-        //listLikelyPlaces()
-        
-    
-       // mapView.settings.compassButton = true
 
-        
-        
-       
-      //  mapView.clear()
+         addAnnotations(coords: coords)
+      
+    
+       mapView.settings.compassButton = true
+
+    mapView.clear()
         
         // Add a marker to the map.
         if selectedPlace != nil {
             let marker = GMSMarker(position: (self.selectedPlace?.coordinate)!)
             marker.title = selectedPlace?.name
-            /*
+       
             marker.snippet = selectedPlace?.formattedAddress
             marker.icon = UIImage(named: "Horizz")
             marker.map = mapView
-           
-            */
-      
-          
-           // let marker = GMSMarker(position: position)
-         
-            
-    }
-    }
-    /*
-    // Populate the array with the list of likely places.
-    func listLikelyPlaces() {
-        // Clean up from previous sessions.
-        likelyPlaces.removeAll()
-        
-        placesClient.currentPlace(callback: { _,_ in (placeLikelihoods, error)
-            if let error = error {
-                // TODO: Handle the error.
-                print(error.localizedDescription)
-                return
-            }
-        })
-    }
- */
-    /*
-    // Prepare the segue.
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == segueToSelect) {
-            if let nextViewController = segue.destination as? PlacesViewController {
-                nextViewController.likelyPlaces = likelyPlaces
-            }
-        }
-    }
- */
-}
 
+           // let marker = GMSMarker(position: position)
+    }
+    }
+    func addAnnotations(coords: [CLLocation]){
+        
+        for coord in coords{
+            let CLLCoordType = CLLocationCoordinate2D(latitude: coord.coordinate.latitude,
+                                                      longitude: coord.coordinate.longitude);
+            let anno = MKPointAnnotation();
+            anno.coordinate = CLLCoordType;
+           // mapView.addAnnotation(anno);
+        }
+        
+    }
+}
 // Delegates to handle events for the location manager.
 extension MapViewController: CLLocationManagerDelegate {
     
@@ -195,6 +176,35 @@ extension MapViewController: CLLocationManagerDelegate {
         print(location.speed)
         print(location.coordinate.latitude)
         print(location.coordinate.longitude)
+
+        let p = ["idUP": userId!]
+        
+        Service.sharedInstance.loadPositions(parameters: p, url: urlGetPosition) { (state, Objets) in
+            if state {
+              //  self.FriendArray = Objets!
+                //self.currentFriendArray = self.FriendArray
+                //self.table.reloadData()
+
+                let params = ["Longitude": String(describing:location.coordinate.longitude),
+                                  "latitude": String(describing:location.coordinate.latitude),
+                                  "idU": self.userId!
+                    ]
+                
+                Service.sharedInstance.postIt(parameters:params , url:self.urlUpdatePosition)
+                
+                print("Update done")
+              
+            } else {
+                
+                let parameters = ["Longitude": String(describing:location.coordinate.longitude),
+                                  "latitude": String(describing:location.coordinate.latitude),
+                                  "idU": self.userId!
+                    ] as [String: String]
+                
+            Service.sharedInstance.postIt(parameters:parameters, url:self.urlAddPosition)
+                print("NewPosition")
+            }
+        }
     }
     
     // Handle authorization for the location manager.
@@ -220,7 +230,3 @@ extension MapViewController: CLLocationManagerDelegate {
       print(error)
     }
 }
-
-
-
-

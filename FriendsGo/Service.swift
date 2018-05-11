@@ -395,6 +395,46 @@ class Service {
     }
     
     
+    
+    
+    
+    func loadPositions(parameters: [String : Any], url: String, completionHandler:@escaping (Bool, [Position]?) -> ()) {
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/x-www-form-urlencoded"
+        ]
+
+        Alamofire.request(url, method:.post, parameters: parameters, headers : headers)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case let .success(value):
+                    
+                    if let result = value as? [String: Any] {
+                        
+                        if let items = result["Positions"] as? [[String: Any]] {
+                            let invEvent = Mapper<Position>().mapArray(JSONArray: items )
+                            print(items)
+                            
+                            print(invEvent)
+                            
+                            completionHandler(true, invEvent)
+                            
+                        } else {
+                            completionHandler(false, nil)
+                        }
+                    }
+                    
+                case let .failure(error):
+                    print(error)
+                    completionHandler(false, nil)
+                }
+        }
+        
+    }
+    
+    
+    
+    
    /*
     func downloadImageFromServer(completionHandler: (Bool, UIImage?) -> ()) {
         var image : UIImage?
