@@ -116,10 +116,11 @@ class MyEventsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //print(currentEventArray[indexPath.row].image)
         
-       let dataDecoded : Data = Data(base64Encoded: currentEventArray[indexPath.row].image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
+      // let dataDecoded : Data = Data(base64Encoded: currentEventArray[indexPath.row].image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
         
-      cell.imageEvent.image = UIImage(data: dataDecoded)
+      //cell.imageEvent.image = UIImage(data: dataDecoded)
         
+        cell.imageEvent.sd_setImage(with: URL(string: currentEventArray[indexPath.row].image), placeholderImage: nil)
         
         //let imagedecoded = Data.init(base64Encoded: currentEventArray[indexPath.row].image)
         //cell.imageEvent.image = UIImage(data: imagedecoded!)!

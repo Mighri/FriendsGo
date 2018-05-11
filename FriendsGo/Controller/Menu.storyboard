@@ -91,7 +91,7 @@
         <!--Map View Controller-->
         <scene sceneID="5ME-rY-ywe">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" id="YEC-3c-2Nt" userLabel="Map View Controller" customClass="MapViewController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YEC-3c-2Nt" userLabel="Map View Controller" customClass="MapViewController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X5L-mv-A6k"/>
                         <viewControllerLayoutGuide type="bottom" id="EzB-L4-XLS"/>
@@ -100,22 +100,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGF-QA-czY">
-                                <rect key="frame" x="180" y="100" width="240" height="93"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="1lY-bw-nUj"/>
-                                    <constraint firstAttribute="height" constant="93" id="oVz-bd-Oeo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SMX-8c-jVc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
-                        <color key="backgroundColor" red="0.89411764709999997" green="0.91764705879999997" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="qGF-QA-czY" firstAttribute="top" secondItem="X5L-mv-A6k" secondAttribute="bottom" constant="80" id="4JT-zF-p43"/>
-                            <constraint firstAttribute="centerX" secondItem="qGF-QA-czY" secondAttribute="centerX" id="Jrk-Om-g2c"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S5l-4P-XxY"/>
                     </view>
                     <navigationItem key="navigationItem" id="5bb-8n-7r7"/>
@@ -124,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iet-ed-2AY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-849" y="748"/>
+            <point key="canvasLocation" x="-849.375" y="747.88732394366195"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="TtJ-OX-Xkw">
@@ -418,6 +407,7 @@
                                         <connections>
                                             <outlet property="Nom" destination="OaB-SW-aXs" id="587-3s-paS"/>
                                             <outlet property="iconimage" destination="7lP-zE-0zA" id="o3Z-pI-pzq"/>
+                                            <outlet property="iconimage2" destination="L8a-qv-tbF" id="hsh-HF-S4X"/>
                                             <outlet property="imageUrl" destination="mZS-fQ-Use" id="lh5-N2-WKk"/>
                                         </connections>
                                     </tableViewCell>
@@ -1324,7 +1314,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXV-Qm-ZJe">
-                                            <rect key="frame" x="16" y="11" width="74" height="69"/>
+                                            <rect key="frame" x="16" y="11" width="74" height="74"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYI-sV-LXk">
@@ -1466,6 +1456,14 @@
                                                     <constraint firstAttribute="height" constant="363" id="ABr-VQ-ejC"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7n-VF-P8N">
+                                                <rect key="frame" x="10" y="10" width="38" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="backk"/>
+                                                <connections>
+                                                    <action selector="back:" destination="pRU-gr-oSO" eventType="touchUpInside" id="i9f-T8-Ilg"/>
+                                                </connections>
+                                            </button>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c8q-4N-n04">
                                                 <rect key="frame" x="16" y="808" width="296" height="176"/>
                                                 <constraints>
@@ -1770,6 +1768,49 @@
             </objects>
             <point key="canvasLocation" x="-881" y="6148"/>
         </scene>
+        <!--Webview View Controller-->
+        <scene sceneID="BwB-D3-faq">
+            <objects>
+                <viewController storyboardIdentifier="WebviewViewController" id="SLM-hi-CsK" customClass="WebviewViewController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WFf-dB-nBJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhk-Xs-vHo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcM-Lt-7ye">
+                                <rect key="frame" x="10" y="30" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="backk"/>
+                                <connections>
+                                    <action selector="back:" destination="811-MB-8Ct" eventType="touchUpInside" id="Slr-O8-CGd"/>
+                                    <action selector="back:" destination="SLM-hi-CsK" eventType="touchUpInside" id="TOj-66-IRm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jhk-Xs-vHo" firstAttribute="leading" secondItem="WyM-xo-TJi" secondAttribute="leading" id="Jml-0S-G0d"/>
+                            <constraint firstItem="jhk-Xs-vHo" firstAttribute="bottom" secondItem="WyM-xo-TJi" secondAttribute="bottom" id="M2S-uY-8s6"/>
+                            <constraint firstItem="jhk-Xs-vHo" firstAttribute="trailing" secondItem="WyM-xo-TJi" secondAttribute="trailing" id="ZEY-tZ-fio"/>
+                            <constraint firstItem="jhk-Xs-vHo" firstAttribute="top" secondItem="WFf-dB-nBJ" secondAttribute="top" id="a40-zF-xdR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WyM-xo-TJi"/>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="jhk-Xs-vHo" id="CyM-Q1-diw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVw-ju-Ggz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99.375" y="6147.8873239436616"/>
+        </scene>
         <!--Parameters View Controller-->
         <scene sceneID="meD-a8-UjW">
             <objects>
@@ -1935,7 +1976,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="          FriendsGo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih7-Hi-mI2">
-                                <rect key="frame" x="0.0" y="28" width="320" height="41"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.069367997348308563" green="0.33657476305961609" blue="0.52863848209381104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1943,7 +1984,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqP-HK-RwI">
-                                <rect key="frame" x="0.0" y="39" width="27" height="18"/>
+                                <rect key="frame" x="0.0" y="11" width="27" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="backk"/>
                                 <connections>
@@ -1951,23 +1992,27 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="party" translatesAutoresizingMaskIntoConstraints="NO" id="t4N-y9-0ox">
-                                <rect key="frame" x="5" y="81" width="76" height="60"/>
+                                <rect key="frame" x="16" y="49" width="76" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu0-cO-O10">
-                                <rect key="frame" x="117" y="81" width="42" height="21"/>
+                                <rect key="frame" x="128" y="49" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-GR-qea">
-                                <rect key="frame" x="117" y="110" width="42" height="21"/>
+                                <rect key="frame" x="128" y="78" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Horizz" translatesAutoresizingMaskIntoConstraints="NO" id="e9z-sk-b4h">
+                                <rect key="frame" x="-6" y="132" width="332" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TlI-vQ-6GZ"/>
@@ -2061,10 +2106,44 @@
             </objects>
             <point key="canvasLocation" x="2368" y="-839"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="t3d-Zv-7lF">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="tRV-jz-OlF" customClass="MapViewController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X8Z-9n-sHa"/>
+                        <viewControllerLayoutGuide type="bottom" id="XTe-3s-7mO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OXx-e1-5H6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hwc-e2-TZG">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hwc-e2-TZG" firstAttribute="leading" secondItem="OXx-e1-5H6" secondAttribute="leading" id="3vH-ga-Mbp"/>
+                            <constraint firstItem="XTe-3s-7mO" firstAttribute="top" secondItem="hwc-e2-TZG" secondAttribute="bottom" id="6V6-3g-U1b"/>
+                            <constraint firstAttribute="trailing" secondItem="hwc-e2-TZG" secondAttribute="trailing" id="EWd-aC-IPH"/>
+                            <constraint firstItem="hwc-e2-TZG" firstAttribute="top" secondItem="X8Z-9n-sHa" secondAttribute="bottom" id="IwL-2d-1bj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DLP-Ec-HIU"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="hwc-e2-TZG" id="saO-JU-5cG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2LQ-dK-nC7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="711"/>
+        </scene>
     </scenes>
     <resources>
         <image name=" Address" width="150" height="150"/>
         <image name="FriendsGo" width="29" height="29"/>
+        <image name="Horizz" width="199" height="8"/>
         <image name="addEvent" width="546" height="553"/>
         <image name="background" width="399" height="557"/>
         <image name="backk" width="980" height="772"/>

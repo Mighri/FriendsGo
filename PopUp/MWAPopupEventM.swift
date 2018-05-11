@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 import MapKit
-// 
+import Alamofire
+//
+
+typealias Parameters = [String: String]
+
+
 class MWAPopupEventM: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var eventName: UITextField!
@@ -121,7 +126,36 @@ class MWAPopupEventM: UIViewController, UINavigationControllerDelegate, UIImageP
     
     // 
     
+    
+    /*
+    func updateProfileImage(image: UIImage) {
+        print(#function)
+        let image:[String : Any] = ["image" : image,
+                                    "imageName" : "profileImage"]
+        
+        TANetworkManager.sharedInstance.requestMultiPart(withServiceName: "updateProfileImage",
+                                                         requestMethod: .post,
+                                                         requestImages: [image],
+                                                         requestVideos: [:],
+                                                         requestData: [:])
+        {(result: Any?, error: Error?, errorType: Error, statusCode: Int?) in
+            
+            if errorType == .requestSuccess {
+                // Success
+                
+            } else if errorType == .noNetwork {
+                // Show error message
+            } else {
+                // Show error message
+            }
+        }
+    }
+    
+    */
+    
+    
     @IBAction private func registerButtonTapped(_ sender: UIButton) {
+        
         
         let userId = UserDefaults.standard.string(forKey: "Saveid")
         print(userId!)
@@ -215,12 +249,15 @@ class MWAPopupEventM: UIViewController, UINavigationControllerDelegate, UIImageP
         {
             //myImageView.image = image
             //var logo = UIImage(named: "image_logo")
-            let imageData:Data =  UIImagePNGRepresentation(image)!
-            let base64String = imageData.base64EncodedString()
+            //let imageData:Data =  UIImagePNGRepresentation(image)!
+            //let base64String = imageData.base64EncodedString()
             //  print(base64String)
             
-            UserDefaults.standard.set(base64String, forKey: "imageEvent")
             
+            
+            //UserDefaults.standard.set(base64String, forKey: "imageEvent")
+            
+            postRequest(image:image)
             /*
              let imagedecoded = Data(base64Encoded: base64String, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
              myImageView.image = UIImage(data: imagedecoded)!
@@ -294,4 +331,135 @@ class MWAPopupEventM: UIViewController, UINavigationControllerDelegate, UIImageP
         self.removeFromParentViewController()
     }
     
+    
+    /*
+    
+    func requestWith(endUrl: String, imageData: Data?, parameters: [String : Any], onCompletion: ((JSON?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil){
+        
+        let url = "http://google.com" /* your API url */
+        
+        let headers: HTTPHeaders = [
+            /* "Authorization": "your_access_token",  in case you need authorization header */
+            "Content-type": "multipart/form-data"
+        ]
+        
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            for (key, value) in parameters {
+                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+            }
+            
+            if let data = imageData{
+                multipartFormData.append(data, withName: "image", fileName: "image.png", mimeType: "image/png")
+            }
+            
+        }, usingThreshold: UInt64.init(), to: url, method: .post, headers: headers) { (result) in
+            switch result{
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    print("Succesfully uploaded")
+                    if let err = response.error{
+                        onError?(err)
+                        return
+                    }
+                    onCompletion?(nil)
+                }
+            case .failure(let error):
+                print("Error in upload: \(error.localizedDescription)")
+                onError?(error)
+            }
+        }
+    }
+    
+    */
+    
+    
+    func postRequest(image:UIImage) {
+        
+        let parameters = ["name": "MyTestFile123321",
+                          "description": "My tutorial test file for MPFD uploads"]
+        
+        guard let mediaImage = Media(withImage: image, forKey: "image") else { return }
+        
+        guard let url = URL(string: "https://api.imgur.com/3/image") else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        let boundary = generateBoundary()
+        
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        request.addValue("Client-ID f65203f7020dddc", forHTTPHeaderField: "Authorization")
+        
+        let dataBody = createDataBody(withParameters: parameters, media: [mediaImage], boundary: boundary)
+        request.httpBody = dataBody
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                    let info = json as! [String : AnyObject]
+                    let infoPicture = info["data"] as! [String : AnyObject]
+                    //let Objet = (infoPicture as! [String : AnyObject])["data"]
+                    let photo = infoPicture["link"] as! String
+                    print(photo)
+                    
+                    UserDefaults.standard.set(photo, forKey: "imageEvent")
+                    
+                } catch {
+                    print(error)
+                }
+            }
+            }.resume()
+    }
+    
+    func generateBoundary() -> String {
+        return "Boundary-\(NSUUID().uuidString)"
+    }
+    
+    func createDataBody(withParameters params: Parameters?, media: [Media]?, boundary: String) -> Data {
+        
+        let lineBreak = "\r\n"
+        var body = Data()
+        
+        if let parameters = params {
+            for (key, value) in parameters {
+                body.append("--\(boundary + lineBreak)")
+                body.append("Content-Disposition: form-data; name=\"\(key)\"\(lineBreak + lineBreak)")
+                body.append("\(value + lineBreak)")
+            }
+        }
+        
+        if let media = media {
+            for photo in media {
+                body.append("--\(boundary + lineBreak)")
+                body.append("Content-Disposition: form-data; name=\"\(photo.key)\"; filename=\"\(photo.filename)\"\(lineBreak)")
+                body.append("Content-Type: \(photo.mimeType + lineBreak + lineBreak)")
+                body.append(photo.data)
+                body.append(lineBreak)
+            }
+        }
+        
+        body.append("--\(boundary)--\(lineBreak)")
+        
+        return body
+    }
+    
+    
+    
+    
+    
+}
+
+
+extension Data {
+    mutating func append(_ string: String) {
+        if let data = string.data(using: .utf8) {
+            append(data)
+        }
+    }
 }

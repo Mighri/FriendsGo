@@ -21,6 +21,7 @@ class InviteContactController: UIViewController, UITableViewDataSource, UITableV
     let urlgetUsers = MyClass.Constants.urlgetUsers
     let urlInvitationFG = MyClass.Constants.urlInvitationFG
     let urlverifInvitation = MyClass.Constants.urlverifInvitation
+     let urlgetContacts = MyClass.Constants.urlgetContacts
     let userId = UserDefaults.standard.string(forKey: "Saveid")!
     var searching: Bool! = false
     let urlgetAmis = MyClass.Constants.urlgetAmis
@@ -58,7 +59,7 @@ class InviteContactController: UIViewController, UITableViewDataSource, UITableV
         
         let p = ["IdU" : userId]
         
-        Service.sharedInstance.loadInfoAny(parameters: p, url: urlgetAmis) { (state, Objets) in
+        Service.sharedInstance.loadInfoAny(parameters: p, url: urlgetContacts) { (state, Objets) in
             if state {
                 self.FriendArray = Objets!
                 self.currentFriendArray = self.FriendArray

@@ -13,6 +13,7 @@ pod 'ObjectMapper'
 pod 'SwiftyJSON'
 pod 'SDWebImage', '4.0'
 pod 'GoogleSignIn'
-
-
+pod 'AlamofireImage'
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 end

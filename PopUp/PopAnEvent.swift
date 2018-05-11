@@ -64,7 +64,7 @@ class PopAnEvent: UIViewController {
         
         let ViewController = mystoryboard.instantiateViewController(withIdentifier: "InviteForEventController") as! InviteForEventController
           ViewController.event = event
-       //self.present(ViewController, animated: true, completion: nil)
+     //self.present(ViewController, animated: true, completion: nil)
      self.navigationController?.pushViewController(ViewController, animated: true)
  
     }

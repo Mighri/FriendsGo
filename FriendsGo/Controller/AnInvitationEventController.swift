@@ -59,8 +59,8 @@ class AnInvitationEventController: UIViewController {
         }
         
         
-        let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
-        imageEvent.image = UIImage(data: imagedecoded)!
+       // let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
+        imageEvent.sd_setImage(with: URL(string: event.image), placeholderImage: nil)
         
         
         mapView.removeAnnotations(mapView.annotations)
@@ -109,6 +109,37 @@ class AnInvitationEventController: UIViewController {
         
         */
  
+    }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    
+    
+    @IBAction func back(_ sender: UIButton) {
+        
+        print("%%%%%%%%%%%%%%%%%%%%")
+        
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
+        
+        //ViewController.event = event
+        
+        self.navigationController?.pushViewController(ViewController, animated: true)
+        
     }
     
     
@@ -163,6 +194,13 @@ class AnInvitationEventController: UIViewController {
     
     @IBAction func googleMaps(_ sender: UIButton) {
         
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "WebviewViewController") as! WebviewViewController
+        
+        //ViewController.event = event
+        
+        self.navigationController?.pushViewController(ViewController, animated: true)
     }
     
 }

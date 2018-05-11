@@ -31,7 +31,12 @@
 		FB647AA4208F72D4006EF6D8 /* InviteForEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */; };
 		FB647AA6208FC84C006EF6D8 /* InviteContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */; };
 		FB647AA920912BE6006EF6D8 /* MWAPopupEventM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */; };
+		FB68097A2098C85600894F89 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB68097B2098C85600894F89 /* AlamofireImage.framework */; };
+		FB6809BB2099D1A300894F89 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6809BA2099D1A300894F89 /* Media.swift */; };
+		FB6809BD209A0B9000894F89 /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6809BC209A0B9000894F89 /* WebviewViewController.swift */; };
 		FB6B37BE2093CB81004EF9EF /* Correspondance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6B37BD2093CB80004EF9EF /* Correspondance.swift */; };
+		FB718F2B20A4645500C0DA9D /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB718F2A20A4645400C0DA9D /* PlacesViewController.swift */; };
+		FB718F2D20A4A12900C0DA9D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB718F2C20A4A12900C0DA9D /* CoreLocation.framework */; };
 		FB8464C920935EE700A46F61 /* ImportFriendsFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8464C820935EE700A46F61 /* ImportFriendsFB.swift */; };
 		FB942BE5207F95F800614B4B /* FB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB942BE4207F95F800614B4B /* FB.swift */; };
 		FB9E7888203E0CEB00E9BCA6 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E7887203E0CEA00E9BCA6 /* Friend.swift */; };
@@ -159,7 +164,12 @@
 		FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactController.swift; sourceTree = "<group>"; };
 		FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWAPopupEventM.swift; sourceTree = "<group>"; };
 		FB647AAA20913900006EF6D8 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Test-Bridging-Header.h"; path = "../../../Test-Bridging-Header.h"; sourceTree = "<group>"; };
+		FB68097B2098C85600894F89 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB6809BA2099D1A300894F89 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		FB6809BC209A0B9000894F89 /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
 		FB6B37BD2093CB80004EF9EF /* Correspondance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Correspondance.swift; sourceTree = "<group>"; };
+		FB718F2A20A4645400C0DA9D /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		FB718F2C20A4A12900C0DA9D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FB8464C820935EE700A46F61 /* ImportFriendsFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportFriendsFB.swift; sourceTree = "<group>"; };
 		FB942BE4207F95F800614B4B /* FB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB.swift; sourceTree = "<group>"; };
 		FB9E7887203E0CEA00E9BCA6 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
@@ -251,7 +261,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB718F2D20A4A12900C0DA9D /* CoreLocation.framework in Frameworks */,
 				FB03AD4B2078245400144ED6 /* MapKit.framework in Frameworks */,
+				FB68097A2098C85600894F89 /* AlamofireImage.framework in Frameworks */,
 				FB145A7F2057E8400038A30B /* GTMSessionFetcher.framework in Frameworks */,
 				FB145A7D2057E83B0038A30B /* GTMOAuth2.framework in Frameworks */,
 				FB145A7B2057E8320038A30B /* GoogleToolboxForMac.framework in Frameworks */,
@@ -286,6 +298,8 @@
 		5367E08D841B6112B2821F68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB718F2C20A4A12900C0DA9D /* CoreLocation.framework */,
+				FB68097B2098C85600894F89 /* AlamofireImage.framework */,
 				FB03AD4A2078245300144ED6 /* MapKit.framework */,
 				FB145A802057E8400038A30B /* GTMSessionFetcher.framework */,
 				FB145A7E2057E83B0038A30B /* GTMOAuth2.framework */,
@@ -322,6 +336,7 @@
 				FB50A8152072757D00702130 /* MWAPopupC.swift */,
 				FB44F5FA20761FF6001F71CB /* MWAPopupAddEvent.swift */,
 				FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */,
+				FB6809BA2099D1A300894F89 /* Media.swift */,
 				FBB8B06B2085FFB8002DE5FA /* PopAnEvent.swift */,
 				FBB8B06F20860C0C002DE5FA /* UpdateEvent.swift */,
 				FBB8B071208689D1002DE5FA /* InvitationEventPopUp.swift */,
@@ -378,6 +393,7 @@
 				FB44F5F2207529DE001F71CB /* MyEventsViewController.swift */,
 				FBB8B0692084E057002DE5FA /* AnEventViewController.swift */,
 				FBB8B0852087DBA6002DE5FA /* AnInvitationEventController.swift */,
+				FB6809BC209A0B9000894F89 /* WebviewViewController.swift */,
 				FBB52B3E204B184C004CC997 /* LeftViewController.swift */,
 				FBB52B40204B186B004CC997 /* RightViewController.swift */,
 				FBB52B42204B188B004CC997 /* ContactViewController.swift */,
@@ -390,6 +406,7 @@
 				FBB52B44204B18B5004CC997 /* EventViewController.swift */,
 				FBB8B07320868EC1002DE5FA /* InviteFriendsController.swift */,
 				FBB52B46204B18D3004CC997 /* MapViewController.swift */,
+				FB718F2A20A4645400C0DA9D /* PlacesViewController.swift */,
 				FBB52B4A204B1911004CC997 /* SubContentsViewController.swift */,
 				FBB52B4C204B194F004CC997 /* ExSlideMenuController.swift */,
 				FBB8B07520869102002DE5FA /* ParticipantsController.swift */,
@@ -667,6 +684,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FriendsGo/Pods-FriendsGo-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -704,6 +723,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FriendsGo/Pods-FriendsGo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -718,6 +738,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -773,6 +794,7 @@
 				FBB52B57204B1A71004CC997 /* UITableViewExtension.swift in Sources */,
 				FB50A8162072757D00702130 /* MWAPopupC.swift in Sources */,
 				FBDBD7882091DCE100500576 /* InvitationEventFG.swift in Sources */,
+				FB6809BB2099D1A300894F89 /* Media.swift in Sources */,
 				FBB52B63204B1B12004CC997 /* UIApplication.swift in Sources */,
 				FBE61C322089415800626B69 /* ParametersCell.swift in Sources */,
 				FBDD83B62065684B006FFA9C /* TableCell.swift in Sources */,
@@ -789,6 +811,7 @@
 				FB647AA4208F72D4006EF6D8 /* InviteForEventController.swift in Sources */,
 				FBB8B09020888E52002DE5FA /* InvitationEventCell.swift in Sources */,
 				FBECB1942045C15E0001DC89 /* RegisterUserViewController.swift in Sources */,
+				FB718F2B20A4645500C0DA9D /* PlacesViewController.swift in Sources */,
 				FBB8B08220874BFF002DE5FA /* ViewPagerControllerB.swift in Sources */,
 				FBB52B43204B188B004CC997 /* ContactViewController.swift in Sources */,
 				FBB8B08C2087F483002DE5FA /* InvAmisController.swift in Sources */,
@@ -798,6 +821,7 @@
 				FBDD83B4206567B4006FFA9C /* ListContactsViewController.swift in Sources */,
 				FBB8B09220889B6C002DE5FA /* FriendsInvitController.swift in Sources */,
 				FBDD83B82068372F006FFA9C /* SearchViewController.swift in Sources */,
+				FB6809BD209A0B9000894F89 /* WebviewViewController.swift in Sources */,
 				FBE61C3020893D3900626B69 /* NotificationCell.swift in Sources */,
 				FBB52B5B204B1AB5004CC997 /* UIImageView.swift in Sources */,
 				FBF27CD4204EF59E007E59E7 /* InvitationViewController.swift in Sources */,

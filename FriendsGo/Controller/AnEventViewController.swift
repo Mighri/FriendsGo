@@ -53,8 +53,8 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
         }
         
         
-        let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
-        imageEvent.image = UIImage(data: imagedecoded)!
+        //let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
+        imageEvent.sd_setImage(with: URL(string: event.image), placeholderImage: nil)
    
     
         mapView.removeAnnotations(mapView.annotations)
@@ -66,6 +66,21 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
     
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+   
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+ 
     
     @IBAction func newPopUp(_ sender: AnyObject) {
       

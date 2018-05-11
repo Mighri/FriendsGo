@@ -114,11 +114,14 @@ class InvitationEventViewController : UIViewController, UITableViewDataSource, U
         cell.heure.text = currentEventArray[indexPath.row].heure
         cell.adresse.text = currentEventArray[indexPath.row].adresse
         
+        print(currentEventArray[indexPath.row].image)
+        
+          cell.imageEvent.sd_setImage(with: URL(string: currentEventArray[indexPath.row].image), placeholderImage: nil)
         //print(currentEventArray[indexPath.row].image)
         
-        let dataDecoded : Data = Data(base64Encoded: currentEventArray[indexPath.row].image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
+        //let dataDecoded : Data = Data(base64Encoded: currentEventArray[indexPath.row].image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
         
-        cell.imageEvent.image = UIImage(data: dataDecoded)
+        //cell.imageEvent.image = UIImage(data: dataDecoded)
         
         return cell
     }

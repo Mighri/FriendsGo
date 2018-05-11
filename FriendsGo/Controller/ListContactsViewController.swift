@@ -104,7 +104,29 @@ class ListContactsViewController: UIViewController, UITableViewDataSource, UITab
         
         cell.imageUrl.sd_setImage(with: URL(string: self.currentFriendArray[indexPath.row].photoURL), placeholderImage: UIImage(named: "profile"))
         
-        cell.iconimage.image = UIImage(named: "logo-facebook")
+        //cell.iconimage.image = UIImage(named: "logo-facebook")
+        
+        
+        if(self.currentFriendArray[indexPath.row].origine == "Facebook")
+        {
+            cell.iconimage.image = UIImage(named: "fb-icon")
+        }
+        else if(self.currentFriendArray[indexPath.row].origine == "Google")
+        {
+            cell.iconimage.image = UIImage(named: "Google-icon")
+        }
+        
+        print(self.currentFriendArray[indexPath.row].telephone)
+
+        if(self.currentFriendArray[indexPath.row].telephone == "NULL")
+        {
+           print("No Phone number")
+        }
+        else
+        {
+            cell.iconimage2.image = UIImage(named: "phone-icon")
+            UserDefaults.standard.set(self.currentFriendArray[indexPath.row].telephone, forKey: "telContact")
+        }
 
         return cell
     }
@@ -230,8 +252,18 @@ class ListContactsViewController: UIViewController, UITableViewDataSource, UITab
         
         popup?.textFieldTextColor = .white
         popup?.textFieldTextFont = UIFont.systemFont(ofSize: 12)
+       
+        let telContact = UserDefaults.standard.string(forKey: "telContact")
         
-        popup?.textFieldPlaceholder = "N° de téléphone"
+        if (telContact  != "NULL")
+        {
+            popup?.textFieldPlaceholder = telContact
+        }
+        else
+        {
+             popup?.textFieldPlaceholder = "N° de téléphone"
+        }
+       
         
         popup?.textFieldPlaceholderColor = .white
         popup?.textFieldPlaceholderFont = UIFont.boldSystemFont(ofSize: 11)
@@ -241,7 +273,7 @@ class ListContactsViewController: UIViewController, UITableViewDataSource, UITab
         popup?.onFirstButtonTapped = { () in
             print("Entered Information::" + (popup?.textField.text)!)
           
-            if (popup?.textField.text!.isPhone())!
+            if ((popup?.textField.text!.isPhone())! || (telContact?.isPhone())!)
             {
                 let tagg = UserDefaults.standard.string(forKey: "ag")
                 print(tagg!)

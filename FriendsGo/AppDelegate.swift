@@ -11,13 +11,15 @@ import FBSDKShareKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 import GoogleSignIn
+import GoogleMaps
+import GooglePlaces
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         //facebook
@@ -44,7 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
    
         }
     */
-    
+    GMSServices.provideAPIKey("AIzaSyCjPSfqvEXANHT-itplcDV30fGr2yxW7CU")
+        
+        GMSPlacesClient.provideAPIKey("AIzaSyCjPSfqvEXANHT-itplcDV30fGr2yxW7CU")
       return true
     }
     

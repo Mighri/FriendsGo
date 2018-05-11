@@ -20,7 +20,7 @@ class Friend: NSObject, Mappable{
     var password: String!
     var inscrivia: String!
     var idS: String!
-    
+    var origine: String!
     required init?(map: Map) {
         
     }
@@ -31,6 +31,7 @@ class Friend: NSObject, Mappable{
         Nom     <- map["Nom"]
         prenom    <- map["prenom"]
         email   <- map["Mail"]
+         origine   <- map["origine"]
         password    <- map["MotDePasse"]
         telephone <- map["telephone"]
         photoURL    <- map["PhotoURL"]

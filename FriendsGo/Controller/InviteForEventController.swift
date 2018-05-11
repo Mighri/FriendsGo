@@ -30,8 +30,9 @@ class InviteForEventController: UIViewController, UINavigationControllerDelegate
         
         titreEvent.text = event.titre
         adresseEvent.text = event.adresse
-        let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
-        imageEvent.image = UIImage(data: imagedecoded)!
+        //let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
+        //imageEvent.image = UIImage(data: imagedecoded)!
+          imageEvent.sd_setImage(with: URL(string: event.image), placeholderImage: nil)
         //options = ViewPagerOptionsB(viewPagerWithFrame: self.view.bounds)
         
         options = ViewPagerOptionsB(viewPagerWithFrame: CGRect(x: 0, y: 150, width: 320, height: 600))
@@ -53,6 +54,23 @@ class InviteForEventController: UIViewController, UINavigationControllerDelegate
         viewPager.didMove(toParentViewController: self)
         
     }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     
     
     @IBAction func back(_ sender: UIButton) {

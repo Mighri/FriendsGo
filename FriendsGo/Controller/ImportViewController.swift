@@ -12,16 +12,18 @@ import FBSDKCoreKit
 import FBSDKShareKit
 
 class ImportViewController: UIViewController{
+    
       let userId = UserDefaults.standard.string(forKey: "Saveid")!
     var friend : Friend!
+     var correspondance : Correspondance!
     var FriendArray = [Friend]()
-   // var correspondance = Correspondance
+    var correspondances = [Correspondance]()
     
     let urlRegisterContact = MyClass.Constants.urlRegisterContact
     let urlUserContact = MyClass.Constants.urlUserContact
     let urlImportContactsFBG = MyClass.Constants.urlImportContactsFBG
      let urlgetCorrespondance = MyClass.Constants.urlgetCorrespondance
-    
+      let urlgetAmis = MyClass.Constants.urlgetAmis
     
     @IBOutlet weak var facebookButton : UIButton!
     @IBOutlet weak var googleButton : UIButton!
@@ -49,22 +51,6 @@ class ImportViewController: UIViewController{
     }
     @IBAction func fbLogin(_ sender: Any) {
         
-        /*
-        let params = [
-            "idU": self.userId,
-            "idContact": self.friend.id]
-        Service.sharedInstance.loadCorrespondance(parameters:params as! [String : String] , url:self.urlgetCorrespondance) { (state, Objets) in
-            if state {
-                
-                //self.FriendArray = Objets!
-                print("Objets")
-            }
-        else
-        {
-            print("nooo")
-        }
-    }
-        */
         
         let p = ["inscrivia" : "Facebook"]
         
@@ -77,23 +63,45 @@ class ImportViewController: UIViewController{
                 self.friend = Objets![i]
                 
                 
-                let params = [
-                    "idU": self.userId,
-                    "idContact": self.friend.id]
+                    let p = ["IdUkjk" : self.userId, "idContacttt" : self.friend.id]
+                    
+                    Service.sharedInstance.loadCorrespondance(parameters: p as! [String : String], url: self.urlgetCorrespondance) { (state, Objets) in
+                        if state {
+                            
+                            print("déjà importé")
+                            
+                        } else {
+                            
+                            
+                            
+                            let params = [
+                                "idU": self.userId,
+                                "idContact": self.friend.id]
+                            
+                            Service.sharedInstance.postIt(parameters:params as! [String : String] , url:self.urlUserContact)
+                            
+                            
+                            let pr = ["Nom": self.friend.Nom,
+                                      "Prenom": self.friend.prenom,
+                                      "photoURL": self.friend.photoURL,
+                                      "origine": "Facebook",
+                                      "idContact": self.friend.id]
+                            
+                            Service.sharedInstance.postIt(parameters:pr as! [String : String] , url:self.urlRegisterContact)
+                            
+                            
+                            print("Objets")
+                            
+                            
+                            
+                            print("nooo")
+                        }
+                        
+                    }
+                    
+                    
+                    
                 
-                Service.sharedInstance.postIt(parameters:params as! [String : String] , url:self.urlUserContact)
-                
-                
-                let pr = ["Nom": self.friend.Nom,
-                          "Prenom": self.friend.prenom,
-                          "photoURL": self.friend.photoURL,
-                          "origine": "Facebook",
-                          "idContact": self.friend.id]
-                
-                Service.sharedInstance.postIt(parameters:pr as! [String : String] , url:self.urlRegisterContact)
-                
-                
-                print("Objets")
                 }
                 
             } else {
@@ -119,33 +127,54 @@ class ImportViewController: UIViewController{
                     self.friend = Objets![i]
                     
                     
-                    let params = [
-                        "idU": self.userId,
-                        "idContact": self.friend.id]
+                    let p = ["IdUkjk" : self.userId, "idContacttt" : self.friend.id]
                     
-                    Service.sharedInstance.postIt(parameters:params as! [String : String] , url:self.urlUserContact)
+                    Service.sharedInstance.loadCorrespondance(parameters: p as! [String : String], url: self.urlgetCorrespondance) { (state, Objets) in
+                        if state {
+                            
+                            print("déjà importé")
+                            
+                        } else {
+                            
+                            
+                            
+                            let params = [
+                                "idU": self.userId,
+                                "idContact": self.friend.id]
+                            
+                            Service.sharedInstance.postIt(parameters:params as! [String : String] , url:self.urlUserContact)
+                            
+                            
+                            let pr = ["Nom": self.friend.Nom,
+                                      "Prenom": self.friend.prenom,
+                                      "photoURL": self.friend.photoURL,
+                                      "origine": "Google",
+                                      "idContact": self.friend.id]
+                            
+                            Service.sharedInstance.postIt(parameters:pr as! [String : String] , url:self.urlRegisterContact)
+                            
+                            
+                            print("Objets")
+                            
+                            
+                            
+                            print("nooo")
+                        }
+                        
+                    }
                     
                     
-                    let pr = ["Nom": self.friend.Nom,
-                              "Prenom": self.friend.prenom,
-                              "photoURL": self.friend.photoURL,
-                              "origine": "Google",
-                              "idContact": self.friend.id]
-                    
-                    Service.sharedInstance.postIt(parameters:pr as! [String : String] , url:self.urlRegisterContact)
                     
                     
-                    print("Objets")
                 }
                 
             } else {
                 print("nooo")
             }
         }
-    }
 }
  
-    
+}
     extension ImportViewController : SlideMenuControllerDelegate {
         
         func leftWillOpen() {

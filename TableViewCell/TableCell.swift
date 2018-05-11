@@ -15,6 +15,7 @@ class TableCell: UITableViewCell {
     @IBOutlet var Nom: UILabel!
    //  @IBOutlet var Prenom: UILabel!
     @IBOutlet var iconimage: UIImageView!
+     @IBOutlet var iconimage2: UIImageView!
       @IBOutlet var button : UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()

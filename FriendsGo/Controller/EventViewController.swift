@@ -12,7 +12,7 @@ class EventViewController: UIViewController {
     
     var tabs = [
         ViewPagerTab(title: "   Invitations"),
-        ViewPagerTab(title: "   Mes événements")
+        ViewPagerTab(title: "   Mes évènements")
     ]
     
     var viewPager:ViewPagerController!

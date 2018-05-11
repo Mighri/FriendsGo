@@ -19,7 +19,7 @@ class Correspondance: NSObject, Mappable{
     }
     // Mappable
     func mapping(map: Map) {
-        idUser    <- map["IdU"]
+        idUser    <- map["IdUC"]
         idContact     <- map["IdC"]
     }
     

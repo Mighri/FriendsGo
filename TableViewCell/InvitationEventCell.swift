@@ -15,7 +15,8 @@ class InvitationEventCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        imageAmis.layer.cornerRadius = 37
+        imageAmis.clipsToBounds = true
         
     }
 }

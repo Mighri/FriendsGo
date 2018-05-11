@@ -9,8 +9,7 @@
 import Foundation
 import Alamofire
 import ObjectMapper
-import SwiftyJSON
-
+import AlamofireImage
 
 class Service {
     
@@ -196,7 +195,7 @@ class Service {
     
     
     
-    func loadCorrespondance(parameters: [String : Any], url: String, completionHandler:@escaping (Bool, [Correspondance]?) -> ()) {
+    func loadCorrespondance(parameters: [String : String], url: String, completionHandler:@escaping (Bool, [Correspondance]?) -> ()) {
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded"
         ]
@@ -213,12 +212,12 @@ class Service {
                     if let result = value as? [String: Any] {
                         
                         if let items = result["correspondance"] as? [[String: Any]] {
-                            let user = Mapper<Correspondance>().mapArray(JSONArray: items )
+                            let c = Mapper<Correspondance>().mapArray(JSONArray: items )
                             print(items)
                             
-                            print(user)
+                            print(c)
                             
-                            completionHandler(true, user)
+                            completionHandler(true, c)
                             
                         } else {
                             completionHandler(false, nil)
@@ -396,7 +395,55 @@ class Service {
     }
     
     
+   /*
+    func downloadImageFromServer(completionHandler: (Bool, UIImage?) -> ()) {
+        var image : UIImage?
+        let urlStr: String = "http://192.168.101.13/upload.php"
+        
+        Alamofire.request(.GET,urlStr, headers: nil)
+            .responseImage { response in
+                switch response.result {
+                case .Success:
+                    image = response.result.value
+                    completionHandler(true, image)
+                    
+                case .Failure:
+                    completionHandler(false, nil)
+                }
+        }
+    }
     
     
+    
+    func uploadImage(myImage: NSData){
+        let urlStr: String = "http://192.168.101.13/upload.php"
+        
+        
+        // Begin upload
+        Alamofire.upload(.POST, urlStr,
+                         headers: nil,
+                         multipartFormData: { multipartFormData in
+                            
+                            // import image to request
+                            multipartFormData.appendBodyPart(data: myImage, name: "file", fileName:
+                                "myName.png", mimeType: "image/png")
+        },
+                         encodingMemoryThreshold: Manager.MultipartFormDataEncodingMemoryThreshold,
+                         encodingCompletion: { encodingResult in
+                            switch encodingResult
+                            {
+                            case .Success(let upload, _, _):
+                                upload.responseString { response in
+                                    debugPrint(response)
+                                    
+                                }
+                            case .Failure(let encodingError):
+                                print(encodingError)
+                            }
+        })
+    }
+    */
 }
+    
+
 

@@ -109,7 +109,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         if(self.currentFriendArray[indexPath.row].inscrivia == "Facebook")
         {
-            cell.iconimage.image = UIImage(named: "logo-facebook")
+            cell.iconimage.image = UIImage(named: "fb-icon")
         }
         else if(self.currentFriendArray[indexPath.row].inscrivia == "Google")
         {
