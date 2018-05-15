@@ -94,14 +94,7 @@ class Service {
             })
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
     // MARK: - Load Informations From WebService when a user connect to the app
     func loadInfo(parameters: [String : String], url: String, completionHandler:@escaping (Bool, [Friend]?) -> ()) {
         // - Headers
@@ -170,7 +163,7 @@ class Service {
                         
                         if let items = result["elements"] as? [[String: Any]] {
                             let user = Mapper<Friend>().mapArray(JSONArray: items )
-                            print(items)
+                            //print(items)
                             
                             print(user)
                             
@@ -213,7 +206,7 @@ class Service {
                         
                         if let items = result["correspondance"] as? [[String: Any]] {
                             let c = Mapper<Correspondance>().mapArray(JSONArray: items )
-                            print(items)
+                            //print(items)
                             
                             print(c)
                             
@@ -256,7 +249,7 @@ class Service {
                         
                         if let items = result["ele"] as? [[String: Any]] {
                             let user = Mapper<Friend>().mapArray(JSONArray: items )
-                            print(items)
+                            //print(items)
                             
                             print(user)
                             
@@ -296,7 +289,7 @@ class Service {
                         
                         if let items = result["events"] as? [[String: Any]] {
                             let event = Mapper<Event>().mapArray(JSONArray: items )
-                            print(items)
+                            //print(items)
                             
                             print(event)
                             
@@ -375,9 +368,9 @@ class Service {
                         
                         if let items = result["invitationEventFG"] as? [[String: Any]] {
                             let invEvent = Mapper<InvitationEventFG>().mapArray(JSONArray: items )
-                            print(items)
+                           // print(items)
                             
-                            print(invEvent)
+                           // print(invEvent)
                             
                             completionHandler(true, invEvent)
                             
@@ -413,9 +406,9 @@ class Service {
                         
                         if let items = result["Positions"] as? [[String: Any]] {
                             let invEvent = Mapper<Position>().mapArray(JSONArray: items )
-                            print(items)
+                           // print(items)
                             
-                            print(invEvent)
+                           // print(invEvent)
                             
                             completionHandler(true, invEvent)
                             

@@ -21,8 +21,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     let userId = UserDefaults.standard.string(forKey: "Saveid")
     
     let coords = [  CLLocation(latitude: 35.8200481161809, longitude: 10.5920922663161),
-                    CLLocation(latitude: 36.8200481161809, longitude: 11.5920922663161),
-                    CLLocation(latitude: 37.8200481161809, longitude:10.992098663161)
+                    CLLocation(latitude: 35.8299481161809, longitude: 10.9920922663161),
+                    CLLocation(latitude: 37.8200481161809, longitude:10.392098663161)
     ];
     
     
@@ -63,11 +63,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         let position = CLLocationCoordinate2D(latitude: 35.8200243115759, longitude: 10.5919910129258)
         let marker = GMSMarker(position: position)
-        marker.title = "London"
-        marker.iconView = markerView
-        marker.tracksViewChanges = true
+        marker.title = "Hello World"
         marker.map = mapView
-        london = marker
+        marker.icon = GMSMarker.markerImage(with: .black)
     }
     
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
@@ -87,7 +85,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
 
         // Initialize the location manager.
         locationManager = CLLocationManager()
@@ -104,6 +101,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                                               zoom: zoomLevel)
         mapView = GMSMapView.map(withFrame: view.bounds, camera: camera)
         mapView.settings.myLocationButton = true
+        //self.mapView?.isMyLocationEnabled = true
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.isMyLocationEnabled = true
         
@@ -117,13 +115,25 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         view.addSubview(mapView)
         mapView.isHidden = true
 
-         addAnnotations(coords: coords)
-      
-    
-       mapView.settings.compassButton = true
+        for coord in coords{
 
-    mapView.clear()
+            let position = CLLocationCoordinate2D(latitude: coord.coordinate.latitude, longitude: coord.coordinate.longitude)
+            
+            let marker = GMSMarker()
+            marker.position = position
+            marker.title = "gg"
+            marker.snippet = "Info window text"
+            //marker.icon = UIImage(named: "contacts")
+            marker.map = mapView
+        }
         
+        
+        // addAnnotations(coords: coords)
+
+      // mapView.settings.compassButton = true
+
+    //mapView.clear()
+        /*
         // Add a marker to the map.
         if selectedPlace != nil {
             let marker = GMSMarker(position: (self.selectedPlace?.coordinate)!)
@@ -134,25 +144,19 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             marker.map = mapView
 
            // let marker = GMSMarker(position: position)
+            
+            */
     }
     }
-    func addAnnotations(coords: [CLLocation]){
-        
-        for coord in coords{
-            let CLLCoordType = CLLocationCoordinate2D(latitude: coord.coordinate.latitude,
-                                                      longitude: coord.coordinate.longitude);
-            let anno = MKPointAnnotation();
-            anno.coordinate = CLLCoordType;
-           // mapView.addAnnotation(anno);
-        }
-        
-    }
-}
+
+
+
 // Delegates to handle events for the location manager.
 extension MapViewController: CLLocationManagerDelegate {
     
     // Handle incoming location events.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // let location = locations.last
         let location: CLLocation = locations[0]
         print(location)
         
