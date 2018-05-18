@@ -85,5 +85,9 @@ class MyClass {
         
          static let urlUpdatePosition = BaseURL+"updatePosition.php"
         
+        static let urlGetLocations = BaseURL+"getLocations.php"
+       
+        static let urlGetFriendsOnMap = BaseURL+"getFriendsOnMap.php"
+        
     }
 }

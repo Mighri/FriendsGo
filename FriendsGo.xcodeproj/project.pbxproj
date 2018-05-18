@@ -41,6 +41,10 @@
 		FB8464C920935EE700A46F61 /* ImportFriendsFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8464C820935EE700A46F61 /* ImportFriendsFB.swift */; };
 		FB942BE5207F95F800614B4B /* FB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB942BE4207F95F800614B4B /* FB.swift */; };
 		FB9E7888203E0CEB00E9BCA6 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E7887203E0CEA00E9BCA6 /* Friend.swift */; };
+		FBA3A29720AC4BCF00FDE760 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3A29620AC4BCC00FDE760 /* MapsViewController.swift */; };
+		FBA3A29B20AC4D6900FDE760 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3A29820AC4D6800FDE760 /* CustomMarkerView.swift */; };
+		FBA3A29C20AC4D6900FDE760 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3A29920AC4D6800FDE760 /* DetailsVC.swift */; };
+		FBA3A29D20AC4D6900FDE760 /* RestaurantPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3A29A20AC4D6800FDE760 /* RestaurantPreviewView.swift */; };
 		FBB21A6B204D9871002E6AD0 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB21A6A204D9871002E6AD0 /* CellView.swift */; };
 		FBB21A6C204DA6A7002E6AD0 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB21A6D204DA6A7002E6AD0 /* SDWebImage.framework */; };
 		FBB41449204767760029E851 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB4144A204767760029E851 /* Alamofire.framework */; };
@@ -175,6 +179,10 @@
 		FB8464C820935EE700A46F61 /* ImportFriendsFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportFriendsFB.swift; sourceTree = "<group>"; };
 		FB942BE4207F95F800614B4B /* FB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB.swift; sourceTree = "<group>"; };
 		FB9E7887203E0CEA00E9BCA6 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		FBA3A29620AC4BCC00FDE760 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		FBA3A29820AC4D6800FDE760 /* CustomMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomMarkerView.swift; path = "../../../../../Downloads/Google-Map-Tutorial-iOS-master/googlMapTutuorial2/CustomMarkerView.swift"; sourceTree = "<group>"; };
+		FBA3A29920AC4D6800FDE760 /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsVC.swift; path = "../../../../../Downloads/Google-Map-Tutorial-iOS-master/googlMapTutuorial2/DetailsVC.swift"; sourceTree = "<group>"; };
+		FBA3A29A20AC4D6800FDE760 /* RestaurantPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantPreviewView.swift; path = "../../../../../Downloads/Google-Map-Tutorial-iOS-master/googlMapTutuorial2/RestaurantPreviewView.swift"; sourceTree = "<group>"; };
 		FBB21A6A204D9871002E6AD0 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		FBB21A6D204DA6A7002E6AD0 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB4144A204767760029E851 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,6 +417,10 @@
 				FBB52B44204B18B5004CC997 /* EventViewController.swift */,
 				FBB8B07320868EC1002DE5FA /* InviteFriendsController.swift */,
 				FBB52B46204B18D3004CC997 /* MapViewController.swift */,
+				FBA3A29620AC4BCC00FDE760 /* MapsViewController.swift */,
+				FBA3A29820AC4D6800FDE760 /* CustomMarkerView.swift */,
+				FBA3A29920AC4D6800FDE760 /* DetailsVC.swift */,
+				FBA3A29A20AC4D6800FDE760 /* RestaurantPreviewView.swift */,
 				FB718F2A20A4645400C0DA9D /* PlacesViewController.swift */,
 				FBB52B4A204B1911004CC997 /* SubContentsViewController.swift */,
 				FBB52B4C204B194F004CC997 /* ExSlideMenuController.swift */,
@@ -775,6 +787,7 @@
 				FBB8B07C20869DEB002DE5FA /* InviteContactCell.swift in Sources */,
 				FBB52B66204B1C05004CC997 /* BaseTableViewCell.swift in Sources */,
 				FBB8B08E2087F4B1002DE5FA /* InvContactsController.swift in Sources */,
+				FBA3A29720AC4BCF00FDE760 /* MapsViewController.swift in Sources */,
 				FBB8B0842087AD9D002DE5FA /* ConfDeleteEventPopUp.swift in Sources */,
 				FBB8B08020874B67002DE5FA /* ViewPagerTabViewB.swift in Sources */,
 				FB8464C920935EE700A46F61 /* ImportFriendsFB.swift in Sources */,
@@ -784,6 +797,7 @@
 				FBB8B08A2087E42A002DE5FA /* ParametersViewController.swift in Sources */,
 				FBDD83B220644B2D006FFA9C /* Constants.swift in Sources */,
 				FBB52B41204B186B004CC997 /* RightViewController.swift in Sources */,
+				FBA3A29D20AC4D6900FDE760 /* RestaurantPreviewView.swift in Sources */,
 				FB44F5F7207530E2001F71CB /* Event.swift in Sources */,
 				FBB21A6B204D9871002E6AD0 /* CellView.swift in Sources */,
 				FB942BE5207F95F800614B4B /* FB.swift in Sources */,
@@ -846,9 +860,11 @@
 				FBF27CD2204EF55F007E59E7 /* NotificationViewController.swift in Sources */,
 				FBB8B07620869102002DE5FA /* ParticipantsController.swift in Sources */,
 				FBF27CD8204EFB22007E59E7 /* MessageViewController.swift in Sources */,
+				FBA3A29C20AC4D6900FDE760 /* DetailsVC.swift in Sources */,
 				FB5D93C5206992E300FC55CF /* TableCellInvitation.swift in Sources */,
 				FBB8B07020860C0C002DE5FA /* UpdateEvent.swift in Sources */,
 				FBB8B06C2085FFB9002DE5FA /* PopAnEvent.swift in Sources */,
+				FBA3A29B20AC4D6900FDE760 /* CustomMarkerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

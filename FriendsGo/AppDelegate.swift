@@ -46,9 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
    
         }
     */
+        /*
     GMSServices.provideAPIKey("AIzaSyCjPSfqvEXANHT-itplcDV30fGr2yxW7CU")
         
         GMSPlacesClient.provideAPIKey("AIzaSyCjPSfqvEXANHT-itplcDV30fGr2yxW7CU")
+ */
+        
+        GMSServices.provideAPIKey("AIzaSyBU0SPK0agG9uyGpUwXsc0uEwLe01OVLis")
+        GMSPlacesClient.provideAPIKey("AIzaSyBU0SPK0agG9uyGpUwXsc0uEwLe01OVLis")
       return true
     }
     

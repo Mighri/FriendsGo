@@ -26,13 +26,13 @@ protocol LeftMenuProtocol : class {
 }
 
 class LeftViewController : UIViewController, LeftMenuProtocol {
-    
+     var window: UIWindow?
     @IBOutlet weak var tableView: UITableView!
     var menus = ["Importer Contacts", "Contacts", "Evénements", "Map", "Messages", "Notifications", "Invitations", "Paramètres"]
     var mainViewController: UIViewController!
     var ContactViewController: UIViewController!
     var EventViewController: UIViewController!
-    var MapViewController: UIViewController!
+    var MapsViewController: UIViewController!
     var nonMenuViewController: UIViewController!
     var NotificationViewController: UIViewController!
     var InvitationViewController: UIViewController!
@@ -66,8 +66,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         let EventViewController = storyboard.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
         self.EventViewController = UINavigationController(rootViewController: EventViewController)
         
-        let MapViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        self.MapViewController = UINavigationController(rootViewController: MapViewController)
+        let MapsViewController = storyboard.instantiateViewController(withIdentifier: "MapsViewController") as! MapsViewController
+        self.MapsViewController = UINavigationController(rootViewController: MapsViewController)
         
         let MessageViewController = storyboard.instantiateViewController(withIdentifier: "MessageViewController") as! MessageViewController
         self.MessageViewController = UINavigationController(rootViewController: MessageViewController)
@@ -119,7 +119,22 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         case .Evénements:
             self.slideMenuController()?.changeMainViewController(self.EventViewController, close: true)
         case .Map:
-            self.slideMenuController()?.changeMainViewController(self.MapViewController, close: true)
+            
+            
+            /*
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            if let window = self.window {
+                window.backgroundColor = UIColor.white
+                
+                let nav = UINavigationController()
+                let mainView = ViewController()
+                nav.viewControllers = [mainView]
+                window.rootViewController = nav
+                window.makeKeyAndVisible()
+            }
+            
+            */
+ self.slideMenuController()?.changeMainViewController(self.MapsViewController, close: true)
         case .Messages:
             self.slideMenuController()?.changeMainViewController(self.MessageViewController, close: true)
         case .Notifications:

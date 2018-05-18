@@ -164,8 +164,8 @@ class Service {
                         if let items = result["elements"] as? [[String: Any]] {
                             let user = Mapper<Friend>().mapArray(JSONArray: items )
                             //print(items)
-                            
-                            print(user)
+                        
+                            //print(user)
                             
                             completionHandler(true, user)
                             
@@ -405,12 +405,12 @@ class Service {
                     if let result = value as? [String: Any] {
                         
                         if let items = result["Positions"] as? [[String: Any]] {
-                            let invEvent = Mapper<Position>().mapArray(JSONArray: items )
-                           // print(items)
+                            let position = Mapper<Position>().mapArray(JSONArray: items )
+                         //print(items)
                             
-                           // print(invEvent)
+                          //print(invEvent)
                             
-                            completionHandler(true, invEvent)
+                            completionHandler(true, position)
                             
                         } else {
                             completionHandler(false, nil)

@@ -120,6 +120,17 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             let position = CLLocationCoordinate2D(latitude: coord.coordinate.latitude, longitude: coord.coordinate.longitude)
             
             let marker = GMSMarker()
+            
+            
+            //let markerImage = UIImage(named: "profile")
+             let markerImage = self.resizeImage(image: UIImage.init(named: "profile")!, newWidth: 30).withRenderingMode(.alwaysTemplate)
+            let markerView = UIImageView(image: markerImage)
+            // Customize color of marker here:
+            //markerView.tintColor = UIColor.green
+            marker.iconView = markerView
+            
+            
+            
             marker.position = position
             marker.title = "gg"
             marker.snippet = "Info window text"
@@ -133,6 +144,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
       // mapView.settings.compassButton = true
 
     //mapView.clear()
+        
+ 
+        
         /*
         // Add a marker to the map.
         if selectedPlace != nil {
@@ -146,6 +160,30 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
            // let marker = GMSMarker(position: position)
             
             */
+    }
+    
+
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+        
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        
+        
+        image.draw(in: CGRect(x: 0, y: 0,width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+    
+    func resizeToScreenSize(image: UIImage)->UIImage{
+        
+        let screenSize = self.view.bounds.size
+        
+        
+        return resizeImage(image: image, newWidth: screenSize.width)
     }
     }
 
