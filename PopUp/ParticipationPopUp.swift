@@ -71,8 +71,15 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
         
         Service.sharedInstance.postIt(parameters:paras as! [String : String], url:self.urlUpdateInvEvent)
         
-         //UserDefaults.standard.set("Je m'intéresse", forKey: "interesse")
-        //close()
+        UserDefaults.standard.set("Je m'intéresse", forKey: "interesse")
+       close()
+        /*
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "AnInvitationEventController") as! AnInvitationEventController
+        ViewController.event = event
+        self.present(ViewController, animated: true, completion: nil)
+ */
 }
     
     

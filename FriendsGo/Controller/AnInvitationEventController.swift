@@ -11,7 +11,10 @@ import MapKit
 
 class AnInvitationEventController: UIViewController {
     
+   
+    
     @IBOutlet var descEvent: UILabel!
+    var invitEvent: InvitationEventFG!
     @IBOutlet var dateEvent: UILabel!
     @IBOutlet var heureEvent: UILabel!
     @IBOutlet var proprietaireEvent: UILabel!
@@ -21,9 +24,7 @@ class AnInvitationEventController: UIViewController {
     @IBOutlet var lieuEvent: UILabel!
     var event: Event!
     var friend: Friend!
-    //var invitEvent = InvitationEventFG!
 
-    
     let urlGetUsername = MyClass.Constants.urlGetUsername
     let urlInvEventFG = MyClass.Constants.urlInvEventFG
     
@@ -39,12 +40,7 @@ class AnInvitationEventController: UIViewController {
         dateEvent.text = event.date
         heureEvent.text = event.heure
          lieuEvent.text = event.adresse
-        //proprietaireEvent.text = event.IdU
-        // participationEvent.text =
-        //imageEvent.image = event.image
-        
-        
-        
+ 
         let p = ["IdU" : event.IdU] as [String : Any]
         
         Service.sharedInstance.loadInfoAny(parameters: p, url: urlGetUsername) { (state, Objets) in
@@ -55,43 +51,42 @@ class AnInvitationEventController: UIViewController {
             } else {
                 print("nooo")
             }
-            
         }
-        
-        
        // let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
         imageEvent.sd_setImage(with: URL(string: event.image), placeholderImage: nil)
         
         
         mapView.removeAnnotations(mapView.annotations)
         self.performSearch()
-        
-        
-        
-        
-        
-       /* var keyy = " "
-        
-    if keyy == UserDefaults.standard.string(forKey: "interesse")
+        /*
+      let key1 = UserDefaults.standard.string(forKey: "interesse")
+        if (key1 != nil)
         {
-            print(keyy)
-            participationEvent.text = UserDefaults.standard.string(forKey: "interesse")!
+            print(key1!)
+            participationEvent.text = key1
             participEvent.image = UIImage(named: "starP")
+            
         }
-        else if keyy == UserDefaults.standard.string(forKey: "neParticipe")
-        {
-            participationEvent.text = UserDefaults.standard.string(forKey: "neParticipe")!
-            participEvent.image = UIImage(named: "cross")
-        }
-        else
-        {
-            participationEvent.text = UserDefaults.standard.string(forKey: "participe")
-            participEvent.image = UIImage(named: "Check")
-        }
-       
-       */
         
-     /*
+        let key2 = UserDefaults.standard.string(forKey: "neParticipe")
+        if (key2 != nil)
+        {
+            print(key2!)
+            participationEvent.text = key2
+            participEvent.image = UIImage(named: "cross")
+            
+        }
+        
+        let key3 = UserDefaults.standard.string(forKey: "participe")
+        if (key3 != nil)
+        {
+            print(key3!)
+            participationEvent.text = key3
+            participEvent.image = UIImage(named: "Check")
+            
+        }
+*/
+     
         let userId = UserDefaults.standard.string(forKey: "Saveid")
         print(userId!)
         let pr = ["IdInvitedd" : userId!,
@@ -99,20 +94,17 @@ class AnInvitationEventController: UIViewController {
         
         Service.sharedInstance.loadInvitationEvent(parameters: pr as [String : Any], url: urlInvEventFG) { (state, Objets) in
             if state {
-                self.invitEvent = Objets!
-                print("Objets")
+                self.invitEvent = Objets![0]
+                print("Invitation Event FG")
             } else {
-                print("nooo")
+                print("no Invitation Event FG")
             }
             
         }
         
-        */
  
     }
-    
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -125,9 +117,7 @@ class AnInvitationEventController: UIViewController {
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
-    
-    
+ 
     @IBAction func back(_ sender: UIButton) {
         
         print("%%%%%%%%%%%%%%%%%%%%")
@@ -141,7 +131,6 @@ class AnInvitationEventController: UIViewController {
         self.navigationController?.pushViewController(ViewController, animated: true)
         
     }
-    
     
     @IBAction func newPopUp(_ sender: AnyObject) {
         let popOverVC = UIStoryboard(name: "MWAPopup", bundle: nil).instantiateViewController(withIdentifier: "ParticipationPopUp") as! ParticipationPopUp
@@ -183,23 +172,17 @@ class AnInvitationEventController: UIViewController {
                     annotation.coordinate = item.placemark.coordinate
                     annotation.title = item.name
                     self.mapView.addAnnotation(annotation)
-                    
-                    
+   
                 }
             }
         })
     }
 
-    
-    
     @IBAction func googleMaps(_ sender: UIButton) {
         
         let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
         
         let ViewController = mystoryboard.instantiateViewController(withIdentifier: "WebviewViewController") as! WebviewViewController
-        
-        //ViewController.event = event
-        
         self.navigationController?.pushViewController(ViewController, animated: true)
     }
     

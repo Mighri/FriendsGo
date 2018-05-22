@@ -346,16 +346,12 @@ class Service {
         }
         
     }
-    
-    
-    
-    
+
     func loadInvitationEvent(parameters: [String : Any], url: String, completionHandler:@escaping (Bool, [InvitationEventFG]?) -> ()) {
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded"
         ]
-        
-        
+
         Alamofire.request(url, method:.post, parameters: parameters, headers : headers)
             .validate()
             .responseJSON { response in
@@ -368,9 +364,8 @@ class Service {
                         
                         if let items = result["invitationEventFG"] as? [[String: Any]] {
                             let invEvent = Mapper<InvitationEventFG>().mapArray(JSONArray: items )
-                           // print(items)
-                            
-                           // print(invEvent)
+                            print(items)
+                            print(invEvent)
                             
                             completionHandler(true, invEvent)
                             

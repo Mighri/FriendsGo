@@ -72,9 +72,9 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             if state {
                 self.positions = Objets!
                 
-                print("Objets")
+                print("All friends positions")
             } else {
-                print("nooo")
+                print(" No Friends positions")
             }
         }
 
@@ -82,9 +82,9 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             if state {
                 self.friends = Objets!
                 
-                print("Objets")
+                print("Friends on Map")
             } else {
-                print("nooo")
+                print("No friends on Map")
             }
         }
     }
@@ -148,8 +148,8 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         let location = locations[0]
         let lat = (location.coordinate.latitude)
         let long = (location.coordinate.longitude)
-        print(lat)
-        print(long)
+       // print(lat)
+        //print(long)
         
         
         
@@ -195,23 +195,27 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         return false
     }
-    /*
+ /*
     func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
         guard let customMarkerView = marker.iconView as? CustomMarkerView else { return nil }
-        
-        
-         /*
-        for i in 0..<self.friends.count {
-            
-            let data = friends[i]
-            
-            restaurantPreviewView.setData(title: data.Nom+" "+data.prenom, img: previewDemoData[0].img, price: Int(data.id)!)
-     }
-         */
+     
+     let tag = customMarkerView.tag
+
+            if (self.friends[tag].photoURL != "NULL")
+            {
+                let url = URL(string: self.friend.photoURL)
+                let data = try? Data(contentsOf: url!)
+            restaurantPreviewView.setData(title: friend.Nom+" "+friend.prenom, img: UIImage(data: data!)!, price: Int(friend.id)!)
+            }
+            else
+            {
+                restaurantPreviewView.setData(title: friend.Nom+" "+friend.prenom, img: UIImage(named: "profile")!, price: Int(friend.id)!)
+            }
+   /*
        
         let data = previewDemoData[customMarkerView.tag]
         restaurantPreviewView.setData(title: data.title, img: data.img, price: data.price)
-
+    */
         return restaurantPreviewView
     }
  */
@@ -219,7 +223,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         guard let customMarkerView = marker.iconView as? CustomMarkerView else { return }
         let tag = customMarkerView.tag
-        restaurantTapped(tag: tag)
+        //restaurantTapped(tag: tag)
     }
     
     func mapView(_ mapView: GMSMapView, didCloseInfoWindowOf marker: GMSMarker) {
@@ -230,16 +234,17 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     }
     
     func showPartyMarkers(lat: Double, long: Double) {
-        myMapView.clear()
+    myMapView.clear()
         // for i in 0..<3 {
         for coord in self.positions {
             
             let pss = ["IdU" : coord.idUser] as [String : Any]
             Service.sharedInstance.loadInfoAny(parameters: pss, url: urlGetUsername) { (state, Objets) in
                 if state {
+                    print("the position owner")
                     self.friend = Objets![0]
                     //self.proprietaireEvent.text = self.friend.Nom + " "+self.friend.prenom
-                    print("Objets")
+                    //print("Objets")
                      let marker=GMSMarker()
                 
                     if (self.friend.photoURL != "NULL")
@@ -273,7 +278,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
                 
                 
                 } else {
-                    print("nooo")
+                    print("No position owner")
                 }
             }
         }
