@@ -13,6 +13,8 @@
 		FB145A7B2057E8320038A30B /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB145A7C2057E8320038A30B /* GoogleToolboxForMac.framework */; };
 		FB145A7D2057E83B0038A30B /* GTMOAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB145A7E2057E83B0038A30B /* GTMOAuth2.framework */; };
 		FB145A7F2057E8400038A30B /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB145A802057E8400038A30B /* GTMSessionFetcher.framework */; };
+		FB2882BD20BC0CCE009EEE0B /* TableCellChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2882BC20BC0CCE009EEE0B /* TableCellChat.swift */; };
+		FB2882BF20BC0D19009EEE0B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2882BE20BC0D19009EEE0B /* Chat.swift */; };
 		FB30A8E0205A9F7500133B39 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30A8DF205A9F7500133B39 /* SignViewController.swift */; };
 		FB3301A220441AAA00C6BDB2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3301A320441AAA00C6BDB2 /* FBSDKCoreKit.framework */; };
 		FB3301A420441AAE00C6BDB2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3301A520441AAE00C6BDB2 /* FBSDKLoginKit.framework */; };
@@ -150,6 +152,8 @@
 		FB145A7C2057E8320038A30B /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB145A7E2057E83B0038A30B /* GTMOAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMOAuth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB145A802057E8400038A30B /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2882BC20BC0CCE009EEE0B /* TableCellChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellChat.swift; sourceTree = "<group>"; };
+		FB2882BE20BC0D19009EEE0B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		FB30A8DF205A9F7500133B39 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		FB3301A320441AAA00C6BDB2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3301A520441AAE00C6BDB2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -410,6 +414,7 @@
 				FBB52B42204B188B004CC997 /* ContactViewController.swift */,
 				FBF27CD3204EF59E007E59E7 /* InvitationViewController.swift */,
 				FBF27CD7204EFB22007E59E7 /* MessageViewController.swift */,
+				FB2882BE20BC0D19009EEE0B /* Chat.swift */,
 				FBF27CD5204EFAA0007E59E7 /* ImportViewController.swift */,
 				FB8464C820935EE700A46F61 /* ImportFriendsFB.swift */,
 				FBF27CD1204EF55F007E59E7 /* NotificationViewController.swift */,
@@ -456,6 +461,7 @@
 				FBE61C2F20893D3900626B69 /* NotificationCell.swift */,
 				FBE61C312089415800626B69 /* ParametersCell.swift */,
 				FBDD83B52065684B006FFA9C /* TableCell.swift */,
+				FB2882BC20BC0CCE009EEE0B /* TableCellChat.swift */,
 				FBB8B07B20869DEB002DE5FA /* InviteContactCell.swift */,
 				FB44F5F820756FC5001F71CB /* EventCell.swift */,
 				FB5D93C4206992E300FC55CF /* TableCellInvitation.swift */,
@@ -777,6 +783,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2882BD20BC0CCE009EEE0B /* TableCellChat.swift in Sources */,
 				FBB52B5F204B1AE3004CC997 /* UIView.swift in Sources */,
 				FBB52B5D204B1ACE004CC997 /* UIImage.swift in Sources */,
 				FB50A8122072257400702130 /* MWAPopup.swift in Sources */,
@@ -789,6 +796,7 @@
 				FBB8B08E2087F4B1002DE5FA /* InvContactsController.swift in Sources */,
 				FBA3A29720AC4BCF00FDE760 /* MapsViewController.swift in Sources */,
 				FBB8B0842087AD9D002DE5FA /* ConfDeleteEventPopUp.swift in Sources */,
+				FB2882BF20BC0D19009EEE0B /* Chat.swift in Sources */,
 				FBB8B08020874B67002DE5FA /* ViewPagerTabViewB.swift in Sources */,
 				FB8464C920935EE700A46F61 /* ImportFriendsFB.swift in Sources */,
 				FBB586D42062A76F0071BFD8 /* ViewPagerTab.swift in Sources */,

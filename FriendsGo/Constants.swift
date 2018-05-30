@@ -12,10 +12,10 @@ class MyClass {
         //000Webhost
        //static let BaseURL = "http://lengthways-dopes.000webhostapp.com/"
         // Pc-Faster : 192.168.101.13
-      //static let BaseURL = "http://192.168.101.13/"
+    // static let BaseURL = "http://192.168.101.13/"
 
         // Chifco : 192.168.10.143
-       static let BaseURL = "http://192.168.10.143/"
+        static let BaseURL = "http://192.168.10.143/"
         
         // class ViewController
         static let urlAuthMail = BaseURL+"getUtilisateurs.php"

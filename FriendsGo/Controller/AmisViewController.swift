@@ -145,7 +145,6 @@ class AmisViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     
-    
 }
 
 

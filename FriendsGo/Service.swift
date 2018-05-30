@@ -163,9 +163,9 @@ class Service {
                         
                         if let items = result["elements"] as? [[String: Any]] {
                             let user = Mapper<Friend>().mapArray(JSONArray: items )
-                            //print(items)
+                             print(items)
                         
-                            //print(user)
+                             print(user)
                             
                             completionHandler(true, user)
                             
