@@ -108,11 +108,13 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
         
-        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "Chat") as! Chat
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "Chat") as! ChatViewController
         
-    ViewController.userFriend = currentFriendArray[indexPath.row]
+    //ViewController.userFriend = currentFriendArray[indexPath.row]
         
-        self.navigationController?.pushViewController(ViewController, animated: true)
+       // self.navigationController?.pushViewController(ViewController, animated: true)
+        
+        self.navigationController?.pushViewController(ChatViewController(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
         
     }
 
