@@ -33,6 +33,10 @@
 		FB647AA4208F72D4006EF6D8 /* InviteForEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */; };
 		FB647AA6208FC84C006EF6D8 /* InviteContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */; };
 		FB647AA920912BE6006EF6D8 /* MWAPopupEventM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */; };
+		FB67E16520C3235F0093C66F /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB67E16420C3235E0093C66F /* ChannelViewController.swift */; };
+		FB67E16720C323990093C66F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB67E16620C323990093C66F /* LoginViewController.swift */; };
+		FB67E16920C323C60093C66F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB67E16820C323C60093C66F /* ChatViewController.swift */; };
+		FB67E16B20C3240A0093C66F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB67E16A20C324090093C66F /* GoogleService-Info.plist */; };
 		FB68097A2098C85600894F89 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB68097B2098C85600894F89 /* AlamofireImage.framework */; };
 		FB6809BB2099D1A300894F89 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6809BA2099D1A300894F89 /* Media.swift */; };
 		FB6809BD209A0B9000894F89 /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6809BC209A0B9000894F89 /* WebviewViewController.swift */; };
@@ -173,6 +177,10 @@
 		FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactController.swift; sourceTree = "<group>"; };
 		FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWAPopupEventM.swift; sourceTree = "<group>"; };
 		FB647AAA20913900006EF6D8 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Test-Bridging-Header.h"; path = "../../../Test-Bridging-Header.h"; sourceTree = "<group>"; };
+		FB67E16420C3235E0093C66F /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		FB67E16620C323990093C66F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FB67E16820C323C60093C66F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		FB67E16A20C324090093C66F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB68097B2098C85600894F89 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6809BA2099D1A300894F89 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		FB6809BC209A0B9000894F89 /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
@@ -415,6 +423,9 @@
 				FBF27CD3204EF59E007E59E7 /* InvitationViewController.swift */,
 				FBF27CD7204EFB22007E59E7 /* MessageViewController.swift */,
 				FB2882BE20BC0D19009EEE0B /* Chat.swift */,
+				FB67E16820C323C60093C66F /* ChatViewController.swift */,
+				FB67E16420C3235E0093C66F /* ChannelViewController.swift */,
+				FB67E16620C323990093C66F /* LoginViewController.swift */,
 				FBF27CD5204EFAA0007E59E7 /* ImportViewController.swift */,
 				FB8464C820935EE700A46F61 /* ImportFriendsFB.swift */,
 				FBF27CD1204EF55F007E59E7 /* NotificationViewController.swift */,
@@ -517,6 +528,7 @@
 			children = (
 				FB647AAA20913900006EF6D8 /* Test-Bridging-Header.h */,
 				FB145A792057E4F20038A30B /* credentials.plist */,
+				FB67E16A20C324090093C66F /* GoogleService-Info.plist */,
 				FBCA49BC203C779C00C74625 /* AppDelegate.swift */,
 				FBB52B3B204B17EE004CC997 /* Controller */,
 				FBA0B0B9204562F700F8558F /* View */,
@@ -672,6 +684,7 @@
 			files = (
 				FBB52B6A204B1C3D004CC997 /* DataTableViewCell.xib in Resources */,
 				FB145A7A2057E4F30038A30B /* credentials.plist in Resources */,
+				FB67E16B20C3240A0093C66F /* GoogleService-Info.plist in Resources */,
 				FBCA49C7203C779D00C74625 /* LaunchScreen.storyboard in Resources */,
 				FBCA49C4203C779D00C74625 /* Assets.xcassets in Resources */,
 				FBB52B70204B2E52004CC997 /* Menu.storyboard in Resources */,
@@ -755,6 +768,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -770,6 +784,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -790,6 +805,7 @@
 				FB44F5F920756FC6001F71CB /* EventCell.swift in Sources */,
 				FBB586D02062A7530071BFD8 /* ViewPagerController.swift in Sources */,
 				FBB52B4F204B19B2004CC997 /* ImageHeaderView.swift in Sources */,
+				FB67E16520C3235F0093C66F /* ChannelViewController.swift in Sources */,
 				FB647AA2208F3CF6006EF6D8 /* SVC.swift in Sources */,
 				FBB8B07C20869DEB002DE5FA /* InviteContactCell.swift in Sources */,
 				FBB52B66204B1C05004CC997 /* BaseTableViewCell.swift in Sources */,
@@ -843,6 +859,7 @@
 				FBB8B08C2087F483002DE5FA /* InvAmisController.swift in Sources */,
 				FBB4145020489CCB0029E851 /* Keyboard.swift in Sources */,
 				FBB52B4B204B1911004CC997 /* SubContentsViewController.swift in Sources */,
+				FB67E16920C323C60093C66F /* ChatViewController.swift in Sources */,
 				FBB8B0882087DF18002DE5FA /* ParticipationPopUp.swift in Sources */,
 				FBDD83B4206567B4006FFA9C /* ListContactsViewController.swift in Sources */,
 				FBB8B09220889B6C002DE5FA /* FriendsInvitController.swift in Sources */,
@@ -856,6 +873,7 @@
 				FBF27CD6204EFAA0007E59E7 /* ImportViewController.swift in Sources */,
 				FBB52B37204B1583004CC997 /* SlideMenuController.swift in Sources */,
 				FBB8B0862087DBA6002DE5FA /* AnInvitationEventController.swift in Sources */,
+				FB67E16720C323990093C66F /* LoginViewController.swift in Sources */,
 				FBB586D62062A7760071BFD8 /* ViewPagerTabView.swift in Sources */,
 				FBB4144E2047690C0029E851 /* Service.swift in Sources */,
 				FB44F5F3207529DE001F71CB /* MyEventsViewController.swift in Sources */,

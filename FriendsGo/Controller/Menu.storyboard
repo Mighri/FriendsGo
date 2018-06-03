@@ -2391,10 +2391,10 @@
             </objects>
             <point key="canvasLocation" x="-821.25" y="-11.619718309859156"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Feg-Kk-fUJ">
             <objects>
-                <viewController storyboardIdentifier="Chat" id="Df0-4o-ikJ" customClass="ChatViewController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chat" id="Df0-4o-ikJ" customClass="LoginViewController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KmN-AC-WJS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

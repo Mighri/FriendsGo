@@ -16,4 +16,12 @@ pod 'GoogleSignIn'
 pod 'AlamofireImage'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+
+
+
+pod 'Firebase/Auth', '~> 4.0.0'
+pod 'Firebase/Storage', '~> 4.0.0'
+pod 'Firebase/Database', '~> 4.0.0'
+
+
 end
