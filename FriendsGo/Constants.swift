@@ -15,7 +15,7 @@ class MyClass {
     // static let BaseURL = "http://192.168.101.13/"
 
         // Chifco : 192.168.10.143
-        static let BaseURL = "http://192.168.101.12/"
+        static let BaseURL = "http://172.16.16.209/"
         
         // class ViewController
         static let urlAuthMail = BaseURL+"getUtilisateurs.php"

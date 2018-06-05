@@ -14,7 +14,7 @@ import GoogleSignIn
 
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate, UITextFieldDelegate {
- 
+    
     
     let loginButton: FBSDKLoginButton = {
         let button = FBSDKLoginButton()
@@ -23,10 +23,10 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
     }()
     
     @IBOutlet weak var signInButton: GIDSignInButton!
-
+    
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-
+    
     let urlAuthMail = MyClass.Constants.urlAuthMail
     let urlRegisterFBG = MyClass.Constants.urlRegisterFBG
     let urlverifUser = MyClass.Constants.urlverifUser
@@ -42,22 +42,28 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
         // self.hideKeyboardWhenTappedAround()
         self.title = "FriendsGo"
         /*
-        view.addSubview(loginButton)
+         view.addSubview(loginButton)
          loginButton.center = view.center
-        loginButton.delegate = self
-        let token = FBSDKAccessToken.current()
-        if  (token != nil)  {
-            fetchProfile()
-            // friends()
-        }
-        */
+         loginButton.delegate = self
+         let token = FBSDKAccessToken.current()
+         if  (token != nil)  {
+         fetchProfile()
+         // friends()
+         }
+         */
         GIDSignIn.sharedInstance().uiDelegate = self
-   
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.notificationReceived(_:)), name:  NSNotification.Name(rawValue: "ToggleAuthUINotification"), object: nil)
         
         emailAddressTextField.delegate = self
         passwordTextField.delegate = self
-
+        
+        
+      //  view.addSubview(loginButton)
+      //  loginButton.center = view.center
+        loginButton.delegate = self
+       
+        
     }
     
     
@@ -76,7 +82,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailAddressTextField
         {
-             passwordTextField.becomeFirstResponder()
+            passwordTextField.becomeFirstResponder()
         }
         else if  textField == passwordTextField
         {
@@ -111,32 +117,32 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
     @IBAction func didTapSignOut(_ sender: AnyObject) {
         GIDSignIn.sharedInstance().signOut()
     }
-
+    
     @objc func notificationReceived(_ notification: Notification) {
         guard let fullName = notification.userInfo?["fullName"] as? String
             else {
                 return
                 
         }
-
+        
         print(fullName)
         
-         let mail = notification.userInfo?["email"] as? String
-     print(mail!)
-         let givenName = notification.userInfo?["givenName"] as? String
+        let mail = notification.userInfo?["email"] as? String
+        print(mail!)
+        let givenName = notification.userInfo?["givenName"] as? String
         print(givenName!)
         let familyName = notification.userInfo?["familyName"] as? String
-          print(familyName!)
-         let photoURL = notification.userInfo?["photoURL"] as? URL
+        print(familyName!)
+        let photoURL = notification.userInfo?["photoURL"] as? URL
         
         
-         print(String(describing: photoURL!))
-   //       print(photoURL!)
+        print(String(describing: photoURL!))
+        //       print(photoURL!)
         
         let photoo = String(describing: photoURL!)
         print(photoo)
         
-       // verif user existance
+        // verif user existance
         
         let ps = ["Mail": mail!]
         
@@ -147,20 +153,20 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
                 //update user account
                 
                 let pr = ["Nom": familyName,
-                         "Prenom": givenName,
-                         "Mail": mail,
-                         "InscriVia": "Google",
-                         "photoURL": photoo]
+                          "Prenom": givenName,
+                          "Mail": mail,
+                          "InscriVia": "Google",
+                          "photoURL": photoo]
                 
                 Service.sharedInstance.postIt(parameters:pr as! [String : String], url:self.urlupdateUser)
-              
+                
                 let delegate =  UIApplication.shared.delegate as! AppDelegate
                 delegate.createMenuView()
             }
             else
             {
                 print("Utilisateur n'existe pas")
-         // Register Google user account
+                // Register Google user account
                 
                 let p = ["Nom": familyName,
                          "Prenom": givenName,
@@ -170,67 +176,64 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
                 
                 
                 Service.sharedInstance.postIt(parameters:p as! [String : String], url:self.urlRegisterFBG)
-            
+                
                 let delegate =  UIApplication.shared.delegate as! AppDelegate
                 delegate.createMenuView()
-            
+                
             }
         }
     }
-
+    
     @IBAction func fbLogin(_ sender: Any) {
-
-        button.readPermissions = ["public_profile","email","user_friends"]
+        
         let token = FBSDKAccessToken.current()
         if  (token != nil)  {
             fetchProfile()
-            print("***********************")
             // friends()
-            //list()
         }
-      
+        
     }
-
+    
     @IBAction func loginSubmitted(_ sender: Any) {
-      
+        
         
         if (
             (emailAddressTextField.text?.isEmpty)! ||
-            (passwordTextField.text?.isEmpty)!)
+                (passwordTextField.text?.isEmpty)!)
         {
             // Display Alert message and return
             displayMessage(userMessage: "Les champs sont obligatoires")
             return
         }
-  // - Params
-       
+        // - Params
+        
         let parameters = ["Mail": emailAddressTextField.text!,
                           "MotDePasse": passwordTextField.text!]
-
-                             //Service.sharedInstance.login()
+        
+        //Service.sharedInstance.login()
         
         Service.sharedInstance.loadInfo(parameters:parameters, url:urlAuthMail) { (state, Objets) in
- if state {
-     print(Objets!)
-    self.friend = Objets![0]
-    print(self.friend)
-    print("Utilisateur existe")
-
-    let delegate =  UIApplication.shared.delegate as! AppDelegate
-    delegate.createMenuView()
-
-    }
-    else
-    {
-        print("Utilisateur n'existe pas")
-    
-    // Display Alert message and return
-    self.displayMessage(userMessage: "Echec d'authentification")
-    return
+            if state {
+                print(Objets!)
+                self.friend = Objets![0]
+                print(self.friend)
+                print("Utilisateur existe")
+                
+                let delegate =  UIApplication.shared.delegate as! AppDelegate
+                delegate.createMenuView()
+                
+            }
+            else
+            {
+                print("Utilisateur n'existe pas")
+                
+                // Display Alert message and return
+                self.displayMessage(userMessage: "Echec d'authentification")
+                return
             }
         }
     }
-
+    
     
     func fetchProfile(){
         
@@ -243,7 +246,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
                 print(error)
                 return
             }
-
+            
             let info = result as! [String : AnyObject]
             print(info["email"]!)
             print(info["first_name"]!)
@@ -256,13 +259,13 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
             let prenom = info["last_name"] as! String
             let mail = info["email"] as! String
             print(mail)
-
+            
             let infoPicture = info["picture"] as! [String : AnyObject]
             let Objet = (infoPicture as! [String : AnyObject])["data"]
             let photo = Objet!["url"] as! String
             
             print(photo)
-
+            
             // verif user existance
             
             let ps = ["Mail": mail]
@@ -271,7 +274,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
                 if state {
                     print(Objets!)
                     print("Utilisateur existe")
- 
+                    
                     //update user account
                     
                     let pr = ["Nom": nom,
@@ -298,7 +301,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
                     
                     
                     Service.sharedInstance.postIt(parameters:p as! [String : String], url:self.urlRegisterFBG)
-                
+                    
                     let delegate =  UIApplication.shared.delegate as! AppDelegate
                     delegate.createMenuView()
                 }
@@ -331,15 +334,15 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
         }
     }
     /*
-    func loginButton(_ button: FBSDKLoginButton!, didCompleteWith result :FBSDKLoginManagerLoginResult!, error: Error!)
-    {
-        print("login completed")
-        fetchProfile()
-      // friends()
-        //list()
-        
-    }
- */
+     func loginButton(_ button: FBSDKLoginButton!, didCompleteWith result :FBSDKLoginManagerLoginResult!, error: Error!)
+     {
+     print("login completed")
+     fetchProfile()
+     // friends()
+     //list()
+     
+     }
+     */
     func loginButtonDidLogOut(_ button: FBSDKLoginButton!){
         
     }
@@ -364,7 +367,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
                 alertController.addAction(OKAction)
                 self.present(alertController, animated: true, completion:nil)
         }
-    } 
+    }
 }
 
 

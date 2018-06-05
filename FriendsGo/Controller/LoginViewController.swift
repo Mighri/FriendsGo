@@ -5,7 +5,7 @@
 //  Created by Radhia Mighri on 02/06/2018.
 //  Copyright © 2018 Radhia Mighri. All rights reserved.
 //
-/*
+
 import UIKit
 import FirebaseAuth
 
@@ -27,7 +27,8 @@ class LoginViewController: UIViewController {
                 return
             }
             //let uid = user.us
-            let uid = user?.user.uid
+            //let uid = user?.user.uid
+           let uid = user?.uid
             UserDefaults.standard.set(uid, forKey: "userId")
             self.present(UINavigationController(rootViewController: ChannelViewController(style: UITableViewStyle.plain)), animated: true, completion: nil)
         }
@@ -51,4 +52,4 @@ class LoginViewController: UIViewController {
    
 
 }
-*/
+ 

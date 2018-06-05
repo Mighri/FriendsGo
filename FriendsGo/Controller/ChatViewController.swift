@@ -6,7 +6,7 @@
 //  Copyright © 2018 Radhia Mighri. All rights reserved.
 //
 
-
+/*
 import UIKit
 
 class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout{
@@ -300,8 +300,9 @@ class BaseCell: UICollectionViewCell{
         
     }
 }
-
-/*
+ */
+ 
+ 
 import UIKit
 import FirebaseDatabase
 
@@ -442,12 +443,14 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
                 self.messageArray.append(Messages(senderId: senderId, message: message))
                 DispatchQueue.main.async {
                     self.collectionView?.reloadData()
+                 
                     DispatchQueue.main.async {
                         let index = IndexPath(row: self.messageArray.count - 1, section: 0)
                         if index.row >= 0{
                             self.collectionView?.scrollToItem(at: index, at: UICollectionViewScrollPosition.top, animated: true)
                         }
                     }
+                   
                 }
             }
         })
@@ -482,8 +485,8 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
                 self.view.layoutIfNeeded()
             }, completion: { (_) in
                 
-                let index = IndexPath(row: self.messageArray.count - 1, section: 0)
-                self.collectionView?.scrollToItem(at: index, at: .top, animated: true)
+                //let index = IndexPath(row: self.messageArray.count - 1, section: 0)
+                //self.collectionView?.scrollToItem(at: index, at: .top, animated: true)
             })
             
             
@@ -528,7 +531,8 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         let estimatedFrame = NSString(string: mes!).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13)], context: nil)
         if self.messageArray[indexPath.row].senderId != UserDefaults.standard.string(forKey: "userId"){
-            cell.messgae.frame = CGRect(x: 20, y: 0, width: estimatedFrame.width + 35, height: estimatedFrame.height + 28)
+             cell.profileImage.frame = CGRect(x: 15, y: estimatedFrame.height, width: 35, height: 35)
+            cell.messgae.frame = CGRect(x: 60, y: 0, width: estimatedFrame.width + 35, height: estimatedFrame.height + 28)
             cell.messgae.textColor = UIColor.black
             cell.messgae.backgroundColor = UIColor(displayP3Red: 233/255, green: 240/255, blue: 246/255, alpha: 1)
         }else if self.messageArray[indexPath.row].senderId == UserDefaults.standard.string(forKey: "userId"){
@@ -558,7 +562,14 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
 
 class chatLogController: BaseCell{
     
-
+    let profileImage:UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.layer.masksToBounds = true
+        image.layer.cornerRadius = 17.5
+        image.image = #imageLiteral(resourceName: "profile")
+        return image
+    }()
     
     let messgae:UITextView = {
         let text = UITextView()
@@ -578,6 +589,7 @@ class chatLogController: BaseCell{
     override func setUp() {
         super.setUp()
         self.addSubview(self.messgae)
+         self.addSubview(profileImage)
     }
     
 }
@@ -597,4 +609,4 @@ class BaseCell: UICollectionViewCell{
     }
 }
 
-*/
+

@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B567FC8A20C53ABE0084FCB5 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8920C53ABE0084FCB5 /* CustomMarkerView.swift */; };
+		B567FC8C20C53AF50084FCB5 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8B20C53AF50084FCB5 /* DetailsVC.swift */; };
+		B567FC8E20C53B0B0084FCB5 /* RestaurantPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8D20C53B0B0084FCB5 /* RestaurantPreviewView.swift */; };
 		D825E4DC0379DDB12F91C8B5 /* Pods_FriendsGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65251C914DBE421E580DC280 /* Pods_FriendsGo.framework */; };
 		FB03AD4B2078245400144ED6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB03AD4A2078245300144ED6 /* MapKit.framework */; };
 		FB145A7A2057E4F30038A30B /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB145A792057E4F20038A30B /* credentials.plist */; };
@@ -48,9 +51,6 @@
 		FB942BE5207F95F800614B4B /* FB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB942BE4207F95F800614B4B /* FB.swift */; };
 		FB9E7888203E0CEB00E9BCA6 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E7887203E0CEA00E9BCA6 /* Friend.swift */; };
 		FBA3A29720AC4BCF00FDE760 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3A29620AC4BCC00FDE760 /* MapsViewController.swift */; };
-		FBA3A29B20AC4D6900FDE760 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3A29820AC4D6800FDE760 /* CustomMarkerView.swift */; };
-		FBA3A29C20AC4D6900FDE760 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3A29920AC4D6800FDE760 /* DetailsVC.swift */; };
-		FBA3A29D20AC4D6900FDE760 /* RestaurantPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3A29A20AC4D6800FDE760 /* RestaurantPreviewView.swift */; };
 		FBB21A6B204D9871002E6AD0 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB21A6A204D9871002E6AD0 /* CellView.swift */; };
 		FBB21A6C204DA6A7002E6AD0 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB21A6D204DA6A7002E6AD0 /* SDWebImage.framework */; };
 		FBB41449204767760029E851 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB4144A204767760029E851 /* Alamofire.framework */; };
@@ -151,6 +151,10 @@
 		699E6678E28DD1A2D8228029 /* Pods_TestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72BBBA2DCC21FCF09FD49871 /* Pods-FriendsGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsGo/Pods-FriendsGo.debug.xcconfig"; sourceTree = "<group>"; };
 		929D89ABD2E1238A1DB82158 /* Pods_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B567FC8920C53ABE0084FCB5 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
+		B567FC8B20C53AF50084FCB5 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		B567FC8D20C53B0B0084FCB5 /* RestaurantPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPreviewView.swift; sourceTree = "<group>"; };
+		B567FC8F20C544070084FCB5 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test-Bridging-Header.h"; sourceTree = "<group>"; };
 		FB03AD4A2078245300144ED6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FB145A792057E4F20038A30B /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		FB145A7C2057E8320038A30B /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,7 +180,6 @@
 		FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteForEventController.swift; sourceTree = "<group>"; };
 		FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactController.swift; sourceTree = "<group>"; };
 		FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWAPopupEventM.swift; sourceTree = "<group>"; };
-		FB647AAA20913900006EF6D8 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Test-Bridging-Header.h"; path = "../../../Test-Bridging-Header.h"; sourceTree = "<group>"; };
 		FB67E16420C3235E0093C66F /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		FB67E16620C323990093C66F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FB67E16820C323C60093C66F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -192,9 +195,6 @@
 		FB942BE4207F95F800614B4B /* FB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FB.swift; sourceTree = "<group>"; };
 		FB9E7887203E0CEA00E9BCA6 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		FBA3A29620AC4BCC00FDE760 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
-		FBA3A29820AC4D6800FDE760 /* CustomMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomMarkerView.swift; path = "../../../../../Downloads/Google-Map-Tutorial-iOS-master/googlMapTutuorial2/CustomMarkerView.swift"; sourceTree = "<group>"; };
-		FBA3A29920AC4D6800FDE760 /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsVC.swift; path = "../../../../../Downloads/Google-Map-Tutorial-iOS-master/googlMapTutuorial2/DetailsVC.swift"; sourceTree = "<group>"; };
-		FBA3A29A20AC4D6800FDE760 /* RestaurantPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantPreviewView.swift; path = "../../../../../Downloads/Google-Map-Tutorial-iOS-master/googlMapTutuorial2/RestaurantPreviewView.swift"; sourceTree = "<group>"; };
 		FBB21A6A204D9871002E6AD0 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		FBB21A6D204DA6A7002E6AD0 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB4144A204767760029E851 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -434,9 +434,9 @@
 				FBB8B07320868EC1002DE5FA /* InviteFriendsController.swift */,
 				FBB52B46204B18D3004CC997 /* MapViewController.swift */,
 				FBA3A29620AC4BCC00FDE760 /* MapsViewController.swift */,
-				FBA3A29820AC4D6800FDE760 /* CustomMarkerView.swift */,
-				FBA3A29920AC4D6800FDE760 /* DetailsVC.swift */,
-				FBA3A29A20AC4D6800FDE760 /* RestaurantPreviewView.swift */,
+				B567FC8920C53ABE0084FCB5 /* CustomMarkerView.swift */,
+				B567FC8B20C53AF50084FCB5 /* DetailsVC.swift */,
+				B567FC8D20C53B0B0084FCB5 /* RestaurantPreviewView.swift */,
 				FB718F2A20A4645400C0DA9D /* PlacesViewController.swift */,
 				FBB52B4A204B1911004CC997 /* SubContentsViewController.swift */,
 				FBB52B4C204B194F004CC997 /* ExSlideMenuController.swift */,
@@ -526,9 +526,9 @@
 		FBCA49BB203C779B00C74625 /* FriendsGo */ = {
 			isa = PBXGroup;
 			children = (
-				FB647AAA20913900006EF6D8 /* Test-Bridging-Header.h */,
 				FB145A792057E4F20038A30B /* credentials.plist */,
 				FB67E16A20C324090093C66F /* GoogleService-Info.plist */,
+				B567FC8F20C544070084FCB5 /* Test-Bridging-Header.h */,
 				FBCA49BC203C779C00C74625 /* AppDelegate.swift */,
 				FBB52B3B204B17EE004CC997 /* Controller */,
 				FBA0B0B9204562F700F8558F /* View */,
@@ -658,7 +658,7 @@
 				};
 			};
 			buildConfigurationList = FBCA49B4203C779A00C74625 /* Build configuration list for PBXProject "FriendsGo" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -724,7 +724,9 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -803,6 +805,7 @@
 				FBB52B5D204B1ACE004CC997 /* UIImage.swift in Sources */,
 				FB50A8122072257400702130 /* MWAPopup.swift in Sources */,
 				FB44F5F920756FC6001F71CB /* EventCell.swift in Sources */,
+				B567FC8A20C53ABE0084FCB5 /* CustomMarkerView.swift in Sources */,
 				FBB586D02062A7530071BFD8 /* ViewPagerController.swift in Sources */,
 				FBB52B4F204B19B2004CC997 /* ImageHeaderView.swift in Sources */,
 				FB67E16520C3235F0093C66F /* ChannelViewController.swift in Sources */,
@@ -810,6 +813,7 @@
 				FBB8B07C20869DEB002DE5FA /* InviteContactCell.swift in Sources */,
 				FBB52B66204B1C05004CC997 /* BaseTableViewCell.swift in Sources */,
 				FBB8B08E2087F4B1002DE5FA /* InvContactsController.swift in Sources */,
+				B567FC8C20C53AF50084FCB5 /* DetailsVC.swift in Sources */,
 				FBA3A29720AC4BCF00FDE760 /* MapsViewController.swift in Sources */,
 				FBB8B0842087AD9D002DE5FA /* ConfDeleteEventPopUp.swift in Sources */,
 				FB2882BF20BC0D19009EEE0B /* Chat.swift in Sources */,
@@ -821,7 +825,6 @@
 				FBB8B08A2087E42A002DE5FA /* ParametersViewController.swift in Sources */,
 				FBDD83B220644B2D006FFA9C /* Constants.swift in Sources */,
 				FBB52B41204B186B004CC997 /* RightViewController.swift in Sources */,
-				FBA3A29D20AC4D6900FDE760 /* RestaurantPreviewView.swift in Sources */,
 				FB44F5F7207530E2001F71CB /* Event.swift in Sources */,
 				FBB21A6B204D9871002E6AD0 /* CellView.swift in Sources */,
 				FB942BE5207F95F800614B4B /* FB.swift in Sources */,
@@ -885,12 +888,11 @@
 				FB5D93C7206CEE9F00FC55CF /* InvitationFG.swift in Sources */,
 				FBF27CD2204EF55F007E59E7 /* NotificationViewController.swift in Sources */,
 				FBB8B07620869102002DE5FA /* ParticipantsController.swift in Sources */,
+				B567FC8E20C53B0B0084FCB5 /* RestaurantPreviewView.swift in Sources */,
 				FBF27CD8204EFB22007E59E7 /* MessageViewController.swift in Sources */,
-				FBA3A29C20AC4D6900FDE760 /* DetailsVC.swift in Sources */,
 				FB5D93C5206992E300FC55CF /* TableCellInvitation.swift in Sources */,
 				FBB8B07020860C0C002DE5FA /* UpdateEvent.swift in Sources */,
 				FBB8B06C2085FFB9002DE5FA /* PopAnEvent.swift in Sources */,
-				FBA3A29B20AC4D6900FDE760 /* CustomMarkerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +1000,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1047,7 +1050,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1059,12 +1063,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4KW87Y97KT;
+				DEVELOPMENT_TEAM = L8ZJ2CG93R;
 				INFOPLIST_FILE = "$(SRCROOT)/FriendsGo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Radhia-Mighri.Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OBJC_BRIDGING_HEADER = "FriendsGo/Test-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1079,10 +1087,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4KW87Y97KT;
+				DEVELOPMENT_TEAM = L8ZJ2CG93R;
 				INFOPLIST_FILE = "$(SRCROOT)/FriendsGo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Radhia-Mighri.Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FriendsGo/Test-Bridging-Header.h";
@@ -1099,7 +1110,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KW87Y97KT;
 				INFOPLIST_FILE = TestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Radhia-Mighri.TestTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1116,7 +1131,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KW87Y97KT;
 				INFOPLIST_FILE = TestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Radhia-Mighri.TestTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1132,7 +1151,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KW87Y97KT;
 				INFOPLIST_FILE = TestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Radhia-Mighri.TestUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1148,7 +1171,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KW87Y97KT;
 				INFOPLIST_FILE = TestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Radhia-Mighri.TestUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

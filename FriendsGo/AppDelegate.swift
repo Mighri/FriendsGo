@@ -25,13 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         //facebook
   
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-
+/*
         if let accessToken = FBSDKAccessToken.current(){
             print(accessToken)
         }else{
             print("Not logged In.")
         }
-
+*/
+        
         
         // Initialize sign-in
         GIDSignIn.sharedInstance().clientID = "381533501640-0top6n4qlemq6dpqnjveuqpn28glhf01.apps.googleusercontent.com"
