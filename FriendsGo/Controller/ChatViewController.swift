@@ -326,6 +326,7 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
     private var messageRef:DatabaseReference!
     private var newMessageRefHandle: DatabaseHandle?
     
+    var recieverName:String!
     
     
     var messageArray = [Messages]()
@@ -340,7 +341,7 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
     
     let textField:UITextField = {
         let text = UITextField()
-        text.attributedPlaceholder = NSAttributedString(string: "Type here...", attributes: [NSAttributedStringKey.font:UIFont.italicSystemFont(ofSize: 15)])
+        text.attributedPlaceholder = NSAttributedString(string: " ", attributes: [NSAttributedStringKey.font:UIFont.italicSystemFont(ofSize: 15)])
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
     }()
@@ -460,7 +461,7 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.messageRef = self.channelRef.child("messages")
-        self.navigationItem.title = self.channel.name
+        self.navigationItem.title = self.recieverName
         COnfigureViews()
         addObserver()
     }

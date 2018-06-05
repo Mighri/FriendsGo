@@ -26,11 +26,10 @@ class LoginViewController: UIViewController {
                 print("error in registering",error!)
                 return
             }
-            //let uid = user.us
             //let uid = user?.user.uid
            let uid = user?.uid
             UserDefaults.standard.set(uid, forKey: "userId")
-            self.present(UINavigationController(rootViewController: ChannelViewController(style: UITableViewStyle.plain)), animated: true, completion: nil)
+           //self.present(UINavigationController(rootViewController: ChannelViewController(style: UITableViewStyle.plain)), animated: true, completion: nil)
         }
     }
 

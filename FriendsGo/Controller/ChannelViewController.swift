@@ -6,6 +6,8 @@
 //  Copyright © 2018 Radhia Mighri. All rights reserved.
 //
 
+
+/*
 import UIKit
 import FirebaseDatabase
 
@@ -103,4 +105,4 @@ class ChannelViewController: UITableViewController {
     
 }
 
-
+*/
