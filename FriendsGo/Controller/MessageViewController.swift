@@ -11,7 +11,7 @@ import SDWebImage
 import FirebaseAuth
 import FirebaseDatabase
 
-
+/*
 class Channel:NSObject{
     var id:String?
     var name:String?
@@ -20,15 +20,15 @@ class Channel:NSObject{
         self.name = name
     }
 }
-
+*/
 class MessageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     
     
     
     //var channel : Channel?
-    private lazy var channelRef = Database.database().reference().child("channels")
-    private var channelrefHandle:DatabaseHandle?
+   // private lazy var channelRef = Database.database().reference().child("channels")
+    //private var channelrefHandle:DatabaseHandle?
     
     
     
@@ -73,14 +73,14 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
     
     
   
-    
+   /*
     deinit {
         if let ref = channelrefHandle{
             channelRef.removeObserver(withHandle: ref)
         }
     }
     
-    
+    */
     
     
     
@@ -149,6 +149,21 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         let reciverId = String(describing :currentFriendArray[indexPath.row].id)
         let recieverName = currentFriendArray[indexPath.row].prenom+" "+currentFriendArray[indexPath.row].Nom
         
+        
+        
+        
+        
+    let view = ChatViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+      view.recieverName = recieverName
+         view.reciverId = reciverId
+      self.navigationController?.pushViewController(view, animated: true)
+        
+        
+        
+        
+        
+        /*
         Auth.auth().signInAnonymously { (user, error) in
             if error != nil{
                 print("error in registering",error!)
@@ -176,6 +191,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
             })
 
         }
+ */
         /*
         let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
         
@@ -191,7 +207,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     
-    
+    /*
     func createChannel(name:String){
         let name = [
             "name":name
@@ -199,7 +215,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         let ref = channelRef.childByAutoId()
         ref.setValue(name)
     }
-    
+    */
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80

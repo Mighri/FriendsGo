@@ -304,8 +304,8 @@ class BaseCell: UICollectionViewCell{
  
  
 import UIKit
+import FirebaseAuth
 import FirebaseDatabase
-
 
 
 class Messages:NSObject{
@@ -318,16 +318,30 @@ class Messages:NSObject{
     }
 }
 
+
+class Channel:NSObject{
+    var id:String?
+    var name:String?
+    init(id:String,name:String) {
+        self.id = id
+        self.name = name
+    }
+}
+
 class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout{
 
     var channel:Channel!
-    var channelRef:DatabaseReference!
+    //var channelRef:DatabaseReference!
     var bottomConstraint : NSLayoutConstraint!
     private var messageRef:DatabaseReference!
     private var newMessageRefHandle: DatabaseHandle?
     
     var recieverName:String!
+     var reciverId:String!
+    let userId = UserDefaults.standard.string(forKey: "Saveid")!
     
+     private lazy var channelRef = Database.database().reference().child("channels")
+     private var channelrefHandle:DatabaseHandle?
     
     var messageArray = [Messages]()
     
@@ -411,7 +425,55 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappear(userInfo:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         
+        
+        
+        Auth.auth().signInAnonymously { (user, error) in
+            if error != nil{
+                print("error in registering",error!)
+                return
+            }
+            //let uid = user.us
+            //let uid = user?.user.uid
+            let uid = user?.uid
+            UserDefaults.standard.set(uid, forKey: "userId")
+            // self.present(UINavigationController(rootViewController: ChannelViewController(style: UITableViewStyle.plain)), animated: true, completion: nil)
+        }
+            self.createChannel(name: self.userId)
+        
+            self.channelrefHandle = self.channelRef.observe(DataEventType.childAdded, with: { (snapshot) in
+                let data = snapshot.value as! NSDictionary
+                if let name = data["name"] as? String{
+                    let channel : Channel
+                    channel = Channel(id: snapshot.key, name: name)
+                    
+                   // let view = ChatViewController(collectionViewLayout: UICollectionViewFlowLayout())
+                    //view.channel = channel
+                    self.channelRef = self.channelRef.child(channel.id!)
+                    print(self.channelRef)
+                   // view.recieverName = recieverName
+                   // self.navigationController?.pushViewController(view, animated: true)
+                }
+            })
+  
     }
+    
+    
+    func createChannel(name:String){
+        let name = [
+            "name":name
+        ]
+        let ref = channelRef.childByAutoId()
+        ref.setValue(name)
+        
+    }
+    
+    
+    deinit {
+        if let ref = channelrefHandle{
+            channelRef.removeObserver(withHandle: ref)
+        }
+    }
+    
     
     @objc func keyboardDisappear(userInfo:Notification){
         
