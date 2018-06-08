@@ -318,7 +318,7 @@ class Messages:NSObject{
     }
 }
 
-
+ 
 class Channel:NSObject{
     var id:String?
     var name:String?
@@ -327,7 +327,7 @@ class Channel:NSObject{
         self.name = name
     }
 }
-
+ 
 class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout{
 
     var channel:Channel!
@@ -340,7 +340,7 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
      var reciverId:String!
     let userId = UserDefaults.standard.string(forKey: "Saveid")!
     
-     private lazy var channelRef = Database.database().reference().child("channels")
+     lazy var channelRef = Database.database().reference().child("channels")
      private var channelrefHandle:DatabaseHandle?
     
     var messageArray = [Messages]()
