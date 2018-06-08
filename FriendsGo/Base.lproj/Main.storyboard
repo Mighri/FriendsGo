@@ -28,7 +28,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="fb"/>
                                 <connections>
-                                    <action selector="fbLogin:" destination="xXG-3I-Xxn" eventType="touchUpInside" id="ZHJ-vE-vqt"/>
+                                    <action selector="fbLogin:" destination="xXG-3I-Xxn" eventType="touchUpInside" id="Rt3-Ej-16n"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connectez-vous via" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgT-gj-1bX">
@@ -38,14 +38,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4CR-2f-gQ0">
-                                <rect key="frame" x="48" y="341" width="229" height="30"/>
+                                <rect key="frame" x="48" y="349" width="229" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="Mot de passe"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ou par e-mail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKI-zk-502">
-                                <rect key="frame" x="115" y="224" width="91" height="21"/>
+                                <rect key="frame" x="115" y="232" width="91" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ekf-n1-ESU"/>
                                 </constraints>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail " textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fUd-eA-vzD">
-                                <rect key="frame" x="48" y="283" width="229" height="30"/>
+                                <rect key="frame" x="48" y="291" width="229" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="E-mail"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -67,7 +67,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginSubmitted:" destination="xXG-3I-Xxn" eventType="touchUpInside" id="iW6-xC-43h"/>
+                                    <action selector="loginSubmitted:" destination="xXG-3I-Xxn" eventType="touchUpInside" id="vCn-BJ-yCM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFJ-Mj-1jM">
@@ -81,10 +81,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZk-cx-ROX" customClass="GIDSignInButton">
-                                <rect key="frame" x="76" y="189" width="181" height="27"/>
+                                <rect key="frame" x="76" y="189" width="190" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.15595524073942257" blue="0.18331525068851173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="fFY-AP-Wd8"/>
+                                    <constraint firstAttribute="height" constant="35" id="XwT-Gq-ZEr"/>
+                                    <constraint firstAttribute="width" constant="190" id="iwe-cA-ZcL"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -94,23 +95,22 @@
                             <constraint firstItem="LGJ-YB-iOU" firstAttribute="trailing" secondItem="QKI-zk-502" secondAttribute="trailing" constant="38.5" id="6Xu-19-3F8"/>
                             <constraint firstItem="QKI-zk-502" firstAttribute="centerX" secondItem="GFJ-Mj-1jM" secondAttribute="centerX" constant="-7" id="FMD-wD-1DV"/>
                             <constraint firstItem="GFJ-Mj-1jM" firstAttribute="centerX" secondItem="na8-6k-jbX" secondAttribute="centerX" constant="7" id="J1S-at-WaG"/>
-                            <constraint firstItem="41x-5h-ubL" firstAttribute="trailing" secondItem="EZk-cx-ROX" secondAttribute="trailing" constant="63" id="J58-nH-dDx"/>
+                            <constraint firstItem="QKI-zk-502" firstAttribute="top" secondItem="EZk-cx-ROX" secondAttribute="bottom" constant="8" symbolic="YES" id="JtD-7u-bMW"/>
                             <constraint firstItem="QKI-zk-502" firstAttribute="centerX" secondItem="NgT-gj-1bX" secondAttribute="centerX" id="KVl-fQ-K37"/>
                             <constraint firstItem="fUd-eA-vzD" firstAttribute="leading" secondItem="4CR-2f-gQ0" secondAttribute="leading" id="LWx-vW-dcV"/>
                             <constraint firstItem="4CR-2f-gQ0" firstAttribute="top" secondItem="fUd-eA-vzD" secondAttribute="bottom" constant="28" id="Lha-g9-cMb"/>
-                            <constraint firstItem="QKI-zk-502" firstAttribute="top" secondItem="EZk-cx-ROX" secondAttribute="bottom" constant="8" symbolic="YES" id="P9G-GA-b3W"/>
                             <constraint firstItem="fUd-eA-vzD" firstAttribute="leading" secondItem="41x-5h-ubL" secondAttribute="leading" constant="48" id="R2D-NB-LId"/>
                             <constraint firstAttribute="bottom" secondItem="GFJ-Mj-1jM" secondAttribute="bottom" constant="30" id="RFp-FI-a5S"/>
+                            <constraint firstItem="EZk-cx-ROX" firstAttribute="leading" secondItem="NgT-gj-1bX" secondAttribute="leading" id="Wuc-hw-JL4"/>
                             <constraint firstItem="fUd-eA-vzD" firstAttribute="top" secondItem="QKI-zk-502" secondAttribute="bottom" constant="38" id="Yyg-i6-u9y"/>
                             <constraint firstItem="NgT-gj-1bX" firstAttribute="leading" secondItem="41x-5h-ubL" secondAttribute="leading" constant="76" id="c0Z-Oo-FIn"/>
-                            <constraint firstItem="EZk-cx-ROX" firstAttribute="leading" secondItem="NgT-gj-1bX" secondAttribute="leading" id="eZ2-FX-QNO"/>
                             <constraint firstItem="41x-5h-ubL" firstAttribute="trailing" secondItem="Rsw-q5-ieD" secondAttribute="trailing" constant="63" id="hIp-R0-5B3"/>
                             <constraint firstItem="Rsw-q5-ieD" firstAttribute="leading" secondItem="41x-5h-ubL" secondAttribute="leading" constant="77" id="ik2-we-igd"/>
                             <constraint firstItem="GFJ-Mj-1jM" firstAttribute="top" secondItem="LGJ-YB-iOU" secondAttribute="bottom" constant="43" id="jxb-Uk-YaI"/>
                             <constraint firstItem="41x-5h-ubL" firstAttribute="trailing" secondItem="fUd-eA-vzD" secondAttribute="trailing" constant="43" id="lQb-nk-Idp"/>
                             <constraint firstItem="NgT-gj-1bX" firstAttribute="top" secondItem="na8-6k-jbX" secondAttribute="top" constant="91" id="pAz-Bw-1R7"/>
                             <constraint firstItem="fUd-eA-vzD" firstAttribute="trailing" secondItem="4CR-2f-gQ0" secondAttribute="trailing" id="qh4-LD-KTd"/>
-                            <constraint firstItem="EZk-cx-ROX" firstAttribute="top" secondItem="Rsw-q5-ieD" secondAttribute="bottom" constant="29" id="y70-b0-36c"/>
+                            <constraint firstItem="EZk-cx-ROX" firstAttribute="top" secondItem="Rsw-q5-ieD" secondAttribute="bottom" constant="29" id="rt7-H6-Vor"/>
                             <constraint firstItem="LGJ-YB-iOU" firstAttribute="leading" secondItem="41x-5h-ubL" secondAttribute="leading" constant="77" id="zMj-aZ-CSN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="41x-5h-ubL"/>
@@ -288,7 +288,6 @@
         <!--Navigation Controller-->
         <scene sceneID="H3b-BR-rfK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J2s-4o-5tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ib-iT-0Xo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LgL-7b-lgH">
@@ -300,6 +299,7 @@
                         <segue destination="xXG-3I-Xxn" kind="relationship" relationship="rootViewController" id="mZl-TV-w1F"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J2s-4o-5tp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-83" y="81"/>
         </scene>
@@ -330,7 +330,6 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="fb"/>
                                                 <connections>
-                                                    <action selector="fbLogin:" destination="xXG-3I-Xxn" eventType="touchUpInside" id="C3b-Xz-gd0"/>
                                                     <action selector="fbLogin:" destination="8c1-hL-M9D" eventType="touchUpInside" id="RZX-B0-uBy"/>
                                                 </connections>
                                             </button>
@@ -370,7 +369,6 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="loginSubmitted:" destination="xXG-3I-Xxn" eventType="touchUpInside" id="1gO-TF-wge"/>
                                                     <action selector="loginSubmitted:" destination="8c1-hL-M9D" eventType="touchUpInside" id="DZj-Cs-V9Z"/>
                                                 </connections>
                                             </button>
@@ -444,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCg-cm-WZi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584.375" y="78.16901408450704"/>
+            <point key="canvasLocation" x="-1118" y="69"/>
         </scene>
     </scenes>
     <resources>

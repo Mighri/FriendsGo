@@ -188,7 +188,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     */
     
     let paras = ["idU": userId,
-                 "idInvite": self.currentFriendArray[buttonTag].id,
+                 "idInvite": self.currentFriendArray[buttonTag].id!,
                  "EtatInvitation" : "En attente",
                  "Moyen": "FriendsGo"
         ] as [String : Any]

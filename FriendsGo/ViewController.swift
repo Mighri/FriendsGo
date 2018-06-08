@@ -41,16 +41,13 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
         super.viewDidLoad()
         // self.hideKeyboardWhenTappedAround()
         self.title = "FriendsGo"
-        /*
-         view.addSubview(loginButton)
-         loginButton.center = view.center
+        
+       //  view.addSubview(loginButton)
+        //loginButton.frame = CGRect(x: 75, y: 125, width: 190, height: 35)
+        //loginButton.center = view.center
          loginButton.delegate = self
-         let token = FBSDKAccessToken.current()
-         if  (token != nil)  {
-         fetchProfile()
-         // friends()
-         }
-         */
+        
+        
         GIDSignIn.sharedInstance().uiDelegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.notificationReceived(_:)), name:  NSNotification.Name(rawValue: "ToggleAuthUINotification"), object: nil)
@@ -61,7 +58,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
         
       //  view.addSubview(loginButton)
       //  loginButton.center = view.center
-        loginButton.delegate = self
+        
+        
+     //loginButton.delegate = self
        
         
     }
@@ -71,7 +70,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
     {
         print("login completed")
         fetchProfile()
-        //friends()
+       // friends()
         
     }
     
@@ -189,7 +188,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
         let token = FBSDKAccessToken.current()
         if  (token != nil)  {
             fetchProfile()
-            // friends()
+             //friends()
         }
         
     }
@@ -312,7 +311,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
     
     func friends() {
         let params = ["fields": "id, first_name, last_name, email, picture"]
-        FBSDKGraphRequest(graphPath: "me/taggable_friends", parameters: params).start { (connection, result , error) -> Void in
+        FBSDKGraphRequest(graphPath: "me/friends", parameters: params).start { (connection, result , error) -> Void in
             if let error = error {
                 print(error)
             } else if let info = result as? [String: Any] {
