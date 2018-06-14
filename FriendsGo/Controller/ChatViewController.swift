@@ -318,7 +318,7 @@ class Messages:NSObject{
     }
 }
 
- 
+ /*
 class Channel:NSObject{
     var id:String?
     var name:String?
@@ -327,7 +327,8 @@ class Channel:NSObject{
         self.name = name
     }
 }
- 
+ */
+
 class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout{
 
     var channel:Channel!
@@ -426,7 +427,7 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
         
         
         
-        
+        /*
         Auth.auth().signInAnonymously { (user, error) in
             if error != nil{
                 print("error in registering",error!)
@@ -454,7 +455,7 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
                    // self.navigationController?.pushViewController(view, animated: true)
                 }
             })
-  
+  */
     }
     
     

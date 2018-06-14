@@ -422,6 +422,42 @@ class Service {
     
     
     
+    func loadConversations(parameters: [String : Any], url: String, completionHandler:@escaping (Bool, [Message]?) -> ()) {
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/x-www-form-urlencoded"
+        ]
+        
+        Alamofire.request(url, method:.post, parameters: parameters, headers : headers)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case let .success(value):
+                    
+                    if let result = value as? [String: Any] {
+                        
+                        if let items = result["conversations"] as? [[String: Any]] {
+                            let conv = Mapper<Message>().mapArray(JSONArray: items )
+                          
+                            print(items)
+                            
+                          print(conv)
+                            
+                            completionHandler(true, conv)
+                            
+                        } else {
+                            completionHandler(false, nil)
+                        }
+                    }
+                    
+                case let .failure(error):
+                    print(error)
+                    completionHandler(false, nil)
+                }
+        }
+        
+    }
+    
+    
     
    /*
     func downloadImageFromServer(completionHandler: (Bool, UIImage?) -> ()) {

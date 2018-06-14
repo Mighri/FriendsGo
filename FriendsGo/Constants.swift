@@ -89,5 +89,15 @@ class MyClass {
        
         static let urlGetFriendsOnMap = BaseURL+"getFriendsOnMap.php"
         
+        
+         static let urlRegisterConversation = BaseURL+"addMessage.php"
+        
+        static let urlGetConversations = BaseURL+"getConversations.php"
+     
+        static let urlGetChannels = BaseURL+"getChannels.php"
+        
+           static let urlgetMessageReciever = BaseURL+"getMessageReciever.php"
+        
+          static let urlGetConvReciever = BaseURL+"getConvReciever.php"
     }
 }

@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B5282ADB20C94807008DD62F /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5282ADA20C94807008DD62F /* LogViewController.swift */; };
+		B544334920D25FA20049922C /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544334820D25FA20049922C /* MessagesViewController.swift */; };
 		B567FC8A20C53ABE0084FCB5 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8920C53ABE0084FCB5 /* CustomMarkerView.swift */; };
 		B567FC8C20C53AF50084FCB5 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8B20C53AF50084FCB5 /* DetailsVC.swift */; };
 		B567FC8E20C53B0B0084FCB5 /* RestaurantPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8D20C53B0B0084FCB5 /* RestaurantPreviewView.swift */; };
+		B5EEF06A20CE875F00243BD9 /* addUserPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EEF06920CE875F00243BD9 /* addUserPopUp.swift */; };
+		B5EEF06C20CE88A000243BD9 /* FriendCellChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EEF06B20CE88A000243BD9 /* FriendCellChat.swift */; };
+		B5EF5FEA20CFB5A400350046 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EF5FE920CFB5A400350046 /* Message.swift */; };
 		D825E4DC0379DDB12F91C8B5 /* Pods_FriendsGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65251C914DBE421E580DC280 /* Pods_FriendsGo.framework */; };
 		FB03AD4B2078245400144ED6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB03AD4A2078245300144ED6 /* MapKit.framework */; };
 		FB145A7A2057E4F30038A30B /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB145A792057E4F20038A30B /* credentials.plist */; };
@@ -153,10 +157,14 @@
 		72BBBA2DCC21FCF09FD49871 /* Pods-FriendsGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsGo/Pods-FriendsGo.debug.xcconfig"; sourceTree = "<group>"; };
 		929D89ABD2E1238A1DB82158 /* Pods_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5282ADA20C94807008DD62F /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		B544334820D25FA20049922C /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		B567FC8920C53ABE0084FCB5 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
 		B567FC8B20C53AF50084FCB5 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		B567FC8D20C53B0B0084FCB5 /* RestaurantPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPreviewView.swift; sourceTree = "<group>"; };
 		B567FC8F20C544070084FCB5 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test-Bridging-Header.h"; sourceTree = "<group>"; };
+		B5EEF06920CE875F00243BD9 /* addUserPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addUserPopUp.swift; sourceTree = "<group>"; };
+		B5EEF06B20CE88A000243BD9 /* FriendCellChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellChat.swift; sourceTree = "<group>"; };
+		B5EF5FE920CFB5A400350046 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		FB03AD4A2078245300144ED6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FB145A792057E4F20038A30B /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		FB145A7C2057E8320038A30B /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -370,6 +378,7 @@
 				FBB8B08B2087F483002DE5FA /* InvAmisController.swift */,
 				FBB8B09120889B6C002DE5FA /* FriendsInvitController.swift */,
 				FBB8B08D2087F4B1002DE5FA /* InvContactsController.swift */,
+				B5EEF06920CE875F00243BD9 /* addUserPopUp.swift */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -378,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				FB9E7887203E0CEA00E9BCA6 /* Friend.swift */,
+				B5EF5FE920CFB5A400350046 /* Message.swift */,
 				FB6B37BD2093CB80004EF9EF /* Correspondance.swift */,
 				FB5D93C6206CEE9F00FC55CF /* InvitationFG.swift */,
 				FBDBD7872091DCE100500576 /* InvitationEventFG.swift */,
@@ -424,6 +434,7 @@
 				FBB52B42204B188B004CC997 /* ContactViewController.swift */,
 				FBF27CD3204EF59E007E59E7 /* InvitationViewController.swift */,
 				FBF27CD7204EFB22007E59E7 /* MessageViewController.swift */,
+				B544334820D25FA20049922C /* MessagesViewController.swift */,
 				FB67E16420C3235E0093C66F /* ChannelViewController.swift */,
 				FB2882BE20BC0D19009EEE0B /* Chat.swift */,
 				FB67E16820C323C60093C66F /* ChatViewController.swift */,
@@ -471,6 +482,7 @@
 			children = (
 				FBB52B65204B1C05004CC997 /* BaseTableViewCell.swift */,
 				FBB8B08F20888E52002DE5FA /* InvitationEventCell.swift */,
+				B5EEF06B20CE88A000243BD9 /* FriendCellChat.swift */,
 				FBE61C2F20893D3900626B69 /* NotificationCell.swift */,
 				FBE61C312089415800626B69 /* ParametersCell.swift */,
 				FBDD83B52065684B006FFA9C /* TableCell.swift */,
@@ -807,9 +819,11 @@
 				FBB52B5F204B1AE3004CC997 /* UIView.swift in Sources */,
 				FBB52B5D204B1ACE004CC997 /* UIImage.swift in Sources */,
 				FB50A8122072257400702130 /* MWAPopup.swift in Sources */,
+				B5EF5FEA20CFB5A400350046 /* Message.swift in Sources */,
 				FB44F5F920756FC6001F71CB /* EventCell.swift in Sources */,
 				B567FC8A20C53ABE0084FCB5 /* CustomMarkerView.swift in Sources */,
 				FBB586D02062A7530071BFD8 /* ViewPagerController.swift in Sources */,
+				B5EEF06C20CE88A000243BD9 /* FriendCellChat.swift in Sources */,
 				FBB52B4F204B19B2004CC997 /* ImageHeaderView.swift in Sources */,
 				FB67E16520C3235F0093C66F /* ChannelViewController.swift in Sources */,
 				FB647AA2208F3CF6006EF6D8 /* SVC.swift in Sources */,
@@ -860,10 +874,12 @@
 				FBB8B09020888E52002DE5FA /* InvitationEventCell.swift in Sources */,
 				FBECB1942045C15E0001DC89 /* RegisterUserViewController.swift in Sources */,
 				FB718F2B20A4645500C0DA9D /* PlacesViewController.swift in Sources */,
+				B5EEF06A20CE875F00243BD9 /* addUserPopUp.swift in Sources */,
 				FBB8B08220874BFF002DE5FA /* ViewPagerControllerB.swift in Sources */,
 				FBB52B43204B188B004CC997 /* ContactViewController.swift in Sources */,
 				FBB8B08C2087F483002DE5FA /* InvAmisController.swift in Sources */,
 				FBB4145020489CCB0029E851 /* Keyboard.swift in Sources */,
+				B544334920D25FA20049922C /* MessagesViewController.swift in Sources */,
 				FBB52B4B204B1911004CC997 /* SubContentsViewController.swift in Sources */,
 				FB67E16920C323C60093C66F /* ChatViewController.swift in Sources */,
 				B5282ADB20C94807008DD62F /* LogViewController.swift in Sources */,
