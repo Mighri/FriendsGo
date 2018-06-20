@@ -54,13 +54,16 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         self.navigationController?.navigationBar.isTranslucent = false
         
+        //self.table.reloadData()
+        /*
         let p = ["IdU" : userId]
         print(userId)
         Service.sharedInstance.loadInfoAny(parameters: p, url: urlgetAmis) { (state, Objets) in
             if state {
                 self.FriendArray = Objets!
                 self.currentFriendArray = self.FriendArray
-                self.table.reloadData()
+                //self.table.reloadData(
+         )
                 
                 print("Objets")
             } else {
@@ -68,6 +71,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
                 
             }
         }
+ */
         setUpSearchBar()
         searchBar.placeholder = "Rechercher"
         
@@ -75,6 +79,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
        
         self.observeChannels()
     }
+    
     
     func observeChannels(){
         channelrefHandle = channelRef.observe(DataEventType.childAdded, with: { (snapshot) in
@@ -114,24 +119,14 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
         self.title = "Messages"
+         self.table.reloadData()
     }
    
-    
-    
-    
-  
     deinit {
         if let ref = channelrefHandle{
             channelRef.removeObserver(withHandle: ref)
         }
     }
-    
-    
-    
-    
-    
-    
-    
     private func setUpFriends() {
         
       
@@ -179,9 +174,12 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     */
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+    print(self.channels.count)
+    
         return self.channels.count
     }
- 
       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
          let cell = self.table.dequeueReusableCell(withIdentifier: "Cell") as! TableCell
@@ -191,9 +189,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         print(userId)
         
       // print(self.channelRef.child(self.channels[indexPath.row].id!))
-        
-        
-        
+
         let parameters = ["ChannelName": self.channels[indexPath.row].name!,
                           "senderID": userId]
         
@@ -210,6 +206,19 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
             else
 
             {
+                
+                print("indexPath.rowindexPath.rowindexPath.rowindexPath.rowindexPath.rowindexPath.row")
+                print(indexPath.row)
+                UserDefaults.standard.set(indexPath.row, forKey: "tagCell")
+                
+                
+                print("Channel n'existe pas")
+                //self.channels.remove(at: indexPath.row)
+                //self.table.deleteRows(at: [indexPath], with: .automatic)
+                //cell.isHidden = true
+                // cell.tag = indexPath.row
+   
+                
                 
                 let pp = ["ChannelName": self.channels[indexPath.row].name!,
                           "RecieverID": self.userId]
@@ -232,6 +241,8 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
                             }
                             else {
                                 
+                               
+                                
                                 print("no Message Reciever Name")
                             }
                         }
@@ -240,19 +251,19 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
                     else
                     
                     {
-                       
+                        print("indexPath.rowindexPath.rowindexPath.rowindexPath.rowindexPath.rowindexPath.row")
+                        print(indexPath.row)
+                        UserDefaults.standard.set(indexPath.row, forKey: "tagCell")
                     }
-                    
-                    
                 }
+                
                 
                 print("Channel n'existe pas")
                 //self.channels.remove(at: indexPath.row)
                 //self.table.deleteRows(at: [indexPath], with: .automatic)
                 //cell.isHidden = true
                 // cell.tag = indexPath.row
-                UserDefaults.standard.set(indexPath.row, forKey: "tagCell")
- 
+             
             }
         }
         
@@ -306,10 +317,14 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
   
     
     */
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         let tagg = UserDefaults.standard.integer(forKey: "tagCell")
-        //print(tagg)
+        
+        print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
+        print(tagg)
         var rowHeight:CGFloat = 0.0
         
         if(indexPath.row == tagg){
@@ -325,14 +340,14 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         return rowHeight
         
     }
+
     
-    
-    /*
+   /*
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
      return 80
      }
-     */
-    
+ 
+    */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         //let reciverId = String(describing :currentFriendArray[indexPath.row].id)
@@ -423,32 +438,20 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         //popOverVC.show(vc: self)
         
     }
-   
-    
-    
-    func createChannel(name:String){
-        let name = [
-            "name":name
-        ]
-        let ref = channelRef.childByAutoId()
-        ref.setValue(name)
-    }
- 
-  
-    
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         currentFriendArray = FriendArray.filter({ friend -> Bool in
             switch searchBar.selectedScopeButtonIndex {
             case 0:
                 if searchText.isEmpty { searching = true
-                    table.reloadData()
+                   // table.reloadData()
                 }
                 return (friend.Nom+" "+friend.prenom).lowercased().contains(searchText.lowercased())
             default:
                 return searching == false
             }
         })
-        table.reloadData()
+        //table.reloadData()
     }
     
     /*
