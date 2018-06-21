@@ -11,9 +11,9 @@ import UIKit
 class ContactViewController: UIViewController {
 
     var tabs = [
-        ViewPagerTab(title: "Contacts"),
-        ViewPagerTab(title: "Amis"),
-        ViewPagerTab(title: "Rechercher")
+        ViewPagerTab(title: "  Contacts"),
+        ViewPagerTab(title: "  Amis"),
+        ViewPagerTab(title: "  Rechercher")
     ]
     
     var viewPager:ViewPagerController!

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B5282ADB20C94807008DD62F /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5282ADA20C94807008DD62F /* LogViewController.swift */; };
-		B544334920D25FA20049922C /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544334820D25FA20049922C /* MessagesViewController.swift */; };
 		B567FC8A20C53ABE0084FCB5 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8920C53ABE0084FCB5 /* CustomMarkerView.swift */; };
 		B567FC8C20C53AF50084FCB5 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8B20C53AF50084FCB5 /* DetailsVC.swift */; };
 		B567FC8E20C53B0B0084FCB5 /* RestaurantPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8D20C53B0B0084FCB5 /* RestaurantPreviewView.swift */; };
@@ -157,7 +156,6 @@
 		72BBBA2DCC21FCF09FD49871 /* Pods-FriendsGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsGo/Pods-FriendsGo.debug.xcconfig"; sourceTree = "<group>"; };
 		929D89ABD2E1238A1DB82158 /* Pods_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5282ADA20C94807008DD62F /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
-		B544334820D25FA20049922C /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		B567FC8920C53ABE0084FCB5 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
 		B567FC8B20C53AF50084FCB5 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		B567FC8D20C53B0B0084FCB5 /* RestaurantPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPreviewView.swift; sourceTree = "<group>"; };
@@ -434,7 +432,6 @@
 				FBB52B42204B188B004CC997 /* ContactViewController.swift */,
 				FBF27CD3204EF59E007E59E7 /* InvitationViewController.swift */,
 				FBF27CD7204EFB22007E59E7 /* MessageViewController.swift */,
-				B544334820D25FA20049922C /* MessagesViewController.swift */,
 				FB67E16420C3235E0093C66F /* ChannelViewController.swift */,
 				FB2882BE20BC0D19009EEE0B /* Chat.swift */,
 				FB67E16820C323C60093C66F /* ChatViewController.swift */,
@@ -879,7 +876,6 @@
 				FBB52B43204B188B004CC997 /* ContactViewController.swift in Sources */,
 				FBB8B08C2087F483002DE5FA /* InvAmisController.swift in Sources */,
 				FBB4145020489CCB0029E851 /* Keyboard.swift in Sources */,
-				B544334920D25FA20049922C /* MessagesViewController.swift in Sources */,
 				FBB52B4B204B1911004CC997 /* SubContentsViewController.swift in Sources */,
 				FB67E16920C323C60093C66F /* ChatViewController.swift in Sources */,
 				B5282ADB20C94807008DD62F /* LogViewController.swift in Sources */,

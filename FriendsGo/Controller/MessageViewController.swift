@@ -48,6 +48,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
      let urlGetUsername = MyClass.Constants.urlGetUsername
     
     var searching: Bool! = false
+    
     let userId = UserDefaults.standard.string(forKey: "Saveid")!
     
     override func viewDidLoad() {
@@ -353,6 +354,8 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         //let reciverId = String(describing :currentFriendArray[indexPath.row].id)
        // let recieverName = currentFriendArray[indexPath.row].prenom+" "+currentFriendArray[indexPath.row].Nom
         
+   
+            
         let channel = self.channels[indexPath.row]
         let view = ChatViewController(collectionViewLayout: UICollectionViewFlowLayout())
         view.channel = channel

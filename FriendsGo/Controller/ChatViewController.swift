@@ -489,7 +489,7 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
         
         if textField.hasText{
             let data = [
-                "senderId":UserDefaults.standard.string(forKey: "userId")!,
+                "senderId":self.userId,
                 "text":self.textField.text!,
             ]
             let newMessage = self.messageRef.childByAutoId()
@@ -527,6 +527,17 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
         self.navigationItem.title = self.recieverName
         COnfigureViews()
         addObserver()
+        /*
+        Auth.auth().signInAnonymously { (user, error) in
+            if error != nil{
+                print("error in registering",error!)
+                return
+            }
+            let uid = user?.uid
+            //UserDefaults.standard.set(uid, forKey: "userId")
+        }
+ */
+          self.collectionView?.reloadData()
     }
     
     
@@ -594,12 +605,13 @@ class ChatViewController: UICollectionViewController,UICollectionViewDelegateFlo
         let size = CGSize(width: 250, height: 1000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         let estimatedFrame = NSString(string: mes!).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13)], context: nil)
-        if self.messageArray[indexPath.row].senderId != UserDefaults.standard.string(forKey: "userId"){
-             cell.profileImage.frame = CGRect(x: 15, y: estimatedFrame.height, width: 35, height: 35)
+        if self.messageArray[indexPath.row].senderId != self.userId{
+            cell.profileImage.frame = CGRect(x: 15, y: estimatedFrame.height, width: 35, height: 35)
+            cell.profileImage.image = #imageLiteral(resourceName: "profile")
             cell.messgae.frame = CGRect(x: 60, y: 0, width: estimatedFrame.width + 35, height: estimatedFrame.height + 28)
             cell.messgae.textColor = UIColor.black
             cell.messgae.backgroundColor = UIColor(displayP3Red: 233/255, green: 240/255, blue: 246/255, alpha: 1)
-        }else if self.messageArray[indexPath.row].senderId == UserDefaults.standard.string(forKey: "userId"){
+        }else if self.messageArray[indexPath.row].senderId == self.userId{
             cell.messgae.frame = CGRect(x: self.view.frame.width - estimatedFrame.width - 18 - 2 - 30, y: 0, width: estimatedFrame.width + 35, height: estimatedFrame.height + 28)
             cell.messgae.backgroundColor = UIColor(displayP3Red: 206/255, green: 224/255, blue: 237/255, alpha: 1)
             cell.messgae.textColor = UIColor.black
@@ -631,7 +643,7 @@ class chatLogController: BaseCell{
         image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.masksToBounds = true
         image.layer.cornerRadius = 17.5
-        image.image = #imageLiteral(resourceName: "profile")
+        //image.image = #imageLiteral(resourceName: "profile")
         return image
     }()
     

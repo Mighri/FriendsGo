@@ -88,21 +88,6 @@
             </objects>
             <point key="canvasLocation" x="844" y="-74"/>
         </scene>
-        <!--Message View Controller-->
-        <scene sceneID="TtJ-OX-Xkw">
-            <objects>
-                <viewController id="FTd-Hq-0MG" userLabel="Message View Controller" customClass="MessageViewController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NJM-vT-QaW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Na9-SQ-MaS"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pio-iB-KAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-591" y="1518"/>
-        </scene>
         <!--Import View Controller-->
         <scene sceneID="dUB-Tb-LsQ">
             <objects>
@@ -114,17 +99,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7PD-xe-wUm">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="568" id="gVO-rj-u9A"/>
-                                    <constraint firstAttribute="width" constant="320" id="jbU-xB-Lk7"/>
+                                    <constraint firstAttribute="height" constant="568" id="Vv9-VN-ZCV"/>
+                                    <constraint firstAttribute="width" constant="320" id="rgW-hZ-nMF"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLR-oc-5Jf">
-                                <rect key="frame" x="35" y="240" width="250" height="48"/>
+                                <rect key="frame" x="31" y="256" width="256" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="192" id="14y-VC-56G"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="WxH-uP-uh6"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="mZV-TS-j9O"/>
-                                    <constraint firstAttribute="height" constant="48" id="vs5-aO-VQs"/>
+                                    <constraint firstAttribute="height" constant="48" id="ud4-HN-ugV"/>
                                 </constraints>
                                 <state key="normal" title="Facebook">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,23 +116,33 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Importer les contacts de" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHk-Kv-HxK">
-                                <rect key="frame" x="16" y="141" width="288" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="24" id="Api-EK-uxm"/>
-                                    <constraint firstAttribute="height" constant="24" id="FdK-3N-dbv"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Idz-py-bbg"/>
-                                    <constraint firstAttribute="width" constant="288" id="LYF-tH-IlP"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="gMS-7b-KsQ"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="136" width="320" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.99434662048500488" blue="0.99372380111092273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gu-MP-AUU">
-                                <rect key="frame" x="35" y="330" width="256" height="48"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-facebook-1" translatesAutoresizingMaskIntoConstraints="NO" id="uBj-Tr-rFl">
+                                <rect key="frame" x="56" y="260" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="ILN-2h-qZj"/>
-                                    <constraint firstAttribute="height" constant="48" id="xyC-2d-cz8"/>
+                                    <constraint firstAttribute="width" constant="40" id="Fgy-i5-qBn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="synchronize" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-TM-TES">
+                                <rect key="frame" x="228" y="262" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Sfd-SM-Rab"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-googleplus" translatesAutoresizingMaskIntoConstraints="NO" id="Bar-qp-dVx">
+                                <rect key="frame" x="56" y="338" width="40" height="40"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="synchronize" translatesAutoresizingMaskIntoConstraints="NO" id="0b2-lF-F9K">
+                                <rect key="frame" x="228" y="338" width="32" height="32"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gu-MP-AUU">
+                                <rect key="frame" x="31" y="330" width="256" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="KmK-rJ-hVx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Google">
@@ -161,36 +153,36 @@
                                     <action selector="importGoogle:" destination="rOA-1z-9bY" eventType="touchUpInside" id="ApR-Bc-ck5"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-facebook-1" translatesAutoresizingMaskIntoConstraints="NO" id="uBj-Tr-rFl">
-                                <rect key="frame" x="56" y="248" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="synchronize" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-TM-TES">
-                                <rect key="frame" x="228" y="248" width="34" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-googleplus" translatesAutoresizingMaskIntoConstraints="NO" id="Bar-qp-dVx">
-                                <rect key="frame" x="56" y="338" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="synchronize" translatesAutoresizingMaskIntoConstraints="NO" id="0b2-lF-F9K">
-                                <rect key="frame" x="228" y="338" width="34" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YHe-nG-UYC" firstAttribute="bottom" secondItem="0gu-MP-AUU" secondAttribute="bottom" constant="190" id="1Pw-62-IHk"/>
-                            <constraint firstItem="0gu-MP-AUU" firstAttribute="top" secondItem="wLR-oc-5Jf" secondAttribute="bottom" constant="42" id="88j-FO-eMt"/>
-                            <constraint firstItem="QHk-Kv-HxK" firstAttribute="centerX" secondItem="7PD-xe-wUm" secondAttribute="centerX" id="ENJ-2M-pzX"/>
-                            <constraint firstItem="7PD-xe-wUm" firstAttribute="bottom" secondItem="YHe-nG-UYC" secondAttribute="bottom" id="IqK-aX-ocv"/>
-                            <constraint firstItem="YHe-nG-UYC" firstAttribute="bottom" secondItem="0gu-MP-AUU" secondAttribute="bottom" constant="190" id="LjW-fI-A8i"/>
-                            <constraint firstItem="wLR-oc-5Jf" firstAttribute="leading" secondItem="0gu-MP-AUU" secondAttribute="leading" id="NV1-HV-ln4"/>
-                            <constraint firstItem="wLR-oc-5Jf" firstAttribute="top" secondItem="QHk-Kv-HxK" secondAttribute="bottom" constant="75" id="dA6-Y5-Vyk"/>
-                            <constraint firstItem="0gu-MP-AUU" firstAttribute="leading" secondItem="YHe-nG-UYC" secondAttribute="leading" constant="35" id="eIV-ky-ifu"/>
-                            <constraint firstItem="0gu-MP-AUU" firstAttribute="top" secondItem="wLR-oc-5Jf" secondAttribute="bottom" constant="42" id="gHv-jP-FJJ"/>
-                            <constraint firstItem="wLR-oc-5Jf" firstAttribute="centerX" secondItem="QHk-Kv-HxK" secondAttribute="centerX" id="iWw-7Y-oXJ"/>
-                            <constraint firstItem="7PD-xe-wUm" firstAttribute="leading" secondItem="NDl-R8-4p5" secondAttribute="leading" id="vse-On-7zw"/>
+                            <constraint firstItem="7PD-xe-wUm" firstAttribute="trailing" secondItem="YHe-nG-UYC" secondAttribute="trailing" id="1Bm-Db-M4k"/>
+                            <constraint firstItem="uBj-Tr-rFl" firstAttribute="centerY" secondItem="wLR-oc-5Jf" secondAttribute="centerY" id="Blh-mM-fRc"/>
+                            <constraint firstItem="uBj-Tr-rFl" firstAttribute="leading" secondItem="YHe-nG-UYC" secondAttribute="leading" constant="56" id="CCc-kK-z3Q"/>
+                            <constraint firstItem="wLR-oc-5Jf" firstAttribute="trailing" secondItem="0gu-MP-AUU" secondAttribute="trailing" id="CJW-Va-gyM"/>
+                            <constraint firstItem="QHk-Kv-HxK" firstAttribute="leading" secondItem="7PD-xe-wUm" secondAttribute="leading" id="F8a-Yu-GwP"/>
+                            <constraint firstItem="YHe-nG-UYC" firstAttribute="trailing" secondItem="wLR-oc-5Jf" secondAttribute="trailing" constant="33" id="Gd4-7g-PmI"/>
+                            <constraint firstItem="0b2-lF-F9K" firstAttribute="centerY" secondItem="0gu-MP-AUU" secondAttribute="centerY" id="Mqq-Fl-ugm"/>
+                            <constraint firstItem="YHe-nG-UYC" firstAttribute="bottom" secondItem="0gu-MP-AUU" secondAttribute="bottom" constant="190" id="Unp-SM-wxG"/>
+                            <constraint firstItem="wLR-oc-5Jf" firstAttribute="top" secondItem="QHk-Kv-HxK" secondAttribute="bottom" constant="91" id="VTz-gZ-bxn"/>
+                            <constraint firstItem="7PD-xe-wUm" firstAttribute="bottom" secondItem="YHe-nG-UYC" secondAttribute="bottom" id="Vlu-yo-egQ"/>
+                            <constraint firstItem="7PD-xe-wUm" firstAttribute="leading" secondItem="YHe-nG-UYC" secondAttribute="leading" id="aI4-1w-2dt"/>
+                            <constraint firstItem="wLR-oc-5Jf" firstAttribute="leading" secondItem="YHe-nG-UYC" secondAttribute="leading" constant="31" id="b0Q-9o-T0X"/>
+                            <constraint firstItem="0gu-MP-AUU" firstAttribute="top" secondItem="wLR-oc-5Jf" secondAttribute="bottom" constant="26" id="cN8-We-etI"/>
+                            <constraint firstItem="YHe-nG-UYC" firstAttribute="trailing" secondItem="0Wv-TM-TES" secondAttribute="trailing" constant="60" id="cP8-lN-uFL"/>
+                            <constraint firstItem="0Wv-TM-TES" firstAttribute="top" secondItem="QHk-Kv-HxK" secondAttribute="bottom" constant="97" id="dKo-Xg-pHt"/>
+                            <constraint firstItem="uBj-Tr-rFl" firstAttribute="trailing" secondItem="Bar-qp-dVx" secondAttribute="trailing" id="gRs-jL-Y4e"/>
+                            <constraint firstItem="Bar-qp-dVx" firstAttribute="top" secondItem="wLR-oc-5Jf" secondAttribute="bottom" constant="34" id="jrk-Vk-Y8J"/>
+                            <constraint firstItem="QHk-Kv-HxK" firstAttribute="trailing" secondItem="7PD-xe-wUm" secondAttribute="trailing" id="kC3-Pf-lBs"/>
+                            <constraint firstItem="wLR-oc-5Jf" firstAttribute="leading" secondItem="0gu-MP-AUU" secondAttribute="leading" id="onG-7h-K5H"/>
+                            <constraint firstItem="uBj-Tr-rFl" firstAttribute="leading" secondItem="Bar-qp-dVx" secondAttribute="leading" id="pkI-w3-Cjr"/>
+                            <constraint firstItem="0Wv-TM-TES" firstAttribute="leading" secondItem="0b2-lF-F9K" secondAttribute="leading" id="qP0-88-Knc"/>
+                            <constraint firstItem="0gu-MP-AUU" firstAttribute="top" secondItem="0Wv-TM-TES" secondAttribute="bottom" constant="36" id="s92-NI-Tlq"/>
+                            <constraint firstItem="0gu-MP-AUU" firstAttribute="top" secondItem="uBj-Tr-rFl" secondAttribute="bottom" constant="30" id="uQS-nw-phR"/>
+                            <constraint firstItem="Bar-qp-dVx" firstAttribute="top" secondItem="0b2-lF-F9K" secondAttribute="top" id="uZH-Pn-fLw"/>
+                            <constraint firstItem="0Wv-TM-TES" firstAttribute="trailing" secondItem="0b2-lF-F9K" secondAttribute="trailing" id="uyu-hV-zDs"/>
+                            <constraint firstItem="Bar-qp-dVx" firstAttribute="bottom" secondItem="0gu-MP-AUU" secondAttribute="bottom" id="xxC-hA-FWl"/>
+                            <constraint firstItem="7PD-xe-wUm" firstAttribute="top" secondItem="NDl-R8-4p5" secondAttribute="top" id="yGf-0Y-NJV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YHe-nG-UYC"/>
                     </view>
@@ -2006,15 +1998,16 @@
                             <searchBar contentMode="redraw" fixedFrame="YES" showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n7O-1b-mxp">
                                 <rect key="frame" x="0.0" y="0.0" width="251" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="qjL-iX-n2b" id="u3A-Bi-8BH"/>
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtU-UJ-Bmj">
-                                <rect key="frame" x="258" y="13" width="46" height="30"/>
+                                <rect key="frame" x="251" y="6" width="46" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="addChat"/>
                                 <connections>
                                     <action selector="addUser" destination="qjL-iX-n2b" eventType="touchUpInside" id="7uE-xp-2ic"/>
                                 </connections>
@@ -2031,7 +2024,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cb3-Jm-z1X" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2837" y="1518"/>
+            <point key="canvasLocation" x="-2838.75" y="1517.9577464788733"/>
         </scene>
         <!--Chat-->
         <scene sceneID="MT8-eK-dpc">
@@ -2484,13 +2477,146 @@
             </objects>
             <point key="canvasLocation" x="-3643" y="1518"/>
         </scene>
+        <!--Import View Controller-->
+        <scene sceneID="AUU-px-bMD">
+            <objects>
+                <viewController storyboardIdentifier="6S" id="c8U-nh-mJS" userLabel="Import View Controller" customClass="ImportViewController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ItV-Hk-0cO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Pv9-Mt-fmP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="568" id="7v7-ME-iTH"/>
+                                    <constraint firstAttribute="width" constant="320" id="SDr-ka-Imb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVe-Dj-lmP">
+                                <rect key="frame" x="35" y="240" width="256" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="192" id="G5j-7N-K6A"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="I9w-RS-5Ym"/>
+                                    <constraint firstAttribute="height" constant="48" id="Rxp-wX-0eb"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="UWA-dz-zCd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="qst-xE-oxR"/>
+                                    <constraint firstAttribute="width" constant="256" id="yiP-gM-5Lw"/>
+                                </constraints>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fbLogin:" destination="c8U-nh-mJS" eventType="touchUpInside" id="v25-kk-zzu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Importer les contacts de" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sd-yx-rDq">
+                                <rect key="frame" x="0.0" y="141" width="320" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.9943466205" blue="0.99372380110000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20k-LA-0AV">
+                                <rect key="frame" x="35" y="330" width="256" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Google">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="importGoogle:" destination="c8U-nh-mJS" eventType="touchUpInside" id="JT6-0R-uX0"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-facebook-1" translatesAutoresizingMaskIntoConstraints="NO" id="60l-xE-Tem">
+                                <rect key="frame" x="56" y="248" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="gex-zH-UhK"/>
+                                    <constraint firstAttribute="height" constant="40" id="pFQ-8o-NZf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="xUg-ky-bBq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="synchronize" translatesAutoresizingMaskIntoConstraints="NO" id="qBq-jC-hEe">
+                                <rect key="frame" x="228" y="248" width="34" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="4GB-FN-DST"/>
+                                    <constraint firstAttribute="height" constant="32" id="s9D-mb-mwx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-googleplus" translatesAutoresizingMaskIntoConstraints="NO" id="EgX-CW-1h1">
+                                <rect key="frame" x="56" y="338" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Ie0-MG-dli"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Zfy-mm-tvd"/>
+                                    <constraint firstAttribute="height" constant="40" id="eTn-pA-Hxa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="onC-nN-rcO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="synchronize" translatesAutoresizingMaskIntoConstraints="NO" id="PCs-Bi-ljt">
+                                <rect key="frame" x="228" y="338" width="34" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="1cF-YG-vvb"/>
+                                    <constraint firstAttribute="height" constant="32" id="egM-39-036"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="kU3-PQ-PeU"/>
+                                    <constraint firstAttribute="width" constant="34" id="off-JM-CHy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="60l-xE-Tem" firstAttribute="bottom" secondItem="KVe-Dj-lmP" secondAttribute="bottom" id="2h6-Ev-JxG"/>
+                            <constraint firstItem="qBq-jC-hEe" firstAttribute="leading" secondItem="PCs-Bi-ljt" secondAttribute="leading" id="3ch-KC-I7D"/>
+                            <constraint firstItem="20k-LA-0AV" firstAttribute="bottom" secondItem="EgX-CW-1h1" secondAttribute="bottom" id="4GH-oR-Qtl"/>
+                            <constraint firstItem="9Sd-yx-rDq" firstAttribute="trailing" secondItem="Pv9-Mt-fmP" secondAttribute="trailing" id="5fo-d1-DJJ"/>
+                            <constraint firstItem="GCu-1G-jKG" firstAttribute="trailing" secondItem="KVe-Dj-lmP" secondAttribute="trailing" constant="29" id="66v-Oj-xtD"/>
+                            <constraint firstItem="9Sd-yx-rDq" firstAttribute="leading" secondItem="Pv9-Mt-fmP" secondAttribute="leading" id="6or-qJ-9sy"/>
+                            <constraint firstItem="20k-LA-0AV" firstAttribute="leading" secondItem="KVe-Dj-lmP" secondAttribute="leading" id="8wj-Nt-pwf"/>
+                            <constraint firstItem="60l-xE-Tem" firstAttribute="trailing" secondItem="EgX-CW-1h1" secondAttribute="trailing" id="AzO-s6-4iH"/>
+                            <constraint firstItem="Pv9-Mt-fmP" firstAttribute="bottom" secondItem="GCu-1G-jKG" secondAttribute="bottom" id="EW0-88-bRJ"/>
+                            <constraint firstItem="GCu-1G-jKG" firstAttribute="bottom" secondItem="PCs-Bi-ljt" secondAttribute="bottom" constant="198" id="Ftc-67-Rlx"/>
+                            <constraint firstItem="qBq-jC-hEe" firstAttribute="centerY" secondItem="KVe-Dj-lmP" secondAttribute="centerY" id="GQs-zv-kmv"/>
+                            <constraint firstItem="Pv9-Mt-fmP" firstAttribute="trailing" secondItem="GCu-1G-jKG" secondAttribute="trailing" id="Il3-6S-pou"/>
+                            <constraint firstItem="PCs-Bi-ljt" firstAttribute="leading" secondItem="EgX-CW-1h1" secondAttribute="trailing" constant="132" id="M7U-Zl-Ljh"/>
+                            <constraint firstItem="EgX-CW-1h1" firstAttribute="top" secondItem="KVe-Dj-lmP" secondAttribute="bottom" constant="50" id="M8F-jx-Fjw"/>
+                            <constraint firstItem="GCu-1G-jKG" firstAttribute="bottom" secondItem="20k-LA-0AV" secondAttribute="bottom" constant="190" id="PlN-iZ-KzW"/>
+                            <constraint firstItem="EgX-CW-1h1" firstAttribute="leading" secondItem="GCu-1G-jKG" secondAttribute="leading" constant="56" id="SMs-cW-irB"/>
+                            <constraint firstItem="KVe-Dj-lmP" firstAttribute="leading" secondItem="GCu-1G-jKG" secondAttribute="leading" constant="35" id="TAi-Hh-h3Z"/>
+                            <constraint firstItem="60l-xE-Tem" firstAttribute="leading" secondItem="EgX-CW-1h1" secondAttribute="leading" id="TEJ-5d-9YE"/>
+                            <constraint firstItem="Pv9-Mt-fmP" firstAttribute="top" secondItem="ItV-Hk-0cO" secondAttribute="top" id="TOH-Kk-zkj"/>
+                            <constraint firstItem="qBq-jC-hEe" firstAttribute="leading" secondItem="60l-xE-Tem" secondAttribute="trailing" constant="132" id="VrG-co-l2W"/>
+                            <constraint firstItem="PCs-Bi-ljt" firstAttribute="leading" secondItem="EgX-CW-1h1" secondAttribute="trailing" constant="132" id="WgV-c1-8hP"/>
+                            <constraint firstItem="Pv9-Mt-fmP" firstAttribute="leading" secondItem="GCu-1G-jKG" secondAttribute="leading" id="Wgv-PD-5GF"/>
+                            <constraint firstItem="GCu-1G-jKG" firstAttribute="trailing" secondItem="qBq-jC-hEe" secondAttribute="trailing" constant="58" id="Xrm-4R-QLh"/>
+                            <constraint firstItem="PCs-Bi-ljt" firstAttribute="top" secondItem="EgX-CW-1h1" secondAttribute="top" id="aqB-UY-ORa"/>
+                            <constraint firstItem="GCu-1G-jKG" firstAttribute="trailing" secondItem="PCs-Bi-ljt" secondAttribute="trailing" constant="58" id="cQp-aW-wp2"/>
+                            <constraint firstItem="PCs-Bi-ljt" firstAttribute="top" secondItem="KVe-Dj-lmP" secondAttribute="bottom" constant="50" id="en0-wC-78i"/>
+                            <constraint firstItem="qBq-jC-hEe" firstAttribute="top" secondItem="60l-xE-Tem" secondAttribute="top" id="fBB-JZ-YrV"/>
+                            <constraint firstItem="PCs-Bi-ljt" firstAttribute="leading" secondItem="EgX-CW-1h1" secondAttribute="trailing" constant="132" id="g9I-Lv-sd2"/>
+                            <constraint firstItem="20k-LA-0AV" firstAttribute="centerY" secondItem="PCs-Bi-ljt" secondAttribute="centerY" id="iQB-fa-RTQ"/>
+                            <constraint firstItem="qBq-jC-hEe" firstAttribute="top" secondItem="9Sd-yx-rDq" secondAttribute="bottom" constant="83" id="iW3-Sv-r1j"/>
+                            <constraint firstItem="9Sd-yx-rDq" firstAttribute="top" secondItem="GCu-1G-jKG" secondAttribute="top" constant="121" id="jjg-Kj-wOQ"/>
+                            <constraint firstItem="qBq-jC-hEe" firstAttribute="trailing" secondItem="PCs-Bi-ljt" secondAttribute="trailing" id="lWF-Wo-lYH"/>
+                            <constraint firstItem="20k-LA-0AV" firstAttribute="trailing" secondItem="KVe-Dj-lmP" secondAttribute="trailing" id="rET-Wa-UJz"/>
+                            <constraint firstItem="60l-xE-Tem" firstAttribute="top" secondItem="9Sd-yx-rDq" secondAttribute="bottom" constant="83" id="tP1-qZ-e6R"/>
+                            <constraint firstItem="20k-LA-0AV" firstAttribute="top" secondItem="qBq-jC-hEe" secondAttribute="bottom" constant="50" id="vAY-WW-nR0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GCu-1G-jKG"/>
+                    </view>
+                    <connections>
+                        <outlet property="facebookButton" destination="KVe-Dj-lmP" id="U2B-po-Fb0"/>
+                        <outlet property="googleButton" destination="20k-LA-0AV" id="Tv2-xf-XCe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WgR-Tb-Upo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515" y="1518"/>
+        </scene>
     </scenes>
     <resources>
         <image name=" Address" width="150" height="150"/>
         <image name="FriendsGo" width="29" height="29"/>
         <image name="Horizz" width="199" height="8"/>
+        <image name="addChat" width="200" height="200"/>
         <image name="addEvent" width="546" height="553"/>
-        <image name="background" width="399" height="557"/>
+        <image name="background" width="383" height="550"/>
         <image name="backk" width="980" height="772"/>
         <image name="dateEvent" width="224" height="224"/>
         <image name="description" width="128" height="128"/>
