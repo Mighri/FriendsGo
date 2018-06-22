@@ -71,7 +71,7 @@ class RegisterUserViewController: UIViewController, UITextFieldDelegate {
         
         self.dismiss(animated: true, completion: nil)
         
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "FB") as! FB
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LogViewController
         
         self.navigationController?.pushViewController(secondViewController, animated: true)
         
@@ -153,7 +153,7 @@ class RegisterUserViewController: UIViewController, UITextFieldDelegate {
                 
                 
                 
-                let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as! ViewController
+                let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LogViewController
                 
                 self.navigationController?.pushViewController(secondViewController, animated: true)
                 

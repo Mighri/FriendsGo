@@ -1449,7 +1449,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRR-Ca-vfN">
-                                <rect key="frame" x="16" y="136" width="288" height="49"/>
+                                <rect key="frame" x="16" y="148" width="288" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9388439059" green="0.38343939189999998" blue="0.568618238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Je participe">
@@ -1460,7 +1460,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bQ-4y-MWf">
-                                <rect key="frame" x="16" y="387" width="288" height="45"/>
+                                <rect key="frame" x="16" y="391" width="288" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.88270896669999999" green="0.44354239109999999" blue="0.44466513400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1470,7 +1470,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvE-qV-JRT">
-                                <rect key="frame" x="16" y="310" width="288" height="45"/>
+                                <rect key="frame" x="16" y="310" width="288" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.47227507829999998" green="0.51998239759999998" blue="0.7929676175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1495,15 +1495,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="delete_white" translatesAutoresizingMaskIntoConstraints="NO" id="0kv-US-pVK">
-                                <rect key="frame" x="28" y="391" width="39" height="36"/>
+                                <rect key="frame" x="30" y="397" width="36" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cross-icon" translatesAutoresizingMaskIntoConstraints="NO" id="fZl-Pj-Pn2">
-                                <rect key="frame" x="33" y="321" width="29" height="22"/>
+                                <rect key="frame" x="35" y="321" width="24" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check-mark" translatesAutoresizingMaskIntoConstraints="NO" id="2oX-2a-idr">
-                                <rect key="frame" x="33" y="148" width="34" height="25"/>
+                                <rect key="frame" x="30" y="159" width="29" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

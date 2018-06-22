@@ -145,7 +145,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         //navigationItem.leftBarButtonItem = UIBarButtonItem(customView: searchBar)
         navigationItem.titleView = searchBar
         searchBar.showsScopeBar = false // you can show/hide this dependant on your layout
-        searchBar.placeholder = "Chercher"
+        searchBar.placeholder = "Rechercher"
     }
     
     // Table

@@ -40,7 +40,7 @@ class LogViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUI
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        
+          self.title = "FriendsGo"
     
         
         
@@ -50,13 +50,8 @@ class LogViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUI
         notificationCenter.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         
- 
         
-        
-        
-        
-        
-        self.title = "FriendsGo"
+      
         /*
          view.addSubview(loginButton)
          loginButton.center = view.center

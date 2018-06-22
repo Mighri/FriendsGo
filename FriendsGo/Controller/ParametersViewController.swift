@@ -29,7 +29,7 @@ class ParametersViewController: UIViewController, UITableViewDataSource, UITable
         
         self.setNavigationBarItem()
         self.title = "Paramètres"
-        searchBar.placeholder = "Chercher"
+        searchBar.placeholder = "Rechercher"
         
         self.navigationController?.navigationBar.isTranslucent = false
         
@@ -94,7 +94,7 @@ class ParametersViewController: UIViewController, UITableViewDataSource, UITable
         //navigationItem.leftBarButtonItem = UIBarButtonItem(customView: searchBar)
         navigationItem.titleView = searchBar
         searchBar.showsScopeBar = false // you can show/hide this dependant on your layout
-        searchBar.placeholder = "Chercher"
+        searchBar.placeholder = "Rechercher"
     }
     
     // Table
