@@ -15,7 +15,6 @@ class ParticipantsController: UITableViewController {
     
     var FriendArray = [Friend]()
     var event: Event!
-      let urlgetAmis = MyClass.Constants.urlgetAmis
     let urlGetParticipated = MyClass.Constants.urlGetParticipated
     
     
@@ -23,14 +22,16 @@ class ParticipantsController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(userId)
+        print(event.idE!)
         let p = ["IdU" : userId,
-        "IDEvent" : event.idE] as [String : Any]
+        "IDEvent" : event.idE!]
         
         Service.sharedInstance.loadInfoAny(parameters: p, url: urlGetParticipated) { (state, Objets) in
             if state {
                 self.FriendArray = Objets!
                  self.tableView.reloadData()
+                //self.FriendArray.count
                 print("Objets")
             } else {
                 print("nooo")

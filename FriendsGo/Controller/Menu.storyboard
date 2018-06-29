@@ -151,6 +151,7 @@
                                 </state>
                                 <connections>
                                     <action selector="importGoogle:" destination="rOA-1z-9bY" eventType="touchUpInside" id="ApR-Bc-ck5"/>
+                                    <segue destination="ktJ-FL-GSg" kind="show" id="7t8-IJ-tqd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -630,7 +631,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnp-sC-Xwg">
-                                                    <rect key="frame" x="126" y="1" width="111" height="26"/>
+                                                    <rect key="frame" x="126" y="1" width="194" height="26"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -675,7 +676,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rtV-R6-2ze" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-287" y="3415"/>
+            <point key="canvasLocation" x="-288.75" y="3414.0845070422533"/>
         </scene>
         <!--My Events View Controller-->
         <scene sceneID="B7h-GF-OAY">
@@ -737,7 +738,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXm-Wf-iyc">
-                                                    <rect key="frame" x="126" y="1" width="111" height="26"/>
+                                                    <rect key="frame" x="126" y="1" width="194" height="26"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -906,14 +907,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaC-Jp-BXM">
                                                 <rect key="frame" x="17" y="308" width="287" height="124"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJd-US-sNu">
-                                                        <rect key="frame" x="21" y="8" width="246" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.52549019607843139" green="0.52549019607843139" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FriendsGo" translatesAutoresizingMaskIntoConstraints="NO" id="2I5-Mx-ZlX">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="2I5-Mx-ZlX">
                                                         <rect key="frame" x="21" y="64" width="40" height="40"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
@@ -956,6 +950,20 @@
                                                             <action selector="InvitedFriends:" destination="811-MB-8Ct" eventType="touchUpInside" id="e8Q-wI-cKl"/>
                                                         </connections>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-41-UQl">
+                                                        <rect key="frame" x="157" y="6" width="130" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJd-US-sNu">
+                                                        <rect key="frame" x="8" y="6" width="132" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.52549019607843139" green="0.52549019607843139" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1008,6 +1016,13 @@
                                                     <action selector="back:" destination="811-MB-8Ct" eventType="touchUpInside" id="wyL-Ns-Pne"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29x-Ex-E7C">
+                                                <rect key="frame" x="82" y="339" width="157" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="ek3-Qb-D0E" firstAttribute="centerX" secondItem="PiM-sN-T3h" secondAttribute="centerX" id="15p-Sn-GQp"/>
@@ -1059,10 +1074,16 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
+                        <outlet property="InterestedEvent" destination="8Ui-41-UQl" id="sB7-wr-LVE"/>
                         <outlet property="InvitedFriendsButton" destination="bbo-iC-88j" id="Xmz-PE-F9O"/>
+                        <outlet property="NonparticipationEvent" destination="29x-Ex-E7C" id="CY5-YX-nJ1"/>
                         <outlet property="dateEvent" destination="4oE-mt-QHh" id="ak9-2g-2dB"/>
                         <outlet property="descEvent" destination="Id8-bG-Bxu" id="0mi-Re-rzh"/>
                         <outlet property="heureEvent" destination="nfr-NE-fhw" id="Sub-hg-uzh"/>
+                        <outlet property="imag3" destination="ZD2-2E-bKa" id="hxw-Z8-4ax"/>
+                        <outlet property="image1" destination="2I5-Mx-ZlX" id="MbK-tw-tiH"/>
+                        <outlet property="image2" destination="D1V-YL-MS7" id="geW-ZW-yaE"/>
+                        <outlet property="image4" destination="NzJ-qS-Odr" id="ZUs-hk-QeY"/>
                         <outlet property="imageEvent" destination="ek3-Qb-D0E" id="df1-IT-iEA"/>
                         <outlet property="mapView" destination="Idw-VF-LHu" id="sHp-ft-CD4"/>
                         <outlet property="participationEvent" destination="hJd-US-sNu" id="GXU-xN-0iX"/>
@@ -2161,15 +2182,63 @@
             </objects>
             <point key="canvasLocation" x="-44" y="-25"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Zko-Cz-iXt">
+            <objects>
+                <tableViewController id="OmC-KW-KRU" customClass="ViewController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rq9-zS-hJx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Zln-oa-tEG">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zln-oa-tEG" id="cdt-3w-Pxb">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OmC-KW-KRU" id="U34-V5-9ic"/>
+                            <outlet property="delegate" destination="OmC-KW-KRU" id="2OY-Dr-Kj8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="EWS-zL-1NY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHJ-fG-XRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3302" y="1447"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Hpn-KV-Wiv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ktJ-FL-GSg" customClass="CustomNavigationController" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="contacts.png" id="hCS-X6-tHn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GKP-Gh-DhM">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OmC-KW-KRU" kind="relationship" relationship="rootViewController" id="8aZ-X0-AKW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGy-e0-oun" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2469" y="1446"/>
+        </scene>
     </scenes>
     <resources>
         <image name=" Address" width="150" height="150"/>
-        <image name="FriendsGo" width="29" height="29"/>
         <image name="Horizz" width="199" height="8"/>
         <image name="addChat" width="200" height="200"/>
         <image name="addEvent" width="546" height="553"/>
         <image name="background" width="383" height="550"/>
         <image name="backk" width="980" height="772"/>
+        <image name="contacts.png" width="25" height="25"/>
         <image name="dateEvent" width="224" height="224"/>
         <image name="description" width="128" height="128"/>
         <image name="heure" width="640" height="639"/>
@@ -2178,6 +2247,7 @@
         <image name="logo-facebook-1" width="200" height="199"/>
         <image name="logo-googleplus" width="137" height="137"/>
         <image name="party" width="225" height="225"/>
+        <image name="profile" width="300" height="300"/>
         <image name="propriétaire" width="128" height="128"/>
         <image name="send" width="256" height="256"/>
         <image name="starr" width="506" height="504"/>

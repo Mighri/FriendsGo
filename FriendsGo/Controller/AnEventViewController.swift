@@ -11,18 +11,33 @@ import MapKit
 
 class AnEventViewController: UIViewController, UINavigationControllerDelegate{
     
-    @IBOutlet var descEvent: UILabel!
+     @IBOutlet var descEvent: UILabel!
      @IBOutlet var dateEvent: UILabel!
      @IBOutlet var heureEvent: UILabel!
      @IBOutlet var proprietaireEvent: UILabel!
      @IBOutlet var participationEvent: UILabel!
+     @IBOutlet var InterestedEvent: UILabel!
+     @IBOutlet var NonparticipationEvent: UILabel!
      @IBOutlet var imageEvent: UIImageView!
+    
+    
+     @IBOutlet var image1: UIImageView!
+     @IBOutlet var image2: UIImageView!
+     @IBOutlet var imag3: UIImageView!
+     @IBOutlet var image4: UIImageView!
+    
+    
         @IBOutlet weak  var InvitedFriendsButton: UIButton!
      var event: Event!
      var friend: Friend!
     let urlGetUsername = MyClass.Constants.urlGetUsername
-     
-   
+    
+        let urlGetParticipated = MyClass.Constants.urlGetParticipated
+      let userId = UserDefaults.standard.string(forKey: "Saveid")!
+        var FriendArray = [Friend]()
+        let urlGetNonParticipated = MyClass.Constants.urlGetNonParticipated
+       let urlGetInteresed = MyClass.Constants.urlGetInteresed
+    
     @IBOutlet weak var mapView: MKMapView!
     var matchingItems: [MKMapItem] = [MKMapItem]()
     
@@ -32,8 +47,70 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
         dateEvent.text = event.date
             heureEvent.text = event.heure
        //proprietaireEvent.text = event.IdU
-       // participationEvent.text =
+      
         //imageEvent.image = event.image
+        
+        image1.layer.cornerRadius = 20
+        image1.clipsToBounds = true
+        
+        
+        image2.layer.cornerRadius = 20
+        image2.clipsToBounds = true
+        
+        imag3.layer.cornerRadius = 20
+        imag3.clipsToBounds = true
+        
+        let para = ["IdU" : userId,
+                 "IDEvent" : event.idE!]
+        
+        Service.sharedInstance.loadInfoAny(parameters: para, url: urlGetParticipated) { (state, Objets) in
+            if state {
+                self.FriendArray = Objets!
+                print("Objetssssssssssssssss")
+                 self.participationEvent.text =  String(describing : self.FriendArray.count) + " Participant(s) ,"
+                self.image2.sd_setImage(with: URL(string: self.FriendArray[0].photoURL), placeholderImage: UIImage(named: "profile"))
+                
+            } else {
+                print("nooo")
+            }
+            
+        }
+        
+        
+        let paraa = ["IdU" : userId,
+                    "IDEvent" : event.idE!]
+        
+        Service.sharedInstance.loadInfoAny(parameters: paraa, url: urlGetInteresed) { (state, Objets) in
+            if state {
+                self.FriendArray = Objets!
+                print("Objetssssssssssssssss")
+                self.InterestedEvent.text =  String(describing : self.FriendArray.count) + " Intéressé(s) ,"
+                 self.imag3.sd_setImage(with: URL(string: self.FriendArray[0].photoURL), placeholderImage: UIImage(named: "profile"))
+            } else {
+                print("nooo")
+            }
+            
+        }
+        
+        
+        
+        let paraaa = ["IdU" : userId,
+                    "IDEvent" : event.idE!]
+        
+        Service.sharedInstance.loadInfoAny(parameters: paraaa, url: urlGetNonParticipated) { (state, Objets) in
+            if state {
+                self.FriendArray = Objets!
+                print("Objetssssssssssssssss")
+               self.NonparticipationEvent.text =  String(describing : self.FriendArray.count) + " Non participant(s)"
+                 self.image4.sd_setImage(with: URL(string: self.FriendArray[0].photoURL), placeholderImage: UIImage(named: "profile"))
+                
+            } else {
+                print("nooo")
+            }
+            
+        }
+        
+        
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         
@@ -52,8 +129,6 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
             
         }
         
-        
-        //let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
         imageEvent.sd_setImage(with: URL(string: event.image), placeholderImage: nil)
    
     

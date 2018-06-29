@@ -5,7 +5,7 @@
 //  Created by Radhia Mighri on 20/02/2018.
 //  Copyright © 2018 Radhia Mighri. All rights reserved.
 //
-
+/*
 import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
@@ -369,5 +369,5 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDel
     }
 }
 
-
+*/
 

@@ -20,12 +20,13 @@ class SVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearc
     var currentFriendArray = [Friend]() //update table
     let urlgetUsers = MyClass.Constants.urlgetUsers
     let urlInvitationEventFG = MyClass.Constants.urlInvitationEventFG
-    let urlverifInvitation = MyClass.Constants.urlverifInvitation
     let userId = UserDefaults.standard.string(forKey: "Saveid")!
     var searching: Bool! = false
     let urlgetAmis = MyClass.Constants.urlgetAmis
+    let urlVerifInvitationEvent = MyClass.Constants.urlVerifInvitationEvent
     
      var event: Event!
+    var invitationsEvent : [InvitationEventFG]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,35 +145,18 @@ class SVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearc
     
     @objc func addButtonPressed(sender: UIButton) {
         let buttonTag = sender.tag
-        //print(buttonTag)
-        // print(self.currentFriendArray[buttonTag].id)
-        //print("Hey")
+       
+         let parameters = ["idUEvent": self.userId,
+         "idInviteEvent": self.currentFriendArray[buttonTag].id!]
         
-        /*
-         let idUser = UserDefaults.standard.string(forKey: "Saveid")
-         // let userId = String(describing:idUser)
-         
-         // print(idUser!)
-         
-         let userId = Int(idUser!)
-         
-         //print(userId!)
-         */
-        /*
-         let parameters = ["idU": self.userId,
-         "idInvite": self.FriendArray[buttonTag].id]
-         /*
-         let parameters = ["IdU": "90",
-         "IdInvite": "92"] as [String : String]
-         */
-         Service.sharedInstance.loadInvitation(parameters:parameters as! [String : String], url:urlverifInvitation) { (state, Objets) in
+         Service.sharedInstance.loadInvitationEvent(parameters:parameters, url:"http://172.16.16.209/verifInvitationEvent.php") { (state, Objets) in
          if state {
-         self.invitations = Objets!
+         //self.invitationsEvent = Objets!
          print("Invitation envoyé")
          
          // Display Alert message and return
-         self.displayMessage(userMessage: "déjà invité")
-         return
+         //self.displayMessage(userMessage: "déjà invité")
+         //return
          
          }
          else
@@ -180,30 +164,29 @@ class SVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearc
          print("Invitation n'existe pas")
          
          
-         let paras = ["idU": self.userId,
-         "idInvite": self.currentFriendArray[buttonTag].id,
-         "EtatInvitation" : "En attente",
-         "Moyen": "FriendsGo"
-         ] as [String : Any]
-         
-         
-         Service.sharedInstance.postItAny(parameters:paras, url:self.urlInvitationFG)
-         
-         
-         
-         }
-         }
-         */
         
+            let paras = ["IdInviteur": self.userId,
+                         "IdInvite": self.currentFriendArray[buttonTag].id!,
+                         "Etat" : "En attente",
+                         "IdEvent": self.event.idE!
+                ] as [String : Any]
+            
+            
+            Service.sharedInstance.postItAny(parameters:paras, url:self.urlInvitationEventFG)
+         
+         }
+         }
+ 
+        /*
         let paras = ["IdInviteur": userId,
-                     "IdInvite": self.currentFriendArray[buttonTag].id,
+                     "IdInvite": self.currentFriendArray[buttonTag].id!,
                      "Etat" : "En attente",
-                     "IdEvent": event.idE
+                     "IdEvent": event.idE!
             ] as [String : Any]
         
         
         Service.sharedInstance.postItAny(parameters:paras, url:self.urlInvitationEventFG)
-        
+        */
         
     }
     

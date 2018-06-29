@@ -8,6 +8,7 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - CRToast (0.0.9)
   - FBSDKCoreKit (4.33.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.33.0):
@@ -74,6 +75,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.15)
   - GTMSessionFetcher/Full (1.1.15):
     - GTMSessionFetcher/Core (= 1.1.15)
+  - libPhoneNumber-iOS (0.9.13)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -88,6 +90,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - CRToast (~> 0.0.9)
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
@@ -97,6 +100,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - GoogleSignIn
+  - libPhoneNumber-iOS
   - ObjectMapper
   - SDWebImage (= 4.0)
   - SwiftyJSON
@@ -106,6 +110,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - Bolts
+    - CRToast
     - FBSDKCoreKit
     - FBSDKLoginKit
     - FBSDKShareKit
@@ -122,6 +127,7 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GTMOAuth2
     - GTMSessionFetcher
+    - libPhoneNumber-iOS
     - nanopb
     - ObjectMapper
     - SDWebImage
@@ -131,6 +137,7 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  CRToast: 5a78c22b921c5ed3487488af605bc403a9c92fed
   FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
   FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
   FBSDKShareKit: 1869cb24db2cea90666a50cb9d568deb38e2d16e
@@ -147,11 +154,12 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  libPhoneNumber-iOS: e444379ac18bbfbdefad571da735b2cd7e096caa
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   ObjectMapper: 5cccd2de6f253eda859df8116a5a554d9769e859
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: b22f619a7f64b3d4d05b3a4cc290f881cf9109d0
+PODFILE CHECKSUM: 27d6ab23fc61ce4e55e250ce94d7e358377724ca
 
 COCOAPODS: 1.5.3

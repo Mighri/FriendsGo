@@ -13,7 +13,6 @@ class  NonParticipantsController: UITableViewController {
     
     var FriendArray = [Friend]()
     var event: Event!
-    let urlgetAmis = MyClass.Constants.urlgetAmis
     let urlGetNonParticipated = MyClass.Constants.urlGetNonParticipated
     
     let userId = UserDefaults.standard.string(forKey: "Saveid")!
@@ -22,7 +21,7 @@ class  NonParticipantsController: UITableViewController {
         super.viewDidLoad()
         
         let p = ["IdU" : userId,
-                 "IDEvent" : event.idE] as [String : Any]
+                 "IDEvent" : event.idE!]
         
         Service.sharedInstance.loadInfoAny(parameters: p, url: urlGetNonParticipated) { (state, Objets) in
             if state {

@@ -23,6 +23,9 @@ class RegisterUserViewController: UIViewController, UITextFieldDelegate {
     var friend : Friend!
     var amis : [Friend]!
 
+    
+      @IBOutlet weak var fd: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,9 +36,27 @@ class RegisterUserViewController: UIViewController, UITextFieldDelegate {
         lastNameTextField.delegate = self
         repeatPasswordTextField.delegate = self
        // self.hideKeyboardWhenTappedAround()
+        
+        
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        
+        
     }
 
+    @objc func keyboardWillShow(_ notification: Notification) {
+        let userInfo = (notification as NSNotification).userInfo!
+        let keyboardHeight =  (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        fd.constant = keyboardHeight.height
+    }
     
+    @objc func keyboardWillHide(_ notification: Notification) {
+        fd.constant = 0
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -139,8 +160,8 @@ class RegisterUserViewController: UIViewController, UITextFieldDelegate {
                 print("Utilisateur n'existe pas")
                 
                 
-                let paras = ["Nom": self.firstNameTextField.text!,
-                                  "Prenom": self.lastNameTextField.text!,
+                let paras = ["Nom": self.lastNameTextField.text!,
+                                  "Prenom": self.firstNameTextField.text!,
                                   "Mail": self.emailAddressTextField.text!,
                                   "InscriVia": "FriendsGo",
                                   "MotDePasse": self.passwordTextField.text!]

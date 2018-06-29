@@ -15,7 +15,7 @@ class InvitationFG: NSObject, Mappable{
     var EtatInvitation: String!
     var Moyen: String!
     var IdInvite: String!
-    var IdU: String!
+    var IdUser: String!
     
     required init?(map: Map) {
         
@@ -26,8 +26,8 @@ class InvitationFG: NSObject, Mappable{
         idFG    <- map["IDIF"]
         EtatInvitation     <- map["EtatInvitation"]
         Moyen    <- map["Moyen"]
-        IdInvite   <- map["IdInvite"]
-        IdU    <- map["IdU"]
+        IdInvite   <- map["IdInvitee"]
+        IdUser    <- map["IdUser"]
     }
     
 }

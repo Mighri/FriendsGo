@@ -347,6 +347,7 @@ class Service {
         
     }
 
+    
     func loadInvitationEvent(parameters: [String : Any], url: String, completionHandler:@escaping (Bool, [InvitationEventFG]?) -> ()) {
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded"
@@ -362,12 +363,12 @@ class Service {
                     
                     if let result = value as? [String: Any] {
                         
-                        if let items = result["invitationEventFG"] as? [[String: Any]] {
-                            let invEvent = Mapper<InvitationEventFG>().mapArray(JSONArray: items )
-                            print(items)
-                            print(invEvent)
+                        if let item = result["InvitationEventFGo"] as? [[String: Any]] {
+                            let invE = Mapper<InvitationEventFG>().mapArray(JSONArray: item )
+                            print(item)
+                            print(invE)
                             
-                            completionHandler(true, invEvent)
+                            completionHandler(true, invE)
                             
                         } else {
                             completionHandler(false, nil)

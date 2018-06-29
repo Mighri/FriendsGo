@@ -150,21 +150,21 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     //print(userId!)
     */
-    /*
-    let parameters = ["idU": self.userId,
-                      "idInvite": self.FriendArray[buttonTag].id]
-    /*
-    let parameters = ["IdU": "90",
-                      "IdInvite": "92"] as [String : String]
-    */
-    Service.sharedInstance.loadInvitation(parameters:parameters as! [String : String], url:urlverifInvitation) { (state, Objets) in
+    print(self.userId)
+    print(self.FriendArray[buttonTag].id!)
+    
+    
+    let parameters = ["idUS": self.userId,
+                      "idInviteS": self.currentFriendArray[buttonTag].id!]
+  
+    Service.sharedInstance.loadInvitation(parameters:parameters, url:urlverifInvitation) { (state, Objets) in
         if state {
            self.invitations = Objets!
             print("Invitation envoyé")
             
             // Display Alert message and return
-            self.displayMessage(userMessage: "déjà invité")
-            return
+            self.displayMessage(userMessage: "Invitation envoyée")
+             return
 
         }
         else
@@ -173,7 +173,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             
             
             let paras = ["idU": self.userId,
-                         "idInvite": self.currentFriendArray[buttonTag].id,
+                         "idInvite": self.currentFriendArray[buttonTag].id!,
                          "EtatInvitation" : "En attente",
                          "Moyen": "FriendsGo"
                 ] as [String : Any]
@@ -185,8 +185,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             
         }
     }
-    */
-    
+ 
+    /*
     let paras = ["idU": userId,
                  "idInvite": self.currentFriendArray[buttonTag].id!,
                  "EtatInvitation" : "En attente",
@@ -195,7 +195,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     Service.sharedInstance.postItAny(parameters:paras, url:self.urlInvitationFG)
-  
+  */
     
     }
     
@@ -245,7 +245,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     func displayMessage(userMessage:String) -> Void {
         DispatchQueue.main.async
             {
-                let alertController = UIAlertController(title: "Alerte", message: userMessage, preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Indication", message: userMessage, preferredStyle: .alert)
                 
                 let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
                     // Code in this block will trigger when OK button tapped.

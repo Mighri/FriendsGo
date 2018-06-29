@@ -12,7 +12,6 @@ import SDWebImage
 class  InterestedFriendsController: UITableViewController {
     var FriendArray = [Friend]()
     var event: Event!
-    let urlgetAmis = MyClass.Constants.urlgetAmis
     let urlGetInteresed = MyClass.Constants.urlGetInteresed
     
     let userId = UserDefaults.standard.string(forKey: "Saveid")!
@@ -21,7 +20,7 @@ class  InterestedFriendsController: UITableViewController {
         super.viewDidLoad()
         
         let p = ["IdU" : userId,
-                 "IDEvent" : event.idE] as [String : Any]
+                 "IDEvent" : event.idE!]
         
         Service.sharedInstance.loadInfoAny(parameters: p, url: urlGetInteresed) { (state, Objets) in
             if state {

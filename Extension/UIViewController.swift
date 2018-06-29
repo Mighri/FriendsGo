@@ -33,7 +33,7 @@ extension UIViewController {
         
         let mystoryboard:UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
      
-        let secondViewController = mystoryboard.instantiateViewController(withIdentifier: "LoginController") as! ViewController
+        let secondViewController = mystoryboard.instantiateViewController(withIdentifier: "LoginController") as! LogViewController
         self.navigationController?.pushViewController(secondViewController, animated: true)
         
     }
