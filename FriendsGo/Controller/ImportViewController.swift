@@ -14,6 +14,8 @@ import FBSDKShareKit
 class ImportViewController: UIViewController{
     
       let userId = UserDefaults.standard.string(forKey: "Saveid")!
+       let urlGetUsername = MyClass.Constants.urlGetUsername
+    
     var friend : Friend!
      var correspondance : Correspondance!
     var FriendArray = [Friend]()
@@ -49,7 +51,55 @@ class ImportViewController: UIViewController{
         self.title = "FriendsGo"
      
     }
+    
+    
+    func displayMessage(userMessage:String) -> Void {
+        DispatchQueue.main.async
+            {
+                let alertController = UIAlertController(title: "Erreur", message: userMessage, preferredStyle: .alert)
+                
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+                    // Code in this block will trigger when OK button tapped.
+                    print("Ok button tapped")
+                    DispatchQueue.main.async
+                        {
+                            self.dismiss(animated: true, completion: nil)
+                    }
+                }
+                alertController.addAction(OKAction)
+                self.present(alertController, animated: true, completion:nil)
+        }
+    }
+    
+    
     @IBAction func fbLogin(_ sender: Any) {
+        
+        
+        print(self.userId)
+        
+        let pz = ["IdU" : self.userId] as [String : Any]
+        
+        Service.sharedInstance.loadInfoAny(parameters: pz, url: urlGetUsername) { (state, Objets) in
+            if state {
+                self.friend = Objets![0]
+                if (self.friend.origine == "Facebook")
+                {
+                    
+                }
+                else
+                {
+                    // Display Alert message and return
+                    self.displayMessage(userMessage: "Veuillez connecter avec votre  compte Facebook")
+                    return
+                }
+                print("Objets")
+            } else {
+                print("nooo")
+            }
+            
+        }
+        
+        
         
         
         let p = ["inscrivia" : "Facebook"]
@@ -98,10 +148,6 @@ class ImportViewController: UIViewController{
                         }
                         
                     }
-                    
-                    
-                    
-                
                 }
                 
             } else {
@@ -172,6 +218,10 @@ class ImportViewController: UIViewController{
                 print("nooo")
             }
         }
+        
+        
+        
+      
 }
  
 }
