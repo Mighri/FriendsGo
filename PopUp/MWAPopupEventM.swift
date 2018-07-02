@@ -159,7 +159,7 @@ class MWAPopupEventM: UIViewController, UINavigationControllerDelegate, UIImageP
         
         let userId = UserDefaults.standard.string(forKey: "Saveid")
         print(userId!)
-        let imageEvent = UserDefaults.standard.string(forKey: "imageEvent")
+        let imageEvent = UserDefaults.standard.string(forKey: "imageEventUpdate")
         print(searchText.text!)
         let parameters = ["Titre": eventName.text!,
                           "Descriptif": eventDescription.text!,
@@ -408,7 +408,7 @@ class MWAPopupEventM: UIViewController, UINavigationControllerDelegate, UIImageP
                     let photo = infoPicture["link"] as! String
                     print(photo)
                     
-                    UserDefaults.standard.set(photo, forKey: "imageEvent")
+                    UserDefaults.standard.set(photo, forKey: "imageEventUpdate")
                     
                 } catch {
                     print(error)

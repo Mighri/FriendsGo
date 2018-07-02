@@ -22,7 +22,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     let urlInvitationFG = MyClass.Constants.urlInvitationFG
     let urlverifInvitation = MyClass.Constants.urlverifInvitation
     let userId = UserDefaults.standard.string(forKey: "Saveid")!
-     var searching: Bool! = false
+    var searching: Bool! = false
+    
+     //@IBOutlet var button : UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         setUpSearchBar()
         alterLayout()
         searchBar.showsCancelButton = false
+        
+          //button.layer.cornerRadius = 15
+         // button.clipsToBounds = true
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {

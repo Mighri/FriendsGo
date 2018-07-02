@@ -103,7 +103,7 @@ extension InviteForEventController: ViewPagerControllerDataSourceB {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "InviteContactController") as! InviteContactController
         
-        let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "SVC") as! SVC
+        let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "SVC") as! InviteAmisEventController
         
         if (position == 0)
         {

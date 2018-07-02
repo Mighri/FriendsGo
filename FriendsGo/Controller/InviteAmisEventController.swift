@@ -10,7 +10,8 @@ import UIKit
 import SDWebImage
 
 
-class SVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UINavigationControllerDelegate {
+class InviteAmisEventController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UINavigationControllerDelegate {
+
     @IBOutlet var table: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     var friend : Friend!

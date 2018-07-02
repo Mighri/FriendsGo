@@ -36,10 +36,7 @@ class UpdateEvent: UIViewController, UINavigationControllerDelegate, UIImagePick
         dateField.placeholder = event.date
         heureField.placeholder = event.heure
         searchField.placeholder = event.adresse
-        //searchField.text = event.adresse
-        /*
-        let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
- */
+
         myImageView.sd_setImage(with: URL(string: event.image), placeholderImage: nil)
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
@@ -96,8 +93,7 @@ class UpdateEvent: UIViewController, UINavigationControllerDelegate, UIImagePick
         heureFieldContainer.addSubview(heureFieldView)
         heureField.leftView = heureFieldContainer
         
-        
-        
+  
         searchField.leftViewMode = .always
         
         let searchFieldContainer = UIView(frame: CGRect(x: searchField.frame.origin.x, y:  searchField.frame.origin.y, width: 40.0, height: 30.0))
@@ -136,7 +132,7 @@ class UpdateEvent: UIViewController, UINavigationControllerDelegate, UIImagePick
         
         let userId = UserDefaults.standard.string(forKey: "Saveid")
         print(userId!)
-        let imageEvent = UserDefaults.standard.string(forKey: "imageEventp")
+        let imageEvent = UserDefaults.standard.string(forKey: "imageEventU")
         print(searchText.text!)
       
         if (eventName.text?.isEmpty)! ||
@@ -168,9 +164,6 @@ class UpdateEvent: UIViewController, UINavigationControllerDelegate, UIImagePick
        
         Service.sharedInstance.postIt(parameters:parameters as! [String : String], url:self.urlUpdateEvent)
              print("Update done")
-        
-            
-            
             
             let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
             
@@ -178,12 +171,8 @@ class UpdateEvent: UIViewController, UINavigationControllerDelegate, UIImagePick
             
             self.navigationController?.pushViewController(ViewController, animated: true)
             
-            
-            
           }
     }
-    
-    
     
     @IBAction func textFieldReturn(_ sender: AnyObject) {
         _ = sender.resignFirstResponder()
@@ -368,7 +357,7 @@ class UpdateEvent: UIViewController, UINavigationControllerDelegate, UIImagePick
                     let photo = infoPicture["link"] as! String
                     print(photo)
                     
-                    UserDefaults.standard.set(photo, forKey: "imageEventp")
+                    UserDefaults.standard.set(photo, forKey: "imageEventU")
                     
                 } catch {
                     print(error)

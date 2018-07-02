@@ -402,9 +402,9 @@ class Service {
                         
                         if let items = result["Positions"] as? [[String: Any]] {
                             let position = Mapper<Position>().mapArray(JSONArray: items )
-                         //print(items)
+                          print(items)
                             
-                          //print(invEvent)
+                          print(position)
                             
                             completionHandler(true, position)
                             

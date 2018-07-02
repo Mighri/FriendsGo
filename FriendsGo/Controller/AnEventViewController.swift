@@ -11,32 +11,34 @@ import MapKit
 
 class AnEventViewController: UIViewController, UINavigationControllerDelegate{
     
+     @IBOutlet var NomEvent: UILabel!
      @IBOutlet var descEvent: UILabel!
      @IBOutlet var dateEvent: UILabel!
      @IBOutlet var heureEvent: UILabel!
-     @IBOutlet var proprietaireEvent: UILabel!
+     @IBOutlet var LieuEvent: UILabel!
      @IBOutlet var participationEvent: UILabel!
      @IBOutlet var InterestedEvent: UILabel!
      @IBOutlet var NonparticipationEvent: UILabel!
      @IBOutlet var imageEvent: UIImageView!
     
-    
-     @IBOutlet var image1: UIImageView!
      @IBOutlet var image2: UIImageView!
      @IBOutlet var imag3: UIImageView!
      @IBOutlet var image4: UIImageView!
     
+    @IBOutlet var imageicon1: UIImageView!
+    @IBOutlet var imageicon2: UIImageView!
+    @IBOutlet var imageicon3: UIImageView!
     
-        @IBOutlet weak  var InvitedFriendsButton: UIButton!
+     @IBOutlet weak  var InvitedFriendsButton: UIButton!
+    
      var event: Event!
      var friend: Friend!
-    let urlGetUsername = MyClass.Constants.urlGetUsername
-    
-        let urlGetParticipated = MyClass.Constants.urlGetParticipated
-      let userId = UserDefaults.standard.string(forKey: "Saveid")!
-        var FriendArray = [Friend]()
-        let urlGetNonParticipated = MyClass.Constants.urlGetNonParticipated
-       let urlGetInteresed = MyClass.Constants.urlGetInteresed
+     let urlGetUsername = MyClass.Constants.urlGetUsername
+     let urlGetParticipated = MyClass.Constants.urlGetParticipated
+     let userId = UserDefaults.standard.string(forKey: "Saveid")!
+     var FriendArray = [Friend]()
+     let urlGetNonParticipated = MyClass.Constants.urlGetNonParticipated
+     let urlGetInteresed = MyClass.Constants.urlGetInteresed
     
     @IBOutlet weak var mapView: MKMapView!
     var matchingItems: [MKMapItem] = [MKMapItem]()
@@ -46,19 +48,17 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
         descEvent.text = event.descriptif
         dateEvent.text = event.date
             heureEvent.text = event.heure
-       //proprietaireEvent.text = event.IdU
-      
-        //imageEvent.image = event.image
-        
-        image1.layer.cornerRadius = 20
-        image1.clipsToBounds = true
-        
+        NomEvent.text = event.titre
+        LieuEvent.text = event.adresse
         
         image2.layer.cornerRadius = 20
         image2.clipsToBounds = true
         
         imag3.layer.cornerRadius = 20
         imag3.clipsToBounds = true
+        
+        image4.layer.cornerRadius = 20
+        image4.clipsToBounds = true
         
         let para = ["IdU" : userId,
                  "IDEvent" : event.idE!]
@@ -69,8 +69,10 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
                 print("Objetssssssssssssssss")
                  self.participationEvent.text =  String(describing : self.FriendArray.count) + " Participant(s) ,"
                 self.image2.sd_setImage(with: URL(string: self.FriendArray[0].photoURL), placeholderImage: UIImage(named: "profile"))
-                
+                self.imageicon1.isHidden = false
+                UserDefaults.standard.set(self.FriendArray.count, forKey: "participatedPoeple")
             } else {
+                 self.imageicon1.isHidden = true
                 print("nooo")
             }
             
@@ -86,13 +88,13 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
                 print("Objetssssssssssssssss")
                 self.InterestedEvent.text =  String(describing : self.FriendArray.count) + " Intéressé(s) ,"
                  self.imag3.sd_setImage(with: URL(string: self.FriendArray[0].photoURL), placeholderImage: UIImage(named: "profile"))
+                UserDefaults.standard.set(self.FriendArray.count, forKey: "interestedPoeple")
+                    self.imageicon2.isHidden = false
             } else {
                 print("nooo")
+                    self.imageicon2.isHidden = true
             }
-            
         }
-        
-        
         
         let paraaa = ["IdU" : userId,
                     "IDEvent" : event.idE!]
@@ -103,19 +105,18 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
                 print("Objetssssssssssssssss")
                self.NonparticipationEvent.text =  String(describing : self.FriendArray.count) + " Non participant(s)"
                  self.image4.sd_setImage(with: URL(string: self.FriendArray[0].photoURL), placeholderImage: UIImage(named: "profile"))
-                
+                UserDefaults.standard.set(self.FriendArray.count, forKey: "NonParticipatedPoeple")
+                    self.imageicon3.isHidden = false
             } else {
+                    self.imageicon3.isHidden = true
                 print("nooo")
             }
-            
         }
-        
-        
-        
+
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         
         self.showAnimate()
-        
+        /*
         let p = ["IdU" : event.IdU] as [String : Any]
         
         Service.sharedInstance.loadInfoAny(parameters: p, url: urlGetUsername) { (state, Objets) in
@@ -128,6 +129,7 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
             }
             
         }
+        */
         
         imageEvent.sd_setImage(with: URL(string: event.image), placeholderImage: nil)
    
@@ -138,6 +140,22 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
         
         InvitedFriendsButton.layer.cornerRadius = 20
         InvitedFriendsButton.clipsToBounds = true
+        
+        
+        
+        let participatedPoeple = UserDefaults.standard.integer(forKey: "participatedPoeple")
+        let interestedPoeple = UserDefaults.standard.integer(forKey: "interestedPoeple")
+        let NonParticipatedPoeple = UserDefaults.standard.integer(forKey: "NonParticipatedPoeple")
+        let sum = (participatedPoeple + interestedPoeple + NonParticipatedPoeple)
+        if (sum > 4)
+        {
+            InvitedFriendsButton.setTitle(String(describing : sum - 4), for: .normal)
+        }
+        else
+        {
+            InvitedFriendsButton.setTitle("0", for: .normal)
+        }
+        
     
     }
     
@@ -231,6 +249,7 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
         ViewController.event = event
         self.navigationController?.pushViewController(ViewController, animated: true)
         
+      
          //self.navigationController?.navigationBar.backItem?.title = "Les invités"
         
         //self.navigationController?.navigationBarHidden = true;
@@ -273,7 +292,7 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
         self.removeFromParentViewController()
     }
 
-    
+    /*
     func createAddEventCustomPopup() {
         
         let popup = MWAPopupAddEvent.createPopup(aPopupType: .addEventView, titleString: " ", messageString: " ", buttonNames: ["Annuler", "Enregistrer"])
@@ -425,4 +444,5 @@ class AnEventViewController: UIViewController, UINavigationControllerDelegate{
             print("Cancel Tapped")
         }
     }
+ */
 }

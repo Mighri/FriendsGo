@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
+
 struct MyPlace {
     var name: String
     var lat: Double
@@ -78,6 +79,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             }
         }
 
+        
         Service.sharedInstance.loadInfoAny(parameters: p, url: urlGetFriendsOnMap) { (state, Objets) in
             if state {
                 self.friends = Objets!
@@ -238,7 +240,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         // for i in 0..<3 {
         for coord in self.positions {
             
-            let pss = ["IdU" : coord.idUser] as [String : Any]
+            let pss = ["IdU" : coord.idUser!] as [String : Any]
             Service.sharedInstance.loadInfoAny(parameters: pss, url: urlGetUsername) { (state, Objets) in
                 if state {
                     print("the position owner")

@@ -28,6 +28,7 @@
 		B57854B520E6749600594D7A /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B57854AE20E6749500594D7A /* settings@2x.png */; };
 		B57854B620E6749600594D7A /* contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = B57854AF20E6749600594D7A /* contacts.png */; };
 		B57854B920E674AC00594D7A /* Google_Contacts_Viewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B57854B720E674AC00594D7A /* Google_Contacts_Viewer.xcdatamodeld */; };
+		B5A22BF420EA3829001889F2 /* TabeCellUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A22BF320EA3829001889F2 /* TabeCellUser.swift */; };
 		B5EEF06A20CE875F00243BD9 /* addUserPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EEF06920CE875F00243BD9 /* addUserPopUp.swift */; };
 		B5EEF06C20CE88A000243BD9 /* FriendCellChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EEF06B20CE88A000243BD9 /* FriendCellChat.swift */; };
 		B5EF5FEA20CFB5A400350046 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EF5FE920CFB5A400350046 /* Message.swift */; };
@@ -53,7 +54,7 @@
 		FB50A8162072757D00702130 /* MWAPopupC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB50A8152072757D00702130 /* MWAPopupC.swift */; };
 		FB5D93C5206992E300FC55CF /* TableCellInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D93C4206992E300FC55CF /* TableCellInvitation.swift */; };
 		FB5D93C7206CEE9F00FC55CF /* InvitationFG.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D93C6206CEE9F00FC55CF /* InvitationFG.swift */; };
-		FB647AA2208F3CF6006EF6D8 /* SVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA1208F3CF5006EF6D8 /* SVC.swift */; };
+		FB647AA2208F3CF6006EF6D8 /* InviteAmisEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA1208F3CF5006EF6D8 /* InviteAmisEventController.swift */; };
 		FB647AA4208F72D4006EF6D8 /* InviteForEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */; };
 		FB647AA6208FC84C006EF6D8 /* InviteContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */; };
 		FB647AA920912BE6006EF6D8 /* MWAPopupEventM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */; };
@@ -194,6 +195,7 @@
 		B57854AE20E6749500594D7A /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		B57854AF20E6749600594D7A /* contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacts.png; sourceTree = "<group>"; };
 		B57854B820E674AC00594D7A /* Google_Contacts_Viewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Google_Contacts_Viewer.xcdatamodel; sourceTree = "<group>"; };
+		B5A22BF320EA3829001889F2 /* TabeCellUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabeCellUser.swift; sourceTree = "<group>"; };
 		B5EEF06920CE875F00243BD9 /* addUserPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addUserPopUp.swift; sourceTree = "<group>"; };
 		B5EEF06B20CE88A000243BD9 /* FriendCellChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellChat.swift; sourceTree = "<group>"; };
 		B5EF5FE920CFB5A400350046 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -218,7 +220,7 @@
 		FB50A8152072757D00702130 /* MWAPopupC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWAPopupC.swift; sourceTree = "<group>"; };
 		FB5D93C4206992E300FC55CF /* TableCellInvitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellInvitation.swift; sourceTree = "<group>"; };
 		FB5D93C6206CEE9F00FC55CF /* InvitationFG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationFG.swift; sourceTree = "<group>"; };
-		FB647AA1208F3CF5006EF6D8 /* SVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVC.swift; sourceTree = "<group>"; };
+		FB647AA1208F3CF5006EF6D8 /* InviteAmisEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteAmisEventController.swift; sourceTree = "<group>"; };
 		FB647AA3208F72D4006EF6D8 /* InviteForEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteForEventController.swift; sourceTree = "<group>"; };
 		FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactController.swift; sourceTree = "<group>"; };
 		FB647AA820912BE5006EF6D8 /* MWAPopupEventM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWAPopupEventM.swift; sourceTree = "<group>"; };
@@ -476,7 +478,7 @@
 			children = (
 				FBDD83B3206567B4006FFA9C /* ListContactsViewController.swift */,
 				FBDD83B72068372E006FFA9C /* SearchViewController.swift */,
-				FB647AA1208F3CF5006EF6D8 /* SVC.swift */,
+				FB647AA1208F3CF5006EF6D8 /* InviteAmisEventController.swift */,
 				FB647AA5208FC84C006EF6D8 /* InviteContactController.swift */,
 				FBDD83AD2063BE1A006FFA9C /* AmisViewController.swift */,
 				FB44F5F420752A44001F71CB /* InvitationEventViewController.swift */,
@@ -540,6 +542,7 @@
 				FBE61C2F20893D3900626B69 /* NotificationCell.swift */,
 				FBE61C312089415800626B69 /* ParametersCell.swift */,
 				FBDD83B52065684B006FFA9C /* TableCell.swift */,
+				B5A22BF320EA3829001889F2 /* TabeCellUser.swift */,
 				FB2882BC20BC0CCE009EEE0B /* TableCellChat.swift */,
 				FBB8B07B20869DEB002DE5FA /* InviteContactCell.swift */,
 				FB44F5F820756FC5001F71CB /* EventCell.swift */,
@@ -894,7 +897,7 @@
 				B5EEF06C20CE88A000243BD9 /* FriendCellChat.swift in Sources */,
 				FBB52B4F204B19B2004CC997 /* ImageHeaderView.swift in Sources */,
 				FB67E16520C3235F0093C66F /* ChannelViewController.swift in Sources */,
-				FB647AA2208F3CF6006EF6D8 /* SVC.swift in Sources */,
+				FB647AA2208F3CF6006EF6D8 /* InviteAmisEventController.swift in Sources */,
 				FBB8B07C20869DEB002DE5FA /* InviteContactCell.swift in Sources */,
 				FBB52B66204B1C05004CC997 /* BaseTableViewCell.swift in Sources */,
 				FBB8B08E2087F4B1002DE5FA /* InvContactsController.swift in Sources */,
@@ -910,6 +913,7 @@
 				FBB8B08A2087E42A002DE5FA /* ParametersViewController.swift in Sources */,
 				B57854A620E6748500594D7A /* TransitionAnimator.swift in Sources */,
 				FBDD83B220644B2D006FFA9C /* Constants.swift in Sources */,
+				B5A22BF420EA3829001889F2 /* TabeCellUser.swift in Sources */,
 				FBB52B41204B186B004CC997 /* RightViewController.swift in Sources */,
 				FB44F5F7207530E2001F71CB /* Event.swift in Sources */,
 				FBB21A6B204D9871002E6AD0 /* CellView.swift in Sources */,

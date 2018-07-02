@@ -167,7 +167,7 @@ class InvitationEventViewController : UIViewController, UITableViewDataSource, U
         table.reloadData()
     }
     
-    
+    /*
     @IBAction func addEventt(_ sender: Any) {
         //createAddEventCustomPopup()
         
@@ -181,7 +181,7 @@ class InvitationEventViewController : UIViewController, UITableViewDataSource, U
         
     }
     
-    
+    */
     func createAddEventCustomPopup() {
         
         let popup = MWAPopupAddEvent.createPopup(aPopupType: .addEventView, titleString: " ", messageString: " ", buttonNames: ["Annuler", "Enregistrer"])

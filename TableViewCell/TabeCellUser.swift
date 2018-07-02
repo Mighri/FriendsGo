@@ -1,34 +1,30 @@
 //
-//  TableCell.swift
+//  TabeCellUser.swift
 //  FriendsGo
 //
-//  Created by Radhia Mighri on 23/03/2018.
+//  Created by Design on 02/07/2018.
 //  Copyright © 2018 Radhia Mighri. All rights reserved.
 //
 
 import UIKit
 
-class TableCell: UITableViewCell {
+class TableCellUser: UITableViewCell {
     
     
     @IBOutlet var imageUrl: UIImageView!
     @IBOutlet var Nom: UILabel!
-   //  @IBOutlet var Prenom: UILabel!
+    //  @IBOutlet var Prenom: UILabel!
     @IBOutlet var iconimage: UIImageView!
-     @IBOutlet var iconimage2: UIImageView!
-      @IBOutlet var button : UIButton!
+    @IBOutlet var iconimage2: UIImageView!
+    @IBOutlet var button : UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         imageUrl.layer.cornerRadius = 25
         imageUrl.clipsToBounds = true
-        
-        
-       // button.layer.cornerRadius = 15
-       // button.clipsToBounds = true
     }
     
-  
-
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

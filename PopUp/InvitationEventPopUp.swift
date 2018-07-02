@@ -23,7 +23,7 @@ class InvitationEventPopUp: UIViewController {
     
     @IBAction func amis(_ sender: UIButton) {
         
-        let popOverVC = UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: "SVC") as! SVC
+        let popOverVC = UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: "SVC") as! InviteAmisEventController
         self.addChildViewController(popOverVC)
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)

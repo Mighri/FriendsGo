@@ -40,8 +40,8 @@ class AnInvitationEventController: UIViewController {
         dateEvent.text = event.date
         heureEvent.text = event.heure
          lieuEvent.text = event.adresse
- 
-        let p = ["IdU" : event.IdU] as [String : Any]
+        print(event.IdU)
+        let p = ["IdU" : event.IdU!] as [String : Any]
         
         Service.sharedInstance.loadInfoAny(parameters: p, url: urlGetUsername) { (state, Objets) in
             if state {
@@ -52,7 +52,7 @@ class AnInvitationEventController: UIViewController {
                 print("nooo")
             }
         }
-       // let imagedecoded = Data(base64Encoded: event.image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
+  
         imageEvent.sd_setImage(with: URL(string: event.image), placeholderImage: nil)
         
         
