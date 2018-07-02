@@ -154,6 +154,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     print(self.FriendArray[buttonTag].id!)
     
     
+    
     let parameters = ["idUS": self.userId,
                       "idInviteS": self.currentFriendArray[buttonTag].id!]
   
