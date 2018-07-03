@@ -41,6 +41,11 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     var ParametersViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
     
+    
+    let userId = UserDefaults.standard.string(forKey: "Saveid")!
+    var FriendArray = [Friend]()
+    let urlgetInvitations  = MyClass.Constants.urlgetInvitations
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -219,8 +224,26 @@ extension LeftViewController : UITableViewDataSource {
             case .Invitations:
                 cell.dataImage.image = UIImage(named: "invitation")
                 cell.dataText.text = self.menus[indexPath.row]
-               let nbInvitation = UserDefaults.standard.integer(forKey: "nbreInv")
-                let nbInv = String(describing:nbInvitation)
+               //let nbInvitation = UserDefaults.standard.integer(forKey: "nbreInv")
+                
+                
+                
+                
+                let p = ["idinvite" : userId]
+                
+                Service.sharedInstance.loadInfoAny(parameters: p, url: urlgetInvitations) { (state, Objets) in
+                    if state {
+                        self.FriendArray = Objets!
+                        
+                        print("Objets")
+                    } else {
+                        print("nooo")
+                    }
+                }
+                
+                
+              let nbInv = String(describing:self.FriendArray.count)
+                
                 cell.number.text = nbInv
                 return cell
                 

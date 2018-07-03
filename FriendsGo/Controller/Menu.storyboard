@@ -2074,106 +2074,6 @@
             </objects>
             <point key="canvasLocation" x="-45" y="1486.2676056338028"/>
         </scene>
-        <!--Chat-->
-        <scene sceneID="MT8-eK-dpc">
-            <objects>
-                <viewController id="EVE-4Z-yHY" customClass="Chat" customModule="FriendsGo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fOA-8s-mjZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6mh-52-KxG">
-                                <rect key="frame" x="0.0" y="66" width="320" height="442"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellChat" rowHeight="104" id="FtG-x3-JS9" customClass="TableCellChat" customModule="FriendsGo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="104"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FtG-x3-JS9" id="Wmf-ZD-uCn">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="103.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ntt-yq-rXe">
-                                                    <rect key="frame" x="14" y="14" width="54" height="54"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLt-Ya-r5O">
-                                                    <rect key="frame" x="90" y="11" width="175" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8d-rj-9KW">
-                                                    <rect key="frame" x="20" y="76" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="imageUrl" destination="Ntt-yq-rXe" id="okC-xR-bbT"/>
-                                            <outlet property="message" destination="DLt-Ya-r5O" id="LjU-qR-dsA"/>
-                                            <outlet property="time" destination="A8d-rj-9KW" id="boe-Ze-v3O"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="EVE-4Z-yHY" id="QSV-UT-vXb"/>
-                                    <outlet property="delegate" destination="EVE-4Z-yHY" id="Y7M-Mi-GlG"/>
-                                </connections>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYh-9s-NgV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.069271564483642578" green="0.33646810054779053" blue="0.53281229734420776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHE-sd-qcj">
-                                <rect key="frame" x="0.0" y="533" width="275" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMN-RS-OHj">
-                                <rect key="frame" x="283" y="533" width="30" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="send"/>
-                                <connections>
-                                    <action selector="sendMessage:" destination="EVE-4Z-yHY" eventType="touchUpInside" id="SZO-cA-fyN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8i-sD-9yk">
-                                <rect key="frame" x="0.0" y="14" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="backk"/>
-                                <connections>
-                                    <action selector="back:" destination="811-MB-8Ct" eventType="touchUpInside" id="RVW-AD-64M"/>
-                                    <action selector="back:" destination="EVE-4Z-yHY" eventType="touchUpInside" id="TeS-xg-WKe"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="bMj-Vd-N58"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Czt-Zu-OLA"/>
-                    <connections>
-                        <outlet property="friendName" destination="sYh-9s-NgV" id="v26-4I-KZJ"/>
-                        <outlet property="sendButton" destination="TMN-RS-OHj" id="Iv0-p3-Zwv"/>
-                        <outlet property="table" destination="6mh-52-KxG" id="gnC-5F-KIq"/>
-                        <outlet property="textField" destination="GHE-sd-qcj" id="SoS-NP-hNq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nxe-Tp-nRR" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="795" y="1488"/>
-        </scene>
         <!--Chat View Controller-->
         <scene sceneID="Feg-Kk-fUJ">
             <objects>
@@ -2255,7 +2155,6 @@
         <image name="logo-googleplus" width="137" height="137"/>
         <image name="party" width="225" height="225"/>
         <image name="propriétaire" width="128" height="128"/>
-        <image name="send" width="256" height="256"/>
         <image name="starr" width="506" height="504"/>
         <image name="synchronize" width="200" height="200"/>
         <image name="tick" width="512" height="512"/>

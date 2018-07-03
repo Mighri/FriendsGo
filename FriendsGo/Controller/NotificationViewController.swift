@@ -28,7 +28,7 @@ class NotificationViewController: UITableViewController {
         Service.sharedInstance.loadInfoAny(parameters: p, url: urlgetInvitations) { (state, Objets) in
             if state {
                 self.FriendArray = Objets!
-                UserDefaults.standard.set(self.FriendArray.count, forKey: "nbreInv")
+                UserDefaults.standard.set(self.FriendArray.count, forKey: "nbreNotif")
                 self.tableView.reloadData()
                 print("Objets")
             } else {

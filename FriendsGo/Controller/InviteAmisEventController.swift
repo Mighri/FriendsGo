@@ -24,7 +24,6 @@ class InviteAmisEventController: UIViewController, UITableViewDataSource, UITabl
     let userId = UserDefaults.standard.string(forKey: "Saveid")!
     var searching: Bool! = false
     let urlgetAmis = MyClass.Constants.urlgetAmis
-    let urlVerifInvitationEvent = MyClass.Constants.urlVerifInvitationEvent
     var invitEvent: InvitationEventFG!
     let urlInvEventFG = MyClass.Constants.urlInvEventFG
     var event: Event!

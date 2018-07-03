@@ -102,6 +102,5 @@ class MyClass {
         
           static let urlGetConvReciever = BaseURL+"getConvReciever.php"
         
-         static let urlVerifInvitationEvent = BaseURL+"verifInvitationEvent.php"
     }
 }
