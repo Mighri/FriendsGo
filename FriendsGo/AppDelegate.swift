@@ -17,7 +17,7 @@ import Firebase
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
      var contactsHandler: ContactsHandler = ContactsHandler()
@@ -37,8 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
         
         
         // Initialize sign-in
-        GIDSignIn.sharedInstance().clientID = "381533501640-0top6n4qlemq6dpqnjveuqpn28glhf01.apps.googleusercontent.com"
-      GIDSignIn.sharedInstance().delegate = self
+       // GIDSignIn.sharedInstance().clientID = "381533501640-0top6n4qlemq6dpqnjveuqpn28glhf01.apps.googleusercontent.com"
+     // GIDSignIn.sharedInstance().delegate = self
 
        /*
         
@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
         return true
         
     }
- 
+ /*
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
@@ -126,7 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
             
         }
     }
- 
+ */
     func application(application: UIApplication,
                      openURL url: URL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
         var options: [String: AnyObject] = [UIApplicationOpenURLOptionsKey.sourceApplication.rawValue: sourceApplication as AnyObject,
