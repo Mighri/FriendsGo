@@ -31,7 +31,7 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
         
         let paras = ["IdInviteur": event.IdU ,
                      "IdInvite": userId,
-                     "Etat" : "participe",
+                     "Etat" : "Participe",
                      "IdEvent": event.idE
             ] as [String : Any]
         
@@ -41,7 +41,15 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
        
         UserDefaults.standard.set("Je participe", forKey: "participe")
         
-        close()
+        //close()
+        
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
+        
+        //ViewController.event = event
+        
+        self.navigationController?.pushViewController(ViewController, animated: true)
     }
     
     
@@ -49,7 +57,7 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
         
         let paras = ["IdInviteur": event.IdU ,
                      "IdInvite": userId,
-                     "Etat" : "ne participe pas",
+                     "Etat" : "Ne participe pas",
                      "IdEvent": event.idE
             ] as [String : Any]
         
@@ -57,14 +65,22 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
         Service.sharedInstance.postIt(parameters:paras as! [String : String], url:self.urlUpdateInvEvent)
         
          UserDefaults.standard.set("Je ne participe pas", forKey: "neParticipe")
-  close()
+  //close()
+        
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
+        
+        //ViewController.event = event
+        
+        self.navigationController?.pushViewController(ViewController, animated: true)
     }
     
     @IBAction func interesseEventButton(_ sender: AnyObject) {
         
         let paras = ["IdInviteur": event.IdU ,
                      "IdInvite": userId,
-                     "Etat" : "interessé",
+                     "Etat" : "Intéressé",
                      "IdEvent": event.idE
             ] as [String : Any]
         
@@ -72,7 +88,16 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
         Service.sharedInstance.postIt(parameters:paras as! [String : String], url:self.urlUpdateInvEvent)
         
         UserDefaults.standard.set("Je m'intéresse", forKey: "interesse")
-       close()
+      // close()
+        
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
+        
+        //ViewController.event = event
+        
+        self.navigationController?.pushViewController(ViewController, animated: true)
+        
         /*
         let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
         
@@ -81,19 +106,40 @@ class ParticipationPopUp: UIViewController, UINavigationControllerDelegate {
         self.present(ViewController, animated: true, completion: nil)
  */
 }
-    
-    
+   /*
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        // self.participationEvent.text = "ggg"
+    }
+    */
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     @IBAction func supprimerEventButton(_ sender: AnyObject) {
         
         let paras = ["IdInviteur": event.IdU ,
                      "IdInvite": userId,
-                     "Etat" : "interesse",
+                     "Etat" : "intéressé",
                      "IdEvent": event.idE
             ] as [String : Any]
         
-        Service.sharedInstance.postItAny(parameters:paras,  url:self.urlDeleteInvEvent)
-        close()
+        Service.sharedInstance.postItAny(parameters:paras, url:self.urlDeleteInvEvent)
+        //close()
+        
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
+        
+        //ViewController.event = event
+        
+        self.navigationController?.pushViewController(ViewController, animated: true)
     }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         

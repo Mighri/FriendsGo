@@ -40,18 +40,12 @@ class LogViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUI
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-          self.title = "FriendsGo"
-    
-        
-        
+        self.title = "FriendsGo"
+
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        
         notificationCenter.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        
-        
-      
         /*
          view.addSubview(loginButton)
          loginButton.center = view.center
@@ -62,6 +56,7 @@ class LogViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUI
          // friends()
          }
          */
+        
         GIDSignIn.sharedInstance().uiDelegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.notificationReceived(_:)), name:  NSNotification.Name(rawValue: "ToggleAuthUINotification"), object: nil)
@@ -73,9 +68,7 @@ class LogViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUI
         //  view.addSubview(loginButton)
         //  loginButton.center = view.center
         loginButton.delegate = self
-        
-        
-        
+   
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -92,10 +85,6 @@ class LogViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUI
         self.view.endEditing(true)
     }
     
-    
-   
-    
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailAddressTextField
         {
@@ -107,8 +96,6 @@ class LogViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUI
         }
         return true
     }
-    
-    
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result :FBSDKLoginManagerLoginResult!, error: Error!)
     {

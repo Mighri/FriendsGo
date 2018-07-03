@@ -67,15 +67,9 @@ class InvitationEventViewController : UIViewController, UITableViewDataSource, U
             } else {
                 print("nooo")
             }
-            
         }
-        
-        
-        
     }
-    
-    
-    
+
     private func setUpSearchBar() {
         searchBar.delegate = self
     }
@@ -116,12 +110,7 @@ class InvitationEventViewController : UIViewController, UITableViewDataSource, U
         
         print(currentEventArray[indexPath.row].image)
         
-          cell.imageEvent.sd_setImage(with: URL(string: currentEventArray[indexPath.row].image), placeholderImage: nil)
-        //print(currentEventArray[indexPath.row].image)
-        
-        //let dataDecoded : Data = Data(base64Encoded: currentEventArray[indexPath.row].image, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
-        
-        //cell.imageEvent.image = UIImage(data: dataDecoded)
+        cell.imageEvent.sd_setImage(with: URL(string: currentEventArray[indexPath.row].image), placeholderImage: nil)
         
         return cell
     }
@@ -131,14 +120,6 @@ class InvitationEventViewController : UIViewController, UITableViewDataSource, U
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        /*
-         let popOverVC = UIStoryboard(name: "MWAPopup", bundle: nil).instantiateViewController(withIdentifier: "pop") as! MWAPopupEventM
-         self.addChildViewController(popOverVC)
-         //popOverVC.view.frame = self.view.frame
-         self.view.addSubview(popOverVC.view)
-         // popOverVC.didMove(toParentViewController: self)
-         popOverVC.show(vc: self.navigationController!)
-         */
         
         let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
         
@@ -148,11 +129,7 @@ class InvitationEventViewController : UIViewController, UITableViewDataSource, U
         
         self.navigationController?.pushViewController(ViewController, animated: true)
         
-        
-        //  createEventCustomPopup()
-        
     }
-    
     // Search Bar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         currentEventArray = eventArray.filter({ event -> Bool in
@@ -165,54 +142,6 @@ class InvitationEventViewController : UIViewController, UITableViewDataSource, U
             }
         })
         table.reloadData()
-    }
-    
-    /*
-    @IBAction func addEventt(_ sender: Any) {
-        //createAddEventCustomPopup()
-        
-        
-        let popOverVC = UIStoryboard(name: "MWAPopup", bundle: nil).instantiateViewController(withIdentifier: "pop") as! MWAPopupEventM
-        self.addChildViewController(popOverVC)
-        //popOverVC.view.frame = self.view.frame
-        self.view.addSubview(popOverVC.view)
-        // popOverVC.didMove(toParentViewController: self)
-        popOverVC.show(vc: self.navigationController!)
-        
-    }
-    
-    */
-    func createAddEventCustomPopup() {
-        
-        let popup = MWAPopupAddEvent.createPopup(aPopupType: .addEventView, titleString: " ", messageString: " ", buttonNames: ["Annuler", "Enregistrer"])
-        
-        popup?.titleTextFont = UIFont.systemFont(ofSize: 22)
-        popup?.titleTextColor = .black
-        
-        popup?.messageTextFont = UIFont.boldSystemFont(ofSize: 16)
-        popup?.messageTextColor = .black
-        
-        popup?.setTextFieldBorderStyle(style: .none)
-        
-        //  popup?.textFieldBackgroundImage = UIImage(named: "textfield_bg")
-        popup?.textFieldBackgroundColor = UIColor(hex: "414141")
-        
-        popup?.textFieldTextColor = .white
-        popup?.textFieldTextFont = UIFont.systemFont(ofSize: 12)
-        
-        popup?.textFieldPlaceholder = "N° de téléphone"
-        
-        popup?.textFieldPlaceholderColor = .white
-        popup?.textFieldPlaceholderFont = UIFont.boldSystemFont(ofSize: 11)
-        popup?.show(vc: self.navigationController!)
-        //popup?.show(vc: self)
-        
-        popup?.onFirstButtonTapped = { () in
-            
-        }
-        popup?.onSecondButtonTapped = { () in
-            print("Cancel Tapped")
-        }
     }
 }
 

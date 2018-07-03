@@ -25,8 +25,9 @@ class InviteAmisEventController: UIViewController, UITableViewDataSource, UITabl
     var searching: Bool! = false
     let urlgetAmis = MyClass.Constants.urlgetAmis
     let urlVerifInvitationEvent = MyClass.Constants.urlVerifInvitationEvent
-    
-     var event: Event!
+    var invitEvent: InvitationEventFG!
+    let urlInvEventFG = MyClass.Constants.urlInvEventFG
+    var event: Event!
     var invitationsEvent : [InvitationEventFG]!
     
     override func viewDidLoad() {
@@ -113,10 +114,7 @@ class InviteAmisEventController: UIViewController, UITableViewDataSource, UITabl
         //cell.Prenom.text = currentFriendArray[indexPath.row].prenom
         
         cell.imageUrl.sd_setImage(with: URL(string: self.currentFriendArray[indexPath.row].photoURL), placeholderImage: UIImage(named: "profile"))
-        
-        
-        
-        
+  
         if(self.currentFriendArray[indexPath.row].inscrivia == "Facebook")
         {
             cell.iconimage.image = UIImage(named: "logo-facebook")
@@ -129,35 +127,41 @@ class InviteAmisEventController: UIViewController, UITableViewDataSource, UITabl
         {
             cell.iconimage.image = UIImage(named: "FriendsGo")
         }
-        
-        
-        //cell.iconimage.image = UIImage(named: "logo-facebook")
-        
         cell.button.tag = indexPath.row
         cell.button.addTarget(self, action: #selector(addButtonPressed), for: .touchUpInside)
-        //  cell.button.addTarget(self, action: "addButtonPressed", for: .touchUpInside)
-        //print(cell.button.tag)
-        
-        
-        
-        
+
         return cell
     }
     
     @objc func addButtonPressed(sender: UIButton) {
         let buttonTag = sender.tag
        
-         let parameters = ["idUEvent": self.userId,
-         "idInviteEvent": self.currentFriendArray[buttonTag].id!]
         
-         Service.sharedInstance.loadInvitationEvent(parameters:parameters, url:"http://172.16.16.209/verifInvitationEvent.php") { (state, Objets) in
-         if state {
-         //self.invitationsEvent = Objets!
-         print("Invitation envoyé")
+        
+        
+        
+        
+       
+        
+        
+        
+        
+        print(self.event.idE!)
+        print(self.currentFriendArray[buttonTag].id!)
+        
+        let pr = ["IdInvitedd" : self.currentFriendArray[buttonTag].id!,
+                  "eventtt" : self.event.idE!]
+        
+      
+        Service.sharedInstance.loadInvitationEvent(parameters: pr, url: urlInvEventFG) { (state, Objets) in
+            if state {
+                
+                self.invitEvent = Objets![0]
+                //print("Invitation envoyé")
          
          // Display Alert message and return
-         //self.displayMessage(userMessage: "déjà invité")
-         //return
+          self.displayMessage(userMessage: "déjà invité")
+          return
          
          }
          else
@@ -195,16 +199,6 @@ class InviteAmisEventController: UIViewController, UITableViewDataSource, UITabl
         return 80
     }
     
-    // This two functions can be used if you want to show the search bar in the section header
-    //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    //        return searchBar
-    //    }
-    
-    //    // search bar in section header
-    //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    //        return UITableViewAutomaticDimension
-    //    }
-    
     // Search Bar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
@@ -219,25 +213,12 @@ class InviteAmisEventController: UIViewController, UITableViewDataSource, UITabl
             }
         })
         table.reloadData()
-        
-        
     }
-    
-    /*
-    func removeActivityIndicator(activityIndicator: UIActivityIndicatorView)
-    {
-        DispatchQueue.main.async
-            {
-                activityIndicator.stopAnimating()
-                activityIndicator.removeFromSuperview()
-        }
-    }
-    
-    */
+
     func displayMessage(userMessage:String) -> Void {
         DispatchQueue.main.async
             {
-                let alertController = UIAlertController(title: "Alerte", message: userMessage, preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Information", message: userMessage, preferredStyle: .alert)
                 
                 let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
                     // Code in this block will trigger when OK button tapped.

@@ -74,8 +74,7 @@ class InviteForEventController: UIViewController, UINavigationControllerDelegate
     
     
     @IBAction func back(_ sender: UIButton) {
-        
-       print("KKKKKKKKKK")
+
         let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
         
         let ViewController = mystoryboard.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
