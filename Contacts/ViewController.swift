@@ -57,15 +57,38 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
         let token = UserDefaults.standard.string(forKey: UserAccessToken)
         if token == nil {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign in", style: .plain, target: self, action: #selector(signIn))
-            self.navigationItem.rightBarButtonItem = nil
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "retour", style: .plain, target: self, action: #selector(backk))
         } else {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign out", style: .plain, target: self, action: #selector(signOut))
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
         }
     }
     
+ 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
     @objc func signIn() {
         GIDSignIn.sharedInstance().signIn()
+    }
+    
+    
+    
+ 
+    
+    @objc func backk() {
+        
+        
+        print("*********************************************")
+        let mystoryboard:UIStoryboard = UIStoryboard(name:"Menu", bundle: nil)
+        
+        let ViewController = mystoryboard.instantiateViewController(withIdentifier: "ImportViewController") as! ImportViewController
+        self.navigationController?.present(ViewController, animated: true, completion: nil)
+        
     }
     
     @objc func signOut() {
@@ -94,7 +117,7 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
         let options = [
             kCRToastTextKey: "Refreshing data ...",
             kCRToastTextAlignmentKey : kCAAlignmentCenter,
-            kCRToastBackgroundColorKey : UIColor.brown,
+            kCRToastBackgroundColorKey : UIColor(hex: "BC2869"),
             kCRToastAnimationInTypeKey : CRToastAnimationType.gravity,
             kCRToastAnimationOutTypeKey : CRToastAnimationType.gravity,
             kCRToastAnimationInDirectionKey : CRToastAnimationDirection.left,

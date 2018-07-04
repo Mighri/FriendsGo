@@ -33,10 +33,7 @@ class ImportViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        
         self.setNavigationBarItem()
         
         facebookButton.layer.cornerRadius = 20
@@ -52,7 +49,21 @@ class ImportViewController: UIViewController{
      
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+
     func displayMessage(userMessage:String) -> Void {
         DispatchQueue.main.async
             {
@@ -96,11 +107,7 @@ class ImportViewController: UIViewController{
             } else {
                 print("nooo")
             }
-            
         }
-        
-        
-        
         
         let p = ["inscrivia" : "Facebook"]
         
@@ -121,9 +128,6 @@ class ImportViewController: UIViewController{
                             print("déjà importé")
                             
                         } else {
-                            
-                            
-                            
                             let params = [
                                 "idU": self.userId,
                                 "idContact": self.friend.id]
@@ -156,10 +160,6 @@ class ImportViewController: UIViewController{
         }
     }
     
-    
-    
-    
-    
     @IBAction func importGoogle(_ sender: Any) {
         
         let p = ["inscrivia" : "Google"]
@@ -181,9 +181,6 @@ class ImportViewController: UIViewController{
                             print("déjà importé")
                             
                         } else {
-                            
-                            
-                            
                             let params = [
                                 "idU": self.userId,
                                 "idContact": self.friend.id]
@@ -198,30 +195,17 @@ class ImportViewController: UIViewController{
                                       "idContact": self.friend.id]
                             
                             Service.sharedInstance.postIt(parameters:pr as! [String : String] , url:self.urlRegisterContact)
-                            
-                            
+   
                             print("Objets")
-                            
-                            
-                            
                             print("nooo")
                         }
-                        
                     }
-                    
-                    
-                    
-                    
                 }
                 
             } else {
                 print("nooo")
             }
         }
-        
-        
-        
-      
 }
  
 }
