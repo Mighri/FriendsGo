@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>381533501640-0top6n4qlemq6dpqnjveuqpn28glhf01.apps.googleusercontent.com</string>
+	<string>888772104651-c1lmvjvjc47lt31av8e62lt4l1c2uagg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.381533501640-0top6n4qlemq6dpqnjveuqpn28glhf01</string>
+	<string>com.googleusercontent.apps.888772104651-c1lmvjvjc47lt31av8e62lt4l1c2uagg</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB40RTwAOl8E68TC-MixnoPLvIULb9V2b8</string>
+	<string>AIzaSyCwjnSu766f339gsaRqzf1AzC3m0fO1A2A</string>
 	<key>GCM_SENDER_ID</key>
-	<string>381533501640</string>
+	<string>888772104651</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.Radhia-Mighri.Test</string>
+	<string>com.chifco.friendsgo.project</string>
 	<key>PROJECT_ID</key>
-	<string>friendsgo-1520937547388</string>
+	<string>test-612fd</string>
 	<key>STORAGE_BUCKET</key>
-	<string>friendsgo-1520937547388.appspot.com</string>
+	<string>test-612fd.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:381533501640:ios:ad8cb168354cb96b</string>
+	<string>1:888772104651:ios:746e2a6305627d98</string>
 	<key>DATABASE_URL</key>
-	<string>https://friendsgo-1520937547388.firebaseio.com</string>
+	<string>https://test-612fd.firebaseio.com</string>
 </dict>
 </plist>

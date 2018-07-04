@@ -25,6 +25,8 @@ pod 'Firebase/Auth', '~> 4.0.0'
 pod 'Firebase/Storage', '~> 4.0.0'
 pod 'Firebase/Database', '~> 4.0.0'
 
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
 
 pod 'CRToast', '~> 0.0.9'
 pod 'libPhoneNumber-iOS'

@@ -55,7 +55,7 @@ class LogViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUI
          fetchProfile()
          // friends()
          }
-         */
+ */
         
         GIDSignIn.sharedInstance().uiDelegate = self
         

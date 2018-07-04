@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B5282ADB20C94807008DD62F /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5282ADA20C94807008DD62F /* LogViewController.swift */; };
+		B548E56F20ED1BB300B14E4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B548E56E20ED1BB300B14E4E /* GoogleService-Info.plist */; };
 		B567FC8A20C53ABE0084FCB5 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8920C53ABE0084FCB5 /* CustomMarkerView.swift */; };
 		B567FC8C20C53AF50084FCB5 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8B20C53AF50084FCB5 /* DetailsVC.swift */; };
 		B567FC8E20C53B0B0084FCB5 /* RestaurantPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567FC8D20C53B0B0084FCB5 /* RestaurantPreviewView.swift */; };
@@ -60,7 +61,6 @@
 		FB67E16520C3235F0093C66F /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB67E16420C3235E0093C66F /* ChannelViewController.swift */; };
 		FB67E16720C323990093C66F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB67E16620C323990093C66F /* LoginViewController.swift */; };
 		FB67E16920C323C60093C66F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB67E16820C323C60093C66F /* ChatViewController.swift */; };
-		FB67E16B20C3240A0093C66F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB67E16A20C324090093C66F /* GoogleService-Info.plist */; };
 		FB68097A2098C85600894F89 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB68097B2098C85600894F89 /* AlamofireImage.framework */; };
 		FB6809BB2099D1A300894F89 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6809BA2099D1A300894F89 /* Media.swift */; };
 		FB6809BD209A0B9000894F89 /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6809BC209A0B9000894F89 /* WebviewViewController.swift */; };
@@ -173,6 +173,8 @@
 		72BBBA2DCC21FCF09FD49871 /* Pods-FriendsGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsGo/Pods-FriendsGo.debug.xcconfig"; sourceTree = "<group>"; };
 		929D89ABD2E1238A1DB82158 /* Pods_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5282ADA20C94807008DD62F /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		B548E56D20ECFB7400B14E4E /* FriendsGo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendsGo.entitlements; sourceTree = "<group>"; };
+		B548E56E20ED1BB300B14E4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B567FC8920C53ABE0084FCB5 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
 		B567FC8B20C53AF50084FCB5 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		B567FC8D20C53B0B0084FCB5 /* RestaurantPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPreviewView.swift; sourceTree = "<group>"; };
@@ -225,7 +227,6 @@
 		FB67E16420C3235E0093C66F /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		FB67E16620C323990093C66F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FB67E16820C323C60093C66F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		FB67E16A20C324090093C66F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB68097B2098C85600894F89 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6809BA2099D1A300894F89 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		FB6809BC209A0B9000894F89 /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
@@ -595,9 +596,10 @@
 		FBCA49BB203C779B00C74625 /* FriendsGo */ = {
 			isa = PBXGroup;
 			children = (
+				B548E56D20ECFB7400B14E4E /* FriendsGo.entitlements */,
 				FB145A792057E4F20038A30B /* credentials.plist */,
 				B57854B720E674AC00594D7A /* Google_Contacts_Viewer.xcdatamodeld */,
-				FB67E16A20C324090093C66F /* GoogleService-Info.plist */,
+				B548E56E20ED1BB300B14E4E /* GoogleService-Info.plist */,
 				B567FC8F20C544070084FCB5 /* Test-Bridging-Header.h */,
 				FBCA49BC203C779C00C74625 /* AppDelegate.swift */,
 				FBB52B3B204B17EE004CC997 /* Controller */,
@@ -714,6 +716,9 @@
 							com.apple.Keychain = {
 								enabled = 0;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					FBCA49CC203C779D00C74625 = {
@@ -757,12 +762,12 @@
 				B57854B020E6749600594D7A /* contacts@3x.png in Resources */,
 				FBB52B6A204B1C3D004CC997 /* DataTableViewCell.xib in Resources */,
 				FB145A7A2057E4F30038A30B /* credentials.plist in Resources */,
-				FB67E16B20C3240A0093C66F /* GoogleService-Info.plist in Resources */,
 				FBCA49C7203C779D00C74625 /* LaunchScreen.storyboard in Resources */,
 				FBCA49C4203C779D00C74625 /* Assets.xcassets in Resources */,
 				FBB52B70204B2E52004CC997 /* Menu.storyboard in Resources */,
 				B57854B420E6749600594D7A /* settings.png in Resources */,
 				B57854B220E6749600594D7A /* contacts_big@2x.png in Resources */,
+				B548E56F20ED1BB300B14E4E /* GoogleService-Info.plist in Resources */,
 				B57854B520E6749600594D7A /* settings@2x.png in Resources */,
 				FBCA49C2203C779C00C74625 /* Main.storyboard in Resources */,
 				FBB52B51204B19E5004CC997 /* ImageHeaderView.xib in Resources */,
@@ -847,6 +852,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/libPhoneNumber-iOS/libPhoneNumber_iOS.framework",
@@ -865,6 +871,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libPhoneNumber_iOS.framework",
@@ -1158,6 +1165,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FriendsGo/FriendsGo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8ZJ2CG93R;
 				INFOPLIST_FILE = "$(SRCROOT)/FriendsGo/Info.plist";
@@ -1166,7 +1174,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Radhia-Mighri.Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chifco.friendsgo.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OBJC_BRIDGING_HEADER = "FriendsGo/Test-Bridging-Header.h";
@@ -1182,6 +1190,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FriendsGo/FriendsGo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8ZJ2CG93R;
 				INFOPLIST_FILE = "$(SRCROOT)/FriendsGo/Info.plist";
@@ -1190,7 +1199,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Radhia-Mighri.Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chifco.friendsgo.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FriendsGo/Test-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
