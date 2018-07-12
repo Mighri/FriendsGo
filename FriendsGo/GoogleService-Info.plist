@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>888772104651-c1lmvjvjc47lt31av8e62lt4l1c2uagg.apps.googleusercontent.com</string>
+	<string>1096263746992-64d9tc1nl90msui5s964sg6al76mfge8.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.888772104651-c1lmvjvjc47lt31av8e62lt4l1c2uagg</string>
+	<string>com.googleusercontent.apps.1096263746992-64d9tc1nl90msui5s964sg6al76mfge8</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCwjnSu766f339gsaRqzf1AzC3m0fO1A2A</string>
+	<string>AIzaSyD9k58P9nTTP7QKt-XiQJk2j2jLOI3f_ig</string>
 	<key>GCM_SENDER_ID</key>
-	<string>888772104651</string>
+	<string>1096263746992</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.chifco.friendsgo.project</string>
 	<key>PROJECT_ID</key>
-	<string>test-612fd</string>
+	<string>friendsgo-9903d</string>
 	<key>STORAGE_BUCKET</key>
-	<string>test-612fd.appspot.com</string>
+	<string>friendsgo-9903d.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:888772104651:ios:746e2a6305627d98</string>
+	<string>1:1096263746992:ios:746e2a6305627d98</string>
 	<key>DATABASE_URL</key>
-	<string>https://test-612fd.firebaseio.com</string>
+	<string>https://friendsgo-9903d.firebaseio.com</string>
 </dict>
 </plist>
